@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MBTI 연애 궁합 테스트 - 나의 연애 스타일은? 💕</title>
+    <meta name="description" content="12가지 질문으로 알아보는 나의 MBTI 연애 스타일! 16가지 유형과 256가지 궁합표. 나와 찰떡궁합인 유형은?">
+    <meta name="keywords" content="MBTI,연애,궁합,심리테스트,연애스타일,성격테스트,INFP,ENFJ,궁합테스트">
+    <meta property="og:title" content="MBTI 연애 궁합 테스트 💕 - 나의 연애 스타일은?">
+    <meta property="og:description" content="16가지 연애 스타일 + 256가지 궁합! 나와 찰떡궁합은 누구?">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://swp1234.github.io/mbti-love/">
+    <meta property="og:image" content="https://swp1234.github.io/mbti-love/icon-512.svg">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a0a1e">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/svg+xml" href="icon-192.svg">
+    <link rel="apple-touch-icon" href="icon-192.svg">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J8GSWM40TV"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-J8GSWM40TV');</script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-container">
+    <!-- INTRO -->
+    <div class="screen intro-screen active" id="intro-screen">
+        <div class="ad-banner"><span class="ad-placeholder">광고 영역</span></div>
+        <div class="intro-content">
+            <div class="intro-icon">💕</div>
+            <h1>MBTI 연애 궁합</h1>
+            <p class="intro-sub">나의 연애 스타일은 뭘까?</p>
+            <p class="intro-desc">12가지 질문에 답하고<br>나만의 연애 스타일 + 찰떡궁합을 확인하세요</p>
+            <div class="intro-meta">
+                <span>📝 12문항</span><span>⏱️ 약 3분</span><span>💖 256궁합</span>
+            </div>
+            <button class="btn-start" id="btn-start">테스트 시작하기</button>
+        </div>
+    </div>
+
+    <!-- QUESTION -->
+    <div class="screen question-screen hidden" id="question-screen">
+        <div class="progress-area">
+            <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+            <span class="progress-text" id="progress-text">1/12</span>
+        </div>
+        <div class="question-card" id="question-card">
+            <p class="q-text" id="q-text"></p>
+            <div class="q-options" id="q-options"></div>
+        </div>
+    </div>
+
+    <!-- LOADING -->
+    <div class="screen loading-screen hidden" id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-icon">💕</div>
+            <p>연애 스타일 분석 중...</p>
+            <div class="loading-bar"><div class="loading-fill" id="loading-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- RESULT -->
+    <div class="screen result-screen hidden" id="result-screen">
+        <div class="result-card">
+            <p class="r-label">당신의 연애 스타일</p>
+            <div class="r-emoji" id="r-emoji"></div>
+            <div class="r-type" id="r-type"></div>
+            <h2 class="r-title" id="r-title"></h2>
+            <p class="r-desc" id="r-desc"></p>
+            <div class="r-keywords" id="r-keywords"></div>
+            <div class="r-section"><h3>💘 이상형</h3><p id="r-ideal"></p></div>
+            <div class="r-section"><h3>💡 연애 팁</h3><p id="r-tip"></p></div>
+        </div>
+
+        <div class="matches-card">
+            <h3>💕 최고 궁합 TOP 3</h3>
+            <div id="r-top3"></div>
+            <h3 class="mt16">⚡ 주의할 궁합</h3>
+            <div id="r-bottom2"></div>
+        </div>
+
+        <button class="btn-compat" id="btn-compat">🔍 다른 유형과 궁합 확인하기</button>
+
+        <button class="btn-premium" id="btn-premium">
+            <span>✨</span><span>AI 연애 심층 분석</span><span class="badge">PREMIUM</span>
+        </button>
+
+        <div class="premium-result hidden" id="premium-result">
+            <div class="premium-card"><h3>🧠 AI 연애 심층 분석</h3><div id="premium-content"></div></div>
+        </div>
+
+        <div class="result-actions">
+            <button class="btn-share" id="btn-share">📤 결과 공유하기</button>
+            <button class="btn-save" id="btn-save-image">📷 이미지 저장</button>
+            <button class="btn-retry" id="btn-retry">🔄 다시 하기</button>
+        </div>
+        <div class="ad-banner"><span class="ad-placeholder">광고 영역</span></div>
+    </div>
+
+    <!-- COMPAT CHECK -->
+    <div class="screen compat-screen hidden" id="compat-screen">
+        <div class="compat-header">
+            <button class="btn-back" id="btn-compat-back">← 뒤로</button>
+            <h2>궁합 확인</h2>
+        </div>
+        <p class="compat-instruction">상대방의 MBTI를 선택하세요</p>
+        <div class="compat-grid" id="compat-grid"></div>
+        <div id="compat-result-area"></div>
+    </div>
+
+    <!-- AD OVERLAY -->
+    <div class="overlay hidden" id="ad-overlay">
+        <div class="ad-modal">
+            <p class="ad-label">광고</p>
+            <div class="ad-placeholder-lg">광고 영역 (전면)</div>
+            <div class="ad-timer"><span id="ad-countdown">5</span>초 후 닫기</div>
+            <button class="btn-close-ad hidden" id="btn-close-ad">✕ 닫기</button>
+        </div>
+    </div>
+
+    <canvas id="share-canvas" width="1080" height="1080" style="display:none"></canvas>
+</div>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
