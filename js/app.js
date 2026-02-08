@@ -180,7 +180,7 @@
         const top = MBTI_TYPES.filter(t => t !== myType)
             .map(t => ({ type: t, score: calcCompat(myType, t) }))
             .sort((a, b) => b.score - a.score)[0];
-        const url = 'https://swp1234.github.io/mbti-love/';
+        const url = 'https://dopabrain.com/mbti-love/';
 
         const text = `💕 내 연애 스타일은 "${style.title}" ${style.emoji}\nMBTI: ${myType}\n\n${STYLES[top.type].emoji} ${top.type}랑 ${top.score}% 궁합!\n\n너는 어떤 스타일? 👇\n${url}\n\n#MBTI연애 #궁합테스트 #연애스타일`;
 
@@ -227,7 +227,7 @@
         ctx.fillStyle = 'rgba(255,255,255,0.4)'; ctx.font = '26px sans-serif';
         ctx.fillText('너는 어떤 스타일? 👉 MBTI 연애 궁합 테스트', w/2, 900);
         ctx.fillStyle = 'rgba(255,255,255,0.25)'; ctx.font = '20px sans-serif';
-        ctx.fillText('🔥 FireTools', w/2, 1010);
+        ctx.fillText('🔥 DopaBrain', w/2, 1010);
 
         const link = document.createElement('a');
         link.download = `MBTI연애_${myType}.png`;
