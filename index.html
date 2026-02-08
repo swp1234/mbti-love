@@ -44,18 +44,29 @@
 </head>
 <body>
 <div class="app-container">
+    <!-- LANGUAGE SELECTOR -->
+    <div class="language-selector">
+        <button class="lang-btn" id="lang-toggle" title="Change language">🌐</button>
+        <div class="lang-menu hidden" id="lang-menu">
+            <button class="lang-option" data-lang="ko">한국어</button>
+            <button class="lang-option" data-lang="en">English</button>
+            <button class="lang-option" data-lang="zh">简体中文</button>
+            <button class="lang-option" data-lang="hi">हिन्दी</button>
+            <button class="lang-option" data-lang="ru">Русский</button>
+        </div>
+    </div>
     <!-- INTRO -->
     <div class="screen intro-screen active" id="intro-screen">
-        <div class="ad-banner"><span class="ad-placeholder">광고 영역</span></div>
+        <div class="ad-banner"><span class="ad-placeholder" data-i18n="ads.banner"></span></div>
         <div class="intro-content">
             <div class="intro-icon">💕</div>
-            <h1>MBTI 연애 궁합</h1>
-            <p class="intro-sub">나의 연애 스타일은 뭘까?</p>
-            <p class="intro-desc">12가지 질문에 답하고<br>나만의 연애 스타일 + 찰떡궁합을 확인하세요</p>
+            <h1 data-i18n="intro.title"></h1>
+            <p class="intro-sub" data-i18n="intro.sub"></p>
+            <p class="intro-desc" data-i18n="intro.desc"></p>
             <div class="intro-meta">
-                <span>📝 12문항</span><span>⏱️ 약 3분</span><span>💖 256궁합</span>
+                <span data-i18n="intro.meta1"></span><span data-i18n="intro.meta2"></span><span data-i18n="intro.meta3"></span>
             </div>
-            <button class="btn-start" id="btn-start">테스트 시작하기</button>
+            <button class="btn-start" id="btn-start" data-i18n="intro.start"></button>
         </div>
     </div>
 
@@ -63,7 +74,7 @@
     <div class="screen question-screen hidden" id="question-screen">
         <div class="progress-area">
             <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
-            <span class="progress-text" id="progress-text">1/12</span>
+            <span class="progress-text" id="progress-text"></span>
         </div>
         <div class="question-card" id="question-card">
             <p class="q-text" id="q-text"></p>
@@ -75,7 +86,7 @@
     <div class="screen loading-screen hidden" id="loading-screen">
         <div class="loading-content">
             <div class="loading-icon">💕</div>
-            <p>연애 스타일 분석 중...</p>
+            <p data-i18n="loading.text"></p>
             <div class="loading-bar"><div class="loading-fill" id="loading-fill"></div></div>
         </div>
     </div>
@@ -83,41 +94,41 @@
     <!-- RESULT -->
     <div class="screen result-screen hidden" id="result-screen">
         <div class="result-card">
-            <p class="r-label">당신의 연애 스타일</p>
+            <p class="r-label" data-i18n="result.label"></p>
             <div class="r-emoji" id="r-emoji"></div>
             <div class="r-type" id="r-type"></div>
             <h2 class="r-title" id="r-title"></h2>
             <p class="r-desc" id="r-desc"></p>
             <div class="r-keywords" id="r-keywords"></div>
-            <div class="r-section"><h3>💘 이상형</h3><p id="r-ideal"></p></div>
-            <div class="r-section"><h3>💡 연애 팁</h3><p id="r-tip"></p></div>
+            <div class="r-section"><h3 data-i18n="result.idealType"></h3><p id="r-ideal"></p></div>
+            <div class="r-section"><h3 data-i18n="result.tip"></h3><p id="r-tip"></p></div>
         </div>
 
         <div class="matches-card">
-            <h3>💕 최고 궁합 TOP 3</h3>
+            <h3 data-i18n="result.top3"></h3>
             <div id="r-top3"></div>
-            <h3 class="mt16">⚡ 주의할 궁합</h3>
+            <h3 class="mt16" data-i18n="result.caution"></h3>
             <div id="r-bottom2"></div>
         </div>
 
-        <button class="btn-compat" id="btn-compat">🔍 다른 유형과 궁합 확인하기</button>
+        <button class="btn-compat" id="btn-compat" data-i18n="compatibility.button"></button>
 
         <button class="btn-premium" id="btn-premium">
-            <span>✨</span><span>AI 연애 심층 분석</span><span class="badge">PREMIUM</span>
+            <span>✨</span><span data-i18n="premium.button"></span><span class="badge" data-i18n="premium.badge"></span>
         </button>
 
         <div class="premium-result hidden" id="premium-result">
-            <div class="premium-card"><h3>🧠 AI 연애 심층 분석</h3><div id="premium-content"></div></div>
+            <div class="premium-card"><h3 data-i18n="premium.title"></h3><div id="premium-content"></div></div>
         </div>
 
         <div class="result-actions">
-            <button class="btn-share" id="btn-share">📤 결과 공유하기</button>
-            <button class="btn-save" id="btn-save-image">📷 이미지 저장</button>
-            <button class="btn-retry" id="btn-retry">🔄 다시 하기</button>
+            <button class="btn-share" id="btn-share" data-i18n="actions.share"></button>
+            <button class="btn-save" id="btn-save-image" data-i18n="actions.saveImage"></button>
+            <button class="btn-retry" id="btn-retry" data-i18n="actions.retry"></button>
         </div>
 
         <div class="recommendations-section">
-            <div class="rec-title">이것도 해보세요</div>
+            <div class="rec-title" data-i18n="recommendations.title"></div>
             <div class="rec-grid">
                 <a href="https://dopabrain.com/emotion-temp/" class="rec-card" target="_blank">
                     <span class="rec-icon">🌡️</span>
@@ -150,16 +161,16 @@
             </div>
         </div>
 
-        <div class="ad-banner"><span class="ad-placeholder">광고 영역</span></div>
+        <div class="ad-banner"><span class="ad-placeholder" data-i18n="ads.banner"></span></div>
     </div>
 
     <!-- COMPAT CHECK -->
     <div class="screen compat-screen hidden" id="compat-screen">
         <div class="compat-header">
-            <button class="btn-back" id="btn-compat-back">← 뒤로</button>
-            <h2>궁합 확인</h2>
+            <button class="btn-back" id="btn-compat-back" data-i18n="compatibility.back"></button>
+            <h2 data-i18n="compatibility.header"></h2>
         </div>
-        <p class="compat-instruction">상대방의 MBTI를 선택하세요</p>
+        <p class="compat-instruction" data-i18n="compatibility.instruction"></p>
         <div class="compat-grid" id="compat-grid"></div>
         <div id="compat-result-area"></div>
     </div>
@@ -167,15 +178,16 @@
     <!-- AD OVERLAY -->
     <div class="overlay hidden" id="ad-overlay">
         <div class="ad-modal">
-            <p class="ad-label">광고</p>
-            <div class="ad-placeholder-lg">광고 영역 (전면)</div>
-            <div class="ad-timer"><span id="ad-countdown">5</span>초 후 닫기</div>
-            <button class="btn-close-ad hidden" id="btn-close-ad">✕ 닫기</button>
+            <p class="ad-label" data-i18n="ads.label"></p>
+            <div class="ad-placeholder-lg" data-i18n="ads.banner"></div>
+            <div class="ad-timer"><span id="ad-countdown">5</span><span data-i18n="ads.closeIn"></span></div>
+            <button class="btn-close-ad hidden" id="btn-close-ad" data-i18n="ads.close"></button>
         </div>
     </div>
 
     <canvas id="share-canvas" width="1080" height="1080" style="display:none"></canvas>
 </div>
+<script src="js/i18n.js"></script>
 <script src="js/data.js"></script>
 <script src="js/app.js"></script>
 </body>

@@ -1,4 +1,27 @@
 // MBTI Love Compatibility Test - App Logic
+
+// Initialize i18n
+(async function initI18n() {
+    await i18n.loadTranslations(i18n.getCurrentLanguage());
+    i18n.updateUI();
+    const langToggle = document.getElementById('lang-toggle');
+    const langMenu = document.getElementById('lang-menu');
+    const langOptions = document.querySelectorAll('.lang-option');
+    document.querySelector(`[data-lang="${i18n.getCurrentLanguage()}"]`)?.classList.add('active');
+    langToggle?.addEventListener('click', () => langMenu.classList.toggle('hidden'));
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.language-selector')) langMenu?.classList.add('hidden');
+    });
+    langOptions.forEach(opt => {
+        opt.addEventListener('click', async () => {
+            await i18n.setLanguage(opt.getAttribute('data-lang'));
+            langOptions.forEach(o => o.classList.remove('active'));
+            opt.classList.add('active');
+            langMenu.classList.add('hidden');
+        });
+    });
+})();
+
 (function () {
     'use strict';
 
@@ -36,6 +59,7 @@
         document.getElementById('progress-fill').style.width = `${(currentQ / total) * 100}%`;
         document.getElementById('progress-text').textContent = `${currentQ + 1} / ${total}`;
         document.getElementById('q-text').textContent = q.text;
+        i18n.updateUI();
 
         const opts = document.getElementById('q-options');
         const shuffled = Math.random() > 0.5 ? q.options : [...q.options].reverse();

@@ -1,0 +1,66 @@
+{
+  "app": {
+    "title": "MBTI Love Compatibility Test | DopaBrain",
+    "description": "MBTI love compatibility test for all 16 types. Find your perfect match and worst pairings!"
+  },
+  "header": {
+    "title": "💕 MBTI Love Match",
+    "sub": "Which MBTI type is your perfect match?"
+  },
+  "intro": {
+    "title": "MBTI Love Match",
+    "sub": "Which MBTI type is your perfect match?",
+    "desc": "Answer 12 questions and discover<br>your love style + ideal compatibility match",
+    "meta1": "📝 12 Questions",
+    "meta2": "⏱️ About 3 minutes",
+    "meta3": "💖 256 Combinations",
+    "start": "Start Test"
+  },
+  "question": {
+    "progress": "Question"
+  },
+  "loading": {
+    "text": "Analyzing your love style..."
+  },
+  "result": {
+    "label": "Your Love Style",
+    "idealType": "💘 Ideal Type",
+    "tip": "💡 Love Tip",
+    "top3": "💕 Top 3 Matches",
+    "caution": "⚡ Watch Out",
+    "score": "Compatibility Score",
+    "good": "Strengths",
+    "watchout": "Watch Out For"
+  },
+  "compatibility": {
+    "button": "🔍 Check Compatibility with Other Types",
+    "header": "Compatibility Check",
+    "instruction": "Select partner's MBTI type",
+    "back": "← Back"
+  },
+  "premium": {
+    "button": "✨ AI Deep Love Analysis",
+    "badge": "PREMIUM",
+    "title": "🧠 AI Deep Love Analysis",
+    "pattern": "📊 Relationship Pattern Analysis",
+    "patternEarly": "Early Stage (1-3 months)",
+    "patternMid": "Mid Stage (3-12 months)",
+    "patternLong": "Long Term (1+ years)",
+    "tips": "💡 5 Love Success Tips",
+    "dates": "🎯 Recommended Date Ideas"
+  },
+  "actions": {
+    "share": "📤 Share Result",
+    "saveImage": "📷 Save Image",
+    "retry": "🔄 Try Again"
+  },
+  "ads": {
+    "banner": "Advertisement",
+    "label": "Ad",
+    "closeIn": "seconds to close",
+    "close": "✕ Close"
+  },
+  "recommendations": {
+    "title": "Try These Too"
+  }
+}
