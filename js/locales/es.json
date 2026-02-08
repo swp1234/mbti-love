@@ -1,0 +1,66 @@
+{
+  "app": {
+    "title": "Prueba de Compatibilidad MBTI para el Amor | DopaBrain",
+    "description": "Prueba de compatibilidad amorosa MBTI para los 16 tipos. ¡Encuentra tu pareja perfecta y los peores emparejamientos!"
+  },
+  "header": {
+    "title": "💕 Coincidencia de Amor MBTI",
+    "sub": "¿Cuál es tu tipo MBTI perfecto?"
+  },
+  "intro": {
+    "title": "Coincidencia de Amor MBTI",
+    "sub": "¿Cuál es tu tipo MBTI perfecto?",
+    "desc": "Responde 12 preguntas y descubre<br>tu estilo de amor + coincidencia de compatibilidad ideal",
+    "meta1": "📝 12 Preguntas",
+    "meta2": "⏱️ Aproximadamente 3 minutos",
+    "meta3": "💖 256 Combinaciones",
+    "start": "Iniciar Prueba"
+  },
+  "question": {
+    "progress": "Pregunta"
+  },
+  "loading": {
+    "text": "Analizando tu estilo de amor..."
+  },
+  "result": {
+    "label": "Tu Estilo de Amor",
+    "idealType": "💘 Tipo Ideal",
+    "tip": "💡 Consejo de Amor",
+    "top3": "💕 Top 3 Coincidencias",
+    "caution": "⚡ Ten Cuidado",
+    "score": "Puntuación de Compatibilidad",
+    "good": "Fortalezas",
+    "watchout": "Ten Cuidado Con"
+  },
+  "compatibility": {
+    "button": "🔍 Verificar Compatibilidad con Otros Tipos",
+    "header": "Verificación de Compatibilidad",
+    "instruction": "Selecciona el tipo MBTI de tu pareja",
+    "back": "← Atrás"
+  },
+  "premium": {
+    "button": "✨ Análisis Profundo de Amor de IA",
+    "badge": "PREMIUM",
+    "title": "🧠 Análisis Profundo de Amor de IA",
+    "pattern": "📊 Análisis de Patrón de Relación",
+    "patternEarly": "Etapa Inicial (1-3 meses)",
+    "patternMid": "Etapa Media (3-12 meses)",
+    "patternLong": "Largo Plazo (1+ años)",
+    "tips": "💡 5 Consejos de Éxito Amoroso",
+    "dates": "🎯 Ideas de Citas Recomendadas"
+  },
+  "actions": {
+    "share": "📤 Compartir Resultado",
+    "saveImage": "📷 Guardar Imagen",
+    "retry": "🔄 Intentar de Nuevo"
+  },
+  "ads": {
+    "banner": "Publicidad",
+    "label": "Anuncio",
+    "closeIn": "segundos para cerrar",
+    "close": "✕ Cerrar"
+  },
+  "recommendations": {
+    "title": "Prueba Estos También"
+  }
+}

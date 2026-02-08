@@ -1,0 +1,66 @@
+{
+  "app": {
+    "title": "Test de Compatibilité Amoureuse MBTI | DopaBrain",
+    "description": "Test de compatibilité amoureuse MBTI pour tous les 16 types. Trouve ta correspondance parfaite et tes pires appairements!"
+  },
+  "header": {
+    "title": "💕 Correspondance Amoureuse MBTI",
+    "sub": "Quel type MBTI est ta correspondance parfaite?"
+  },
+  "intro": {
+    "title": "Correspondance Amoureuse MBTI",
+    "sub": "Quel type MBTI est ta correspondance parfaite?",
+    "desc": "Réponds à 12 questions et découvre<br>ton style d'amour + ta correspondance de compatibilité idéale",
+    "meta1": "📝 12 Questions",
+    "meta2": "⏱️ Environ 3 minutes",
+    "meta3": "💖 256 Combinaisons",
+    "start": "Commencer le Test"
+  },
+  "question": {
+    "progress": "Question"
+  },
+  "loading": {
+    "text": "Analyse de ton style d'amour..."
+  },
+  "result": {
+    "label": "Ton Style d'Amour",
+    "idealType": "💘 Type Idéal",
+    "tip": "💡 Conseil d'Amour",
+    "top3": "💕 Top 3 Correspondances",
+    "caution": "⚡ Attention",
+    "score": "Score de Compatibilité",
+    "good": "Forces",
+    "watchout": "Attention à"
+  },
+  "compatibility": {
+    "button": "🔍 Vérifier la Compatibilité avec d'Autres Types",
+    "header": "Vérification de Compatibilité",
+    "instruction": "Sélectionne le type MBTI du partenaire",
+    "back": "← Retour"
+  },
+  "premium": {
+    "button": "✨ Analyse Amoureuse Profonde IA",
+    "badge": "PREMIUM",
+    "title": "🧠 Analyse Amoureuse Profonde IA",
+    "pattern": "📊 Analyse de Schéma Relationnel",
+    "patternEarly": "Stade Initial (1-3 mois)",
+    "patternMid": "Stade Intermédiaire (3-12 mois)",
+    "patternLong": "Long Terme (1+ ans)",
+    "tips": "💡 5 Conseils de Succès Amoureux",
+    "dates": "🎯 Idées de Rendez-Vous Recommandées"
+  },
+  "actions": {
+    "share": "📤 Partager le Résultat",
+    "saveImage": "📷 Enregistrer l'Image",
+    "retry": "🔄 Réessayer"
+  },
+  "ads": {
+    "banner": "Publicité",
+    "label": "Annonce",
+    "closeIn": "secondes pour fermer",
+    "close": "✕ Fermer"
+  },
+  "recommendations": {
+    "title": "Essaie aussi"
+  }
+}

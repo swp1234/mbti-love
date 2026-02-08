@@ -1,0 +1,66 @@
+{
+  "app": {
+    "title": "Teste de Compatibilidade de Amor MBTI | DopaBrain",
+    "description": "Teste de compatibilidade de amor MBTI para todos os 16 tipos. Encontre seu parceiro perfeito e piores combinações!"
+  },
+  "header": {
+    "title": "💕 Correspondência de Amor MBTI",
+    "sub": "Qual tipo de MBTI é seu parceiro perfeito?"
+  },
+  "intro": {
+    "title": "Correspondência de Amor MBTI",
+    "sub": "Qual tipo de MBTI é seu parceiro perfeito?",
+    "desc": "Responda 12 questões e descubra<br>seu estilo de amor + correspondência de compatibilidade ideal",
+    "meta1": "📝 12 Questões",
+    "meta2": "⏱️ Cerca de 3 minutos",
+    "meta3": "💖 256 Combinações",
+    "start": "Começar Teste"
+  },
+  "question": {
+    "progress": "Questão"
+  },
+  "loading": {
+    "text": "Analisando seu estilo de amor..."
+  },
+  "result": {
+    "label": "Seu Estilo de Amor",
+    "idealType": "💘 Tipo Ideal",
+    "tip": "💡 Dica de Amor",
+    "top3": "💕 Top 3 Correspondências",
+    "caution": "⚡ Cuidado",
+    "score": "Pontuação de Compatibilidade",
+    "good": "Pontos Fortes",
+    "watchout": "Cuidado Com"
+  },
+  "compatibility": {
+    "button": "🔍 Verificar Compatibilidade com Outros Tipos",
+    "header": "Verificação de Compatibilidade",
+    "instruction": "Selecione o tipo de MBTI do parceiro",
+    "back": "← Voltar"
+  },
+  "premium": {
+    "button": "✨ Análise Profunda de Amor com IA",
+    "badge": "PREMIUM",
+    "title": "🧠 Análise Profunda de Amor com IA",
+    "pattern": "📊 Análise de Padrão de Relacionamento",
+    "patternEarly": "Estágio Inicial (1-3 meses)",
+    "patternMid": "Estágio Intermediário (3-12 meses)",
+    "patternLong": "Longo Prazo (1+ anos)",
+    "tips": "💡 5 Dicas para Sucesso no Amor",
+    "dates": "🎯 Ideias de Encontro Recomendadas"
+  },
+  "actions": {
+    "share": "📤 Compartilhar Resultado",
+    "saveImage": "📷 Salvar Imagem",
+    "retry": "🔄 Tentar Novamente"
+  },
+  "ads": {
+    "banner": "Publicidade",
+    "label": "Anúncio",
+    "closeIn": "segundos para fechar",
+    "close": "✕ Fechar"
+  },
+  "recommendations": {
+    "title": "Experimente também"
+  }
+}

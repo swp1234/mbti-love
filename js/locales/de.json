@@ -1,0 +1,66 @@
+{
+  "app": {
+    "title": "MBTI Liebes-Kompatibilität Test | DopaBrain",
+    "description": "MBTI Liebes-Kompatibilität Test für alle 16 Typen. Finde deine perfekte Passung und schlimmsten Paarungen!"
+  },
+  "header": {
+    "title": "💕 MBTI Liebes-Passung",
+    "sub": "Welcher MBTI-Typ ist deine perfekte Passung?"
+  },
+  "intro": {
+    "title": "MBTI Liebes-Passung",
+    "sub": "Welcher MBTI-Typ ist deine perfekte Passung?",
+    "desc": "Beantworte 12 Fragen und entdecke<br>deinen Liebeszstil + ideale Kompatibilitäts-Passung",
+    "meta1": "📝 12 Fragen",
+    "meta2": "⏱️ Etwa 3 Minuten",
+    "meta3": "💖 256 Kombinationen",
+    "start": "Test starten"
+  },
+  "question": {
+    "progress": "Frage"
+  },
+  "loading": {
+    "text": "Analysiere deinen Liebeszstil..."
+  },
+  "result": {
+    "label": "Dein Liebeszstil",
+    "idealType": "💘 Idealer Typ",
+    "tip": "💡 Liebes-Tipp",
+    "top3": "💕 Top 3 Passungen",
+    "caution": "⚡ Achte auf",
+    "score": "Kompatibilitätspunktzahl",
+    "good": "Stärken",
+    "watchout": "Achte auf"
+  },
+  "compatibility": {
+    "button": "🔍 Kompatibilität mit anderen Typen prüfen",
+    "header": "Kompatibilitätsprüfung",
+    "instruction": "Wähle MBTI-Typ des Partners",
+    "back": "← Zurück"
+  },
+  "premium": {
+    "button": "✨ Tiefe KI-Liebes-Analyse",
+    "badge": "PREMIUM",
+    "title": "🧠 Tiefe KI-Liebes-Analyse",
+    "pattern": "📊 Beziehungsmuster-Analyse",
+    "patternEarly": "Frühe Phase (1-3 Monate)",
+    "patternMid": "Mittlere Phase (3-12 Monate)",
+    "patternLong": "Langfristig (1+ Jahre)",
+    "tips": "💡 5 Liebes-Erfolgs-Tipps",
+    "dates": "🎯 Empfehlenswerte Dating-Ideen"
+  },
+  "actions": {
+    "share": "📤 Ergebnis teilen",
+    "saveImage": "📷 Bild speichern",
+    "retry": "🔄 Nochmal versuchen"
+  },
+  "ads": {
+    "banner": "Werbung",
+    "label": "Anzeige",
+    "closeIn": "Sekunden zum Schließen",
+    "close": "✕ Schließen"
+  },
+  "recommendations": {
+    "title": "Probiere auch diese"
+  }
+}

@@ -217,47 +217,82 @@
         }
     }
 
-    // Save image
+    // Generate & save image
     function saveImage() {
+        generateShareImage(() => {
+            const canvas = document.getElementById('share-canvas');
+            const link = document.createElement('a');
+            link.download = `MBTI연애_${myType}.png`;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            gtag('event', 'save_image', { test_type: 'mbti_love' });
+        });
+    }
+
+    function generateShareImage(callback) {
         const canvas = document.getElementById('share-canvas');
         const ctx = canvas.getContext('2d');
         const w = 1080, h = 1080;
         const style = STYLES[myType];
+
+        canvas.width = w;
+        canvas.height = h;
 
         // BG
         const grad = ctx.createLinearGradient(0, 0, w, h);
         grad.addColorStop(0, style.color); grad.addColorStop(1, '#0a0a1e');
         ctx.fillStyle = grad; ctx.fillRect(0, 0, w, h);
 
-        // Pattern
+        // Pattern - decorative circles
         ctx.fillStyle = 'rgba(255,255,255,0.02)';
-        for (let i = 0; i < 30; i++) { ctx.beginPath(); ctx.arc(Math.random()*w, Math.random()*h, Math.random()*50+10, 0, Math.PI*2); ctx.fill(); }
+        for (let i = 0; i < 40; i++) {
+            ctx.beginPath();
+            ctx.arc(Math.random()*w, Math.random()*h, Math.random()*60+10, 0, Math.PI*2);
+            ctx.fill();
+        }
+
+        // Hearts pattern
+        ctx.fillStyle = 'rgba(255,255,255,0.01)';
+        for (let i = 0; i < 20; i++) {
+            const x = Math.random()*w;
+            const y = Math.random()*h;
+            ctx.fillText('💕', x, y);
+        }
 
         ctx.textAlign = 'center';
-        ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.font = '30px sans-serif';
-        ctx.fillText('나의 MBTI 연애 스타일은', w/2, 160);
+        ctx.fillStyle = 'rgba(255,255,255,0.6)'; ctx.font = '32px sans-serif';
+        ctx.fillText('나의 MBTI 연애 스타일은', w/2, 140);
 
-        ctx.font = '120px serif'; ctx.fillText(style.emoji, w/2, 330);
-        ctx.fillStyle = '#fff'; ctx.font = 'bold 72px sans-serif';
-        ctx.fillText(myType, w/2, 450);
-        ctx.font = 'bold 44px sans-serif'; ctx.fillText(`"${style.title}"`, w/2, 530);
+        ctx.font = '130px serif'; ctx.fillStyle = '#fff'; ctx.fillText(style.emoji, w/2, 320);
+        ctx.fillStyle = '#fff'; ctx.font = 'bold 80px sans-serif';
+        ctx.fillText(myType, w/2, 440);
+        ctx.font = 'bold 48px sans-serif'; ctx.fillText(`"${style.title}"`, w/2, 530);
 
         const top = MBTI_TYPES.filter(t => t !== myType)
             .map(t => ({ type: t, score: calcCompat(myType, t) }))
             .sort((a, b) => b.score - a.score)[0];
-        ctx.fillStyle = 'rgba(255,255,255,0.7)'; ctx.font = '32px sans-serif';
-        ctx.fillText(`💕 최고 궁합: ${top.type} (${top.score}%)`, w/2, 650);
+        ctx.fillStyle = 'rgba(255,255,255,0.8)'; ctx.font = 'bold 36px sans-serif';
+        ctx.fillText(`💕 최고 궁합: ${top.type}`, w/2, 630);
+        ctx.font = '32px sans-serif'; ctx.fillStyle = 'rgba(255,255,255,0.7)';
+        ctx.fillText(`${top.score}% 궁합`, w/2, 680);
 
+        // Divider
+        ctx.strokeStyle = 'rgba(255,255,255,0.2)';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(w*0.15, 720);
+        ctx.lineTo(w*0.85, 720);
+        ctx.stroke();
+
+        ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.font = '28px sans-serif';
+        ctx.fillText('너는 어떤 스타일? 👇', w/2, 820);
         ctx.fillStyle = 'rgba(255,255,255,0.4)'; ctx.font = '26px sans-serif';
-        ctx.fillText('너는 어떤 스타일? 👉 MBTI 연애 궁합 테스트', w/2, 900);
-        ctx.fillStyle = 'rgba(255,255,255,0.25)'; ctx.font = '20px sans-serif';
-        ctx.fillText('🔥 DopaBrain', w/2, 1010);
+        ctx.fillText('MBTI 연애 궁합 테스트', w/2, 870);
 
-        const link = document.createElement('a');
-        link.download = `MBTI연애_${myType}.png`;
-        link.href = canvas.toDataURL('image/png');
-        link.click();
-        gtag('event', 'save_image', { test_type: 'mbti_love' });
+        ctx.fillStyle = 'rgba(255,255,255,0.3)'; ctx.font = '22px sans-serif';
+        ctx.fillText('🔥 DopaBrain', w/2, 1020);
+
+        if (callback) callback();
     }
 
     // Premium

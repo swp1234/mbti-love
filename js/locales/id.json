@@ -1,0 +1,66 @@
+{
+  "app": {
+    "title": "Tes Kompatibilitas Cinta MBTI | DopaBrain",
+    "description": "Tes kompatibilitas cinta MBTI untuk semua 16 jenis. Temukan pasangan sempurna dan pasangan terburuk Anda!"
+  },
+  "header": {
+    "title": "💕 Pasangan Cinta MBTI",
+    "sub": "Jenis MBTI apa pasangan sempurna Anda?"
+  },
+  "intro": {
+    "title": "Pasangan Cinta MBTI",
+    "sub": "Jenis MBTI apa pasangan sempurna Anda?",
+    "desc": "Jawab 12 pertanyaan dan temukan<br>gaya cinta Anda + kecocokan ideal",
+    "meta1": "📝 12 Pertanyaan",
+    "meta2": "⏱️ Sekitar 3 menit",
+    "meta3": "💖 256 Kombinasi",
+    "start": "Mulai Tes"
+  },
+  "question": {
+    "progress": "Pertanyaan"
+  },
+  "loading": {
+    "text": "Menganalisis gaya cinta Anda..."
+  },
+  "result": {
+    "label": "Gaya Cinta Anda",
+    "idealType": "💘 Jenis Ideal",
+    "tip": "💡 Tips Cinta",
+    "top3": "💕 3 Pasangan Terbaik",
+    "caution": "⚡ Perhatikan",
+    "score": "Skor Kompatibilitas",
+    "good": "Kekuatan",
+    "watchout": "Perhatikan"
+  },
+  "compatibility": {
+    "button": "🔍 Periksa Kompatibilitas dengan Jenis Lain",
+    "header": "Pemeriksaan Kompatibilitas",
+    "instruction": "Pilih jenis MBTI pasangan",
+    "back": "← Kembali"
+  },
+  "premium": {
+    "button": "✨ Analisis Cinta Mendalam AI",
+    "badge": "PREMIUM",
+    "title": "🧠 Analisis Cinta Mendalam AI",
+    "pattern": "📊 Analisis Pola Hubungan",
+    "patternEarly": "Tahap Awal (1-3 bulan)",
+    "patternMid": "Tahap Menengah (3-12 bulan)",
+    "patternLong": "Jangka Panjang (1+ tahun)",
+    "tips": "💡 5 Tips Kesuksesan Cinta",
+    "dates": "🎯 Ide Kencan yang Direkomendasikan"
+  },
+  "actions": {
+    "share": "📤 Bagikan Hasil",
+    "saveImage": "📷 Simpan Gambar",
+    "retry": "🔄 Coba Lagi"
+  },
+  "ads": {
+    "banner": "Iklan",
+    "label": "Iklan",
+    "closeIn": "detik untuk menutup",
+    "close": "✕ Tutup"
+  },
+  "recommendations": {
+    "title": "Coba Juga"
+  }
+}

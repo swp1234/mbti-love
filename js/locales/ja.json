@@ -1,0 +1,66 @@
+{
+  "app": {
+    "title": "MBTI恋愛相性テスト | DopaBrain",
+    "description": "16すべてのMBTIタイプの恋愛相性テスト。あなたの完璧な相手と最悪のペアを見つけてください！"
+  },
+  "header": {
+    "title": "💕 MBTI恋愛マッチ",
+    "sub": "あなたの完璧な相手はどのMBTIタイプ？"
+  },
+  "intro": {
+    "title": "MBTI恋愛マッチ",
+    "sub": "あなたの完璧な相手はどのMBTIタイプ？",
+    "desc": "12個の質問に答えて<br>あなたの恋愛スタイルと理想の相性相手を発見",
+    "meta1": "📝 12問",
+    "meta2": "⏱️ 約3分",
+    "meta3": "💖 256の組み合わせ",
+    "start": "テストを開始"
+  },
+  "question": {
+    "progress": "問題"
+  },
+  "loading": {
+    "text": "あなたの恋愛スタイルを分析中..."
+  },
+  "result": {
+    "label": "あなたの恋愛スタイル",
+    "idealType": "💘 理想のタイプ",
+    "tip": "💡 恋愛アドバイス",
+    "top3": "💕 トップ3マッチ",
+    "caution": "⚡ 注意すべき点",
+    "score": "相性スコア",
+    "good": "強み",
+    "watchout": "注意すべき点"
+  },
+  "compatibility": {
+    "button": "🔍 他のタイプとの相性をチェック",
+    "header": "相性チェック",
+    "instruction": "相手のMBTIタイプを選択",
+    "back": "← 戻る"
+  },
+  "premium": {
+    "button": "✨ AI深い恋愛分析",
+    "badge": "プレミアム",
+    "title": "🧠 AI深い恋愛分析",
+    "pattern": "📊 関係パターン分析",
+    "patternEarly": "早期段階（1～3ヶ月）",
+    "patternMid": "中期段階（3～12ヶ月）",
+    "patternLong": "長期（1年以上）",
+    "tips": "💡 恋愛成功のコツ5つ",
+    "dates": "🎯 おすすめデートアイデア"
+  },
+  "actions": {
+    "share": "📤 結果をシェア",
+    "saveImage": "📷 画像を保存",
+    "retry": "🔄 もう一度試す"
+  },
+  "ads": {
+    "banner": "広告",
+    "label": "広告",
+    "closeIn": "秒で閉じる",
+    "close": "✕ 閉じる"
+  },
+  "recommendations": {
+    "title": "こちらも試してみてください"
+  }
+}
