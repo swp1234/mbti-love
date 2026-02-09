@@ -54,6 +54,23 @@
     "saveImage": "📷 Resmi Kaydet",
     "retry": "🔄 Tekrar Dene"
   },
+  "share": {
+    "title": "Aşk stilinizi paylaşın!",
+    "subtitle": "Arkadaşlarınızla paylaşın ve uyumluluğunuzu karşılaştırın 💕",
+    "nativeShare": "📤 Yerel Paylaşım",
+    "shareModal": "Paylaş",
+    "shareClose": "Kapat",
+    "twitter": "𝕏 Twitter",
+    "facebook": "Facebook",
+    "kakaotalk": "KakaoTalk",
+    "copyLink": "Bağlantıyı Kopyala",
+    "copied": "Panoya kopyalandı! 💕",
+    "compareWith": "🤝 Arkadaş ile Karşılaştır",
+    "inviteText": "Benim MBTI aşk stilim {type}! {emoji} %{score} uyumlu oluyoruz! Sen de dene 👇"
+  },
+  "game": {
+    "back": "DopaBrain Anasayfa"
+  }
   "ads": {
     "banner": "Reklam",
     "label": "Reklam",

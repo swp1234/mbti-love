@@ -54,6 +54,23 @@
     "saveImage": "📷 이미지 저장",
     "retry": "🔄 다시 하기"
   },
+  "share": {
+    "title": "내 연애 스타일을 공유해보세요!",
+    "subtitle": "친구에게 공유하고 함께 궁합을 비교해보세요 💕",
+    "nativeShare": "📤 네이티브 공유",
+    "shareModal": "공유하기",
+    "shareClose": "닫기",
+    "twitter": "𝕏 트위터",
+    "facebook": "페이스북",
+    "kakaotalk": "카카오톡",
+    "copyLink": "링크 복사",
+    "copied": "클립보드에 복사되었습니다! 💕",
+    "compareWith": "🤝 친구와 비교하기",
+    "inviteText": "나의 MBTI 연애 스타일은 {type}! {emoji} 당신과 {score}% 궁합이야. 너도 확인해봐! 👇"
+  },
+  "game": {
+    "back": "DopaBrain 홈"
+  }
   "ads": {
     "banner": "광고 영역",
     "label": "광고",

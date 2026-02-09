@@ -54,6 +54,23 @@
     "saveImage": "📷 Guardar Imagen",
     "retry": "🔄 Intentar de Nuevo"
   },
+  "share": {
+    "title": "¡Comparte tu estilo de amor!",
+    "subtitle": "Comparte con amigos y comparen su compatibilidad 💕",
+    "nativeShare": "📤 Compartir Nativo",
+    "shareModal": "Compartir",
+    "shareClose": "Cerrar",
+    "twitter": "𝕏 Twitter",
+    "facebook": "Facebook",
+    "kakaotalk": "KakaoTalk",
+    "copyLink": "Copiar Enlace",
+    "copied": "¡Copiado al portapapeles! 💕",
+    "compareWith": "🤝 Comparar con Amigo",
+    "inviteText": "Mi estilo de amor MBTI es {type}! {emoji} ¡Tenemos {score}% de compatibilidad! Tú también prueba 👇"
+  },
+  "game": {
+    "back": "Inicio DopaBrain"
+  }
   "ads": {
     "banner": "Publicidad",
     "label": "Anuncio",

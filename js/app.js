@@ -198,23 +198,88 @@
         el.scrollIntoView({ behavior: 'smooth' });
     }
 
-    // Share
-    function shareResult() {
+    // Share - 향상된 버전
+    function getShareText() {
         const style = STYLES[myType];
         const top = MBTI_TYPES.filter(t => t !== myType)
             .map(t => ({ type: t, score: calcCompat(myType, t) }))
             .sort((a, b) => b.score - a.score)[0];
-        const url = 'https://dopabrain.com/mbti-love/';
 
-        const text = `💕 내 연애 스타일은 "${style.title}" ${style.emoji}\nMBTI: ${myType}\n\n${STYLES[top.type].emoji} ${top.type}랑 ${top.score}% 궁합!\n\n너는 어떤 스타일? 👇\n${url}\n\n#MBTI연애 #궁합테스트 #연애스타일`;
+        return {
+            title: i18n.t('share.inviteText').replace('{type}', myType).replace('{emoji}', style.emoji).replace('{score}', top.score),
+            shortText: `💕 ${myType} - ${style.title} ${style.emoji}`,
+            fullText: `💕 내 연애 스타일은 "${style.title}" ${style.emoji}\nMBTI: ${myType}\n\n${STYLES[top.type].emoji} ${top.type}랑 ${top.score}% 궁합!\n\n너는 어떤 스타일? 👇\nhttps://dopabrain.com/mbti-love/\n\n#MBTI연애 #궁합테스트 #연애스타일`,
+            url: 'https://dopabrain.com/mbti-love/'
+        };
+    }
 
-        gtag('event', 'share', { method: 'native', test_type: 'mbti_love' });
+    function shareResult() {
+        const shareData = getShareText();
+        const shareModal = document.getElementById('share-modal');
+        shareModal.classList.remove('hidden');
 
-        if (navigator.share) {
-            navigator.share({ title: `나의 MBTI 연애 스타일: ${style.title}`, text, url }).catch(() => {});
-        } else {
-            navigator.clipboard.writeText(text).then(() => alert('결과가 복사되었습니다! 💕')).catch(() => {});
-        }
+        gtag('event', 'share_modal_open', { test_type: 'mbti_love' });
+    }
+
+    // 공유 버튼 이벤트
+    function setupShareButtons() {
+        const shareModal = document.getElementById('share-modal');
+        const shareClose = document.getElementById('share-close');
+        const shareData = getShareText();
+
+        // 모달 닫기
+        shareClose.addEventListener('click', () => {
+            shareModal.classList.add('hidden');
+        });
+        shareModal.addEventListener('click', (e) => {
+            if (e.target === shareModal) shareModal.classList.add('hidden');
+        });
+
+        // 트위터 공유
+        document.getElementById('share-twitter')?.addEventListener('click', () => {
+            const text = encodeURIComponent(shareData.title);
+            const url = `https://x.com/intent/tweet?text=${text}&url=${encodeURIComponent(shareData.url)}`;
+            window.open(url, '_blank', 'width=550,height=420');
+            gtag('event', 'share', { method: 'twitter', test_type: 'mbti_love' });
+        });
+
+        // 페이스북 공유
+        document.getElementById('share-facebook')?.addEventListener('click', () => {
+            const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareData.url)}`;
+            window.open(url, '_blank', 'width=550,height=420');
+            gtag('event', 'share', { method: 'facebook', test_type: 'mbti_love' });
+        });
+
+        // 카카오톡 공유 (URL만 공유)
+        document.getElementById('share-kakaotalk')?.addEventListener('click', () => {
+            navigator.clipboard.writeText(shareData.url).then(() => {
+                alert(i18n.t('share.copied'));
+            }).catch(() => {});
+            gtag('event', 'share', { method: 'kakaotalk', test_type: 'mbti_love' });
+        });
+
+        // 링크 복사
+        document.getElementById('share-copy')?.addEventListener('click', () => {
+            navigator.clipboard.writeText(`${shareData.title}\n${shareData.url}`).then(() => {
+                alert(i18n.t('share.copied'));
+            }).catch(() => {});
+            gtag('event', 'share', { method: 'copy', test_type: 'mbti_love' });
+        });
+
+        // 네이티브 공유
+        document.getElementById('share-native')?.addEventListener('click', () => {
+            if (navigator.share) {
+                navigator.share({
+                    title: shareData.title,
+                    text: shareData.fullText,
+                    url: shareData.url
+                }).then(() => {
+                    gtag('event', 'share', { method: 'native', test_type: 'mbti_love' });
+                }).catch(() => {});
+            } else {
+                alert(i18n.t('share.copied'));
+            }
+        });
     }
 
     // Generate & save image
@@ -342,6 +407,9 @@
         document.getElementById('premium-result').classList.add('hidden');
         show(introScreen);
     });
+
+    // 공유 버튼 초기화
+    setupShareButtons();
 
     if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 })();

@@ -54,6 +54,23 @@
     "saveImage": "📷 Simpan Gambar",
     "retry": "🔄 Coba Lagi"
   },
+  "share": {
+    "title": "Bagikan gaya cinta Anda!",
+    "subtitle": "Bagikan dengan teman dan bandingkan kompatibilitas Anda 💕",
+    "nativeShare": "📤 Bagikan Nativo",
+    "shareModal": "Bagikan",
+    "shareClose": "Tutup",
+    "twitter": "𝕏 Twitter",
+    "facebook": "Facebook",
+    "kakaotalk": "KakaoTalk",
+    "copyLink": "Salin Tautan",
+    "copied": "Disalin ke papan klip! 💕",
+    "compareWith": "🤝 Bandingkan dengan Teman",
+    "inviteText": "Gaya cinta MBTI saya adalah {type}! {emoji} Kami memiliki kompatibilitas {score}%! Coba juga kamu 👇"
+  },
+  "game": {
+    "back": "Beranda DopaBrain"
+  }
   "ads": {
     "banner": "Iklan",
     "label": "Iklan",

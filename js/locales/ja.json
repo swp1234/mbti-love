@@ -54,6 +54,23 @@
     "saveImage": "📷 画像を保存",
     "retry": "🔄 もう一度試す"
   },
+  "share": {
+    "title": "あなたの恋愛スタイルをシェアしよう！",
+    "subtitle": "友達とシェアして相性を比較しよう 💕",
+    "nativeShare": "📤 ネイティブシェア",
+    "shareModal": "シェア",
+    "shareClose": "閉じる",
+    "twitter": "𝕏 Twitter",
+    "facebook": "Facebook",
+    "kakaotalk": "KakaoTalk",
+    "copyLink": "リンクをコピー",
+    "copied": "クリップボードにコピーしました！💕",
+    "compareWith": "🤝 友達と比較",
+    "inviteText": "私のMBTI恋愛スタイルは {type}！{emoji} 私たちは {score}% の相性です。あなたも試してみて！👇"
+  },
+  "game": {
+    "back": "DopaBrain ホーム"
+  }
   "ads": {
     "banner": "広告",
     "label": "広告",
