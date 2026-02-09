@@ -68,7 +68,14 @@
         answers = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
         show(questionScreen);
         showQuestion();
-        gtag('event', 'test_start', { test_type: 'mbti_love' });
+        // GA4: 테스트 시작
+        if (typeof gtag === 'function') {
+            gtag('event', 'test_start', {
+                app_name: 'mbti-love',
+                test_type: 'mbti_love',
+                content_type: 'test'
+            });
+        }
     }
 
     function showQuestion() {
@@ -165,7 +172,14 @@
         // Premium hidden
         document.getElementById('premium-result').classList.add('hidden');
 
-        gtag('event', 'test_complete', { test_type: 'mbti_love', result: myType });
+        // GA4: 테스트 완료
+        if (typeof gtag === 'function') {
+            gtag('event', 'test_complete', {
+                app_name: 'mbti-love',
+                test_type: 'mbti_love',
+                result_type: myType
+            });
+        }
         resultScreen.scrollTop = 0;
     }
 
