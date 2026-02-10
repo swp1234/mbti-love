@@ -30,7 +30,8 @@
     "caution": "⚡ Dikkat Et",
     "score": "Uyumluluk Puanı",
     "good": "Güçlü Yönler",
-    "watchout": "Dikkat Et"
+    "watchout": "Dikkat Et",
+    "rank": "."
   },
   "compatibility": {
     "button": "🔍 Diğer Tiplerle Uyumluluğu Kontrol Et",
@@ -80,9 +81,6 @@
   },
   "recommendations": {
     "title": "Bunları da Dene"
-  },
-  "result": {
-    "rank": "."
   },
   "canvas": {
     "myStyle": "Benim MBTI aşk stilim",

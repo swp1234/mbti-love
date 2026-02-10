@@ -30,7 +30,8 @@
     "caution": "⚡ Achte auf",
     "score": "Kompatibilitätspunktzahl",
     "good": "Stärken",
-    "watchout": "Achte auf"
+    "watchout": "Achte auf",
+    "rank": "."
   },
   "compatibility": {
     "button": "🔍 Kompatibilität mit anderen Typen prüfen",
@@ -80,9 +81,6 @@
   },
   "recommendations": {
     "title": "Probiere auch diese"
-  },
-  "result": {
-    "rank": "."
   },
   "canvas": {
     "myStyle": "Mein MBTI-Liebeszstil ist",

@@ -30,7 +30,8 @@
     "caution": "⚡ Cuidado",
     "score": "Pontuação de Compatibilidade",
     "good": "Pontos Fortes",
-    "watchout": "Cuidado Com"
+    "watchout": "Cuidado Com",
+    "rank": "º"
   },
   "compatibility": {
     "button": "🔍 Verificar Compatibilidade com Outros Tipos",
@@ -80,9 +81,6 @@
   },
   "recommendations": {
     "title": "Experimente também"
-  },
-  "result": {
-    "rank": "º"
   },
   "canvas": {
     "myStyle": "Meu estilo de amor MBTI é",

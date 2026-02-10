@@ -30,7 +30,8 @@
     "caution": "⚡ Perhatikan",
     "score": "Skor Kompatibilitas",
     "good": "Kekuatan",
-    "watchout": "Perhatikan"
+    "watchout": "Perhatikan",
+    "rank": "."
   },
   "compatibility": {
     "button": "🔍 Periksa Kompatibilitas dengan Jenis Lain",
@@ -80,9 +81,6 @@
   },
   "recommendations": {
     "title": "Coba Juga"
-  },
-  "result": {
-    "rank": "."
   },
   "canvas": {
     "myStyle": "Gaya cinta MBTI saya adalah",

@@ -30,7 +30,8 @@
     "caution": "⚡ Attention",
     "score": "Score de Compatibilité",
     "good": "Forces",
-    "watchout": "Attention à"
+    "watchout": "Attention à",
+    "rank": "ème"
   },
   "compatibility": {
     "button": "🔍 Vérifier la Compatibilité avec d'Autres Types",
@@ -80,9 +81,6 @@
   },
   "recommendations": {
     "title": "Essaie aussi"
-  },
-  "result": {
-    "rank": "ème"
   },
   "canvas": {
     "myStyle": "Mon style d'amour MBTI est",

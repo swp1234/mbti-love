@@ -30,7 +30,8 @@
     "caution": "⚡ Watch Out",
     "score": "Compatibility Score",
     "good": "Strengths",
-    "watchout": "Watch Out For"
+    "watchout": "Watch Out For",
+    "rank": "th"
   },
   "compatibility": {
     "button": "🔍 Check Compatibility with Other Types",
@@ -80,9 +81,6 @@
   },
   "recommendations": {
     "title": "Try These Too"
-  },
-  "result": {
-    "rank": "th"
   },
   "canvas": {
     "myStyle": "My MBTI Love Style is",

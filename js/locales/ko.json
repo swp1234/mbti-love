@@ -30,7 +30,8 @@
     "caution": "⚡ 주의할 궁합",
     "score": "궁합 점수",
     "good": "잘 맞는 점",
-    "watchout": "주의할 점"
+    "watchout": "주의할 점",
+    "rank": "위"
   },
   "compatibility": {
     "button": "🔍 다른 유형과 궁합 확인하기",
@@ -80,9 +81,6 @@
   },
   "recommendations": {
     "title": "이것도 해보세요"
-  },
-  "result": {
-    "rank": "위"
   },
   "canvas": {
     "myStyle": "나의 MBTI 연애 스타일은",
