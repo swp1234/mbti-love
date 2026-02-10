@@ -246,6 +246,7 @@
     }
 
     function shareResult() {
+        if (!myType) return;
         const shareData = getShareText();
         const shareModal = document.getElementById('share-modal');
         shareModal.classList.remove('hidden');
