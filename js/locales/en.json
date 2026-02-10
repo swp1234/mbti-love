@@ -79,5 +79,15 @@
   },
   "recommendations": {
     "title": "Try These Too"
+  },
+  "result": {
+    "rank": "th"
+  },
+  "canvas": {
+    "myStyle": "My MBTI Love Style is",
+    "bestMatch": "Best Match",
+    "compatibility": "Compatibility",
+    "yourStyle": "What's your style? 👇",
+    "testTitle": "MBTI Love Compatibility Test"
   }
 }

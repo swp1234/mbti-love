@@ -79,5 +79,15 @@
   },
   "recommendations": {
     "title": "Coba Juga"
+  },
+  "result": {
+    "rank": "."
+  },
+  "canvas": {
+    "myStyle": "Gaya cinta MBTI saya adalah",
+    "bestMatch": "Pasangan terbaik",
+    "compatibility": "kompatibilitas",
+    "yourStyle": "Gaya Anda apa? 👇",
+    "testTitle": "Tes Kompatibilitas Cinta MBTI"
   }
 }

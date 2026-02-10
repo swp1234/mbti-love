@@ -79,5 +79,15 @@
   },
   "recommendations": {
     "title": "こちらも試してみてください"
+  },
+  "result": {
+    "rank": "位"
+  },
+  "canvas": {
+    "myStyle": "私のMBTI恋愛スタイルは",
+    "bestMatch": "ベストマッチ",
+    "compatibility": "相性",
+    "yourStyle": "あなたのスタイルは? 👇",
+    "testTitle": "MBTI恋愛マッチテスト"
   }
 }

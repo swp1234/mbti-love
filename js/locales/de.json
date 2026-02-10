@@ -79,5 +79,15 @@
   },
   "recommendations": {
     "title": "Probiere auch diese"
+  },
+  "result": {
+    "rank": "."
+  },
+  "canvas": {
+    "myStyle": "Mein MBTI-Liebeszstil ist",
+    "bestMatch": "Beste Passung",
+    "compatibility": "Kompatibilität",
+    "yourStyle": "Welcher ist dein Stil? 👇",
+    "testTitle": "MBTI Liebes-Kompatibilität Test"
   }
 }

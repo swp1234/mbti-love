@@ -79,5 +79,15 @@
   },
   "recommendations": {
     "title": "이것도 해보세요"
+  },
+  "result": {
+    "rank": "위"
+  },
+  "canvas": {
+    "myStyle": "나의 MBTI 연애 스타일은",
+    "bestMatch": "최고 궁합",
+    "compatibility": "궁합",
+    "yourStyle": "너는 어떤 스타일? 👇",
+    "testTitle": "MBTI 연애 궁합 테스트"
   }
 }

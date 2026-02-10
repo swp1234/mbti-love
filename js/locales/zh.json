@@ -79,5 +79,15 @@
   },
   "recommendations": {
     "title": "还可以试试这些"
+  },
+  "result": {
+    "rank": "位"
+  },
+  "canvas": {
+    "myStyle": "我的MBTI恋爱风格是",
+    "bestMatch": "最佳搭档",
+    "compatibility": "匹配度",
+    "yourStyle": "你的风格是什么? 👇",
+    "testTitle": "MBTI恋爱匹配测试"
   }
 }

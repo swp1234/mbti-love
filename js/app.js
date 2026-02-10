@@ -152,7 +152,7 @@
             const s = STYLES[m.type];
             const lvl = getCompatLevel(m.score);
             return `<div class="match-item">
-                <span class="match-rank">${i + 1}위</span>
+                <span class="match-rank">${i + 1}${i18n.t('result.rank')}</span>
                 <span class="match-emoji">${s.emoji}</span>
                 <span class="match-info"><strong>${m.type}</strong> ${s.title}</span>
                 <span class="match-score" style="color:${s.color}">${m.score}%</span>
@@ -319,7 +319,7 @@
         generateShareImage(() => {
             const canvas = document.getElementById('share-canvas');
             const link = document.createElement('a');
-            link.download = `MBTI연애_${myType}.png`;
+            link.download = `MBTI_Love_${myType}.png`;
             link.href = canvas.toDataURL('image/png');
             link.click();
             gtag('event', 'save_image', { test_type: 'mbti_love' });
@@ -358,7 +358,7 @@
 
         ctx.textAlign = 'center';
         ctx.fillStyle = 'rgba(255,255,255,0.6)'; ctx.font = '32px sans-serif';
-        ctx.fillText('나의 MBTI 연애 스타일은', w/2, 140);
+        ctx.fillText(i18n.t('canvas.myStyle'), w/2, 140);
 
         ctx.font = '130px serif'; ctx.fillStyle = '#fff'; ctx.fillText(style.emoji, w/2, 320);
         ctx.fillStyle = '#fff'; ctx.font = 'bold 80px sans-serif';
@@ -369,9 +369,9 @@
             .map(t => ({ type: t, score: calcCompat(myType, t) }))
             .sort((a, b) => b.score - a.score)[0];
         ctx.fillStyle = 'rgba(255,255,255,0.8)'; ctx.font = 'bold 36px sans-serif';
-        ctx.fillText(`💕 최고 궁합: ${top.type}`, w/2, 630);
+        ctx.fillText(`💕 ${i18n.t('canvas.bestMatch')}: ${top.type}`, w/2, 630);
         ctx.font = '32px sans-serif'; ctx.fillStyle = 'rgba(255,255,255,0.7)';
-        ctx.fillText(`${top.score}% 궁합`, w/2, 680);
+        ctx.fillText(`${top.score}% ${i18n.t('canvas.compatibility')}`, w/2, 680);
 
         // Divider
         ctx.strokeStyle = 'rgba(255,255,255,0.2)';
@@ -382,9 +382,9 @@
         ctx.stroke();
 
         ctx.fillStyle = 'rgba(255,255,255,0.5)'; ctx.font = '28px sans-serif';
-        ctx.fillText('너는 어떤 스타일? 👇', w/2, 820);
+        ctx.fillText(i18n.t('canvas.yourStyle'), w/2, 820);
         ctx.fillStyle = 'rgba(255,255,255,0.4)'; ctx.font = '26px sans-serif';
-        ctx.fillText('MBTI 연애 궁합 테스트', w/2, 870);
+        ctx.fillText(i18n.t('canvas.testTitle'), w/2, 870);
 
         ctx.fillStyle = 'rgba(255,255,255,0.3)'; ctx.font = '22px sans-serif';
         ctx.fillText('🔥 DopaBrain', w/2, 1020);
@@ -409,17 +409,17 @@
         const content = document.getElementById('premium-content');
 
         content.innerHTML = `
-            <div class="prem-section"><h4>📊 연애 패턴 분석</h4>
+            <div class="prem-section"><h4>📊 ${i18n.t('premium.pattern')}</h4>
                 <div class="pattern-timeline">
-                    <div class="pattern-item"><span class="pattern-label">초반 (1~3개월)</span><p>${p.pattern.early}</p></div>
-                    <div class="pattern-item"><span class="pattern-label">중반 (3~12개월)</span><p>${p.pattern.mid}</p></div>
-                    <div class="pattern-item"><span class="pattern-label">장기 (1년+)</span><p>${p.pattern.long}</p></div>
+                    <div class="pattern-item"><span class="pattern-label">${i18n.t('premium.patternEarly')}</span><p>${p.pattern.early}</p></div>
+                    <div class="pattern-item"><span class="pattern-label">${i18n.t('premium.patternMid')}</span><p>${p.pattern.mid}</p></div>
+                    <div class="pattern-item"><span class="pattern-label">${i18n.t('premium.patternLong')}</span><p>${p.pattern.long}</p></div>
                 </div>
             </div>
-            <div class="prem-section"><h4>💡 연애 성공 팁 5가지</h4>
+            <div class="prem-section"><h4>💡 ${i18n.t('premium.tips')}</h4>
                 <ul>${p.tips.map(t => `<li>${t}</li>`).join('')}</ul>
             </div>
-            <div class="prem-section"><h4>🎯 추천 데이트 코스</h4>
+            <div class="prem-section"><h4>🎯 ${i18n.t('premium.dates')}</h4>
                 <ul>${p.dates.map(d => `<li>${d}</li>`).join('')}</ul>
             </div>
         `;
