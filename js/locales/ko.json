@@ -66,7 +66,8 @@
     "copyLink": "링크 복사",
     "copied": "클립보드에 복사되었습니다! 💕",
     "compareWith": "🤝 친구와 비교하기",
-    "inviteText": "나의 MBTI 연애 스타일은 {type}! {emoji} 당신과 {score}% 궁합이야. 너도 확인해봐! 👇"
+    "inviteText": "나의 MBTI 연애 스타일은 {type}! {emoji} 당신과 {score}% 궁합이야. 너도 확인해봐! 👇",
+    "fullText": "💕 나의 연애 스타일은 \"{title}\" {emoji}\nMBTI: {type}\n\n{bestEmoji} {bestType}랑 {score}% 궁합!\n\n너는 어떤 스타일? 👇\nhttps://dopabrain.com/mbti-love/\n\n#MBTI연애 #궁합테스트 #연애스타일"
   },
   "game": {
     "back": "DopaBrain 홈"

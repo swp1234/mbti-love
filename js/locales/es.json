@@ -66,7 +66,8 @@
     "copyLink": "Copiar Enlace",
     "copied": "¡Copiado al portapapeles! 💕",
     "compareWith": "🤝 Comparar con Amigo",
-    "inviteText": "Mi estilo de amor MBTI es {type}! {emoji} ¡Tenemos {score}% de compatibilidad! Tú también prueba 👇"
+    "inviteText": "Mi estilo de amor MBTI es {type}! {emoji} ¡Tenemos {score}% de compatibilidad! Tú también prueba 👇",
+    "fullText": "💕 Mi estilo de amor es \"{title}\" {emoji}\nMBTI: {type}\n\n{bestEmoji} {bestType} tiene {score}% de compatibilidad!\n\n¿Cuál es tu estilo? 👇\nhttps://dopabrain.com/mbti-love/\n\n#MBTIAmor #PruebaCompatibilidad #EstiloAmor"
   },
   "game": {
     "back": "Inicio DopaBrain"

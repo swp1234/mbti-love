@@ -66,7 +66,8 @@
     "copyLink": "リンクをコピー",
     "copied": "クリップボードにコピーしました！💕",
     "compareWith": "🤝 友達と比較",
-    "inviteText": "私のMBTI恋愛スタイルは {type}！{emoji} 私たちは {score}% の相性です。あなたも試してみて！👇"
+    "inviteText": "私のMBTI恋愛スタイルは {type}！{emoji} 私たちは {score}% の相性です。あなたも試してみて！👇",
+    "fullText": "💕 私のMBTI恋愛スタイルは\"{title}\" {emoji}\nMBTI: {type}\n\n{bestEmoji} {bestType}との相性は{score}%です！\n\nあなたのスタイルは? 👇\nhttps://dopabrain.com/mbti-love/\n\n#MBTI恋愛 #相性テスト #恋愛スタイル"
   },
   "game": {
     "back": "DopaBrain ホーム"

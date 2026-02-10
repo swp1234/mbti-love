@@ -66,7 +66,8 @@
     "copyLink": "Bağlantıyı Kopyala",
     "copied": "Panoya kopyalandı! 💕",
     "compareWith": "🤝 Arkadaş ile Karşılaştır",
-    "inviteText": "Benim MBTI aşk stilim {type}! {emoji} %{score} uyumlu oluyoruz! Sen de dene 👇"
+    "inviteText": "Benim MBTI aşk stilim {type}! {emoji} %{score} uyumlu oluyoruz! Sen de dene 👇",
+    "fullText": "💕 Benim aşk stilim \"{title}\" {emoji}\nMBTI: {type}\n\n{bestEmoji} {bestType} %{score} uyumludur!\n\nSenin stiling nedir? 👇\nhttps://dopabrain.com/mbti-love/\n\n#MBTIAşk #UyumluluTestesi #AşkStili"
   },
   "game": {
     "back": "DopaBrain Anasayfa"

@@ -240,7 +240,7 @@
         return {
             title: i18n.t('share.inviteText').replace('{type}', myType).replace('{emoji}', style.emoji).replace('{score}', top.score),
             shortText: `💕 ${myType} - ${style.title} ${style.emoji}`,
-            fullText: `💕 내 연애 스타일은 "${style.title}" ${style.emoji}\nMBTI: ${myType}\n\n${STYLES[top.type].emoji} ${top.type}랑 ${top.score}% 궁합!\n\n너는 어떤 스타일? 👇\nhttps://dopabrain.com/mbti-love/\n\n#MBTI연애 #궁합테스트 #연애스타일`,
+            fullText: (window.i18n?.t('share.fullText') || 'English').replace('{title}', style.title).replace('{type}', myType).replace('{emoji}', style.emoji).replace('{bestEmoji}', STYLES[top.type].emoji).replace('{bestType}', top.type).replace('{score}', top.score),
             url: 'https://dopabrain.com/mbti-love/'
         };
     }

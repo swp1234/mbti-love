@@ -66,7 +66,8 @@
     "copyLink": "复制链接",
     "copied": "已复制到剪贴板！💕",
     "compareWith": "🤝 与朋友比较",
-    "inviteText": "我的MBTI恋爱风格是 {type}！{emoji} 我们匹配度 {score}%。你也来测试吧！👇"
+    "inviteText": "我的MBTI恋爱风格是 {type}！{emoji} 我们匹配度 {score}%。你也来测试吧！👇",
+    "fullText": "💕 我的恋爱风格是\"{title}\" {emoji}\nMBTI: {type}\n\n{bestEmoji} {bestType}的匹配度 {score}%！\n\n你的风格是什么? 👇\nhttps://dopabrain.com/mbti-love/\n\n#MBTI恋爱 #匹配度测试 #恋爱风格"
   },
   "game": {
     "back": "DopaBrain 首页"
