@@ -1,5 +1,20 @@
 // MBTI Love Compatibility Test - App Logic
 
+// Theme toggle
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    themeToggle.textContent = savedTheme === 'light' ? '🌙' : '☀️';
+    themeToggle.addEventListener('click', () => {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'light' ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        themeToggle.textContent = next === 'light' ? '🌙' : '☀️';
+    });
+}
+
 // Initialize i18n with error handling
 (async function initI18n() {
     try {
