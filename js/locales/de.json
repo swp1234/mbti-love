@@ -88,5 +88,13 @@
     "compatibility": "Kompatibilität",
     "yourStyle": "Welcher ist dein Stil? 👇",
     "testTitle": "MBTI Liebes-Kompatibilität Test"
+  },
+  "error": {
+    "storage": "Einige Funktionen sind im privaten Modus eingeschränkt.",
+    "data": "Fehler beim Laden. Bitte Seite aktualisieren.",
+    "canvas": "Grafikfehler. Bitte erneut versuchen.",
+    "audio": "Audio nicht verfügbar. Sie können fortfahren.",
+    "network": "Bitte Verbindung prüfen und erneut versuchen.",
+    "general": "Etwas ist schiefgelaufen. Bitte aktualisieren oder erneut versuchen."
   }
 }
