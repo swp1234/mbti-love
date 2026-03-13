@@ -1,99 +1,133 @@
 {
   "app": {
     "title": "Tes Kompatibilitas Cinta MBTI | DopaBrain",
-    "description": "Tes kompatibilitas cinta MBTI untuk semua 16 jenis. Temukan pasangan sempurna dan pasangan terburuk Anda!"
+    "description": "Tes kompatibilitas cinta MBTI untuk semua 16 tipe. Temukan pasangan sempurna Anda!",
+    "skipLink": "Langsung ke konten utama",
+    "loading": "Memuat..."
   },
-  "header": {
-    "title": "💕 Pasangan Cinta MBTI",
-    "sub": "Jenis MBTI apa pasangan sempurna Anda?"
-  },
+  "header": { "title": "💕 MBTI Cinta", "sub": "Tipe MBTI mana yang cocok denganmu?" },
   "intro": {
-    "title": "Pasangan Cinta MBTI",
-    "sub": "Jenis MBTI apa pasangan sempurna Anda?",
-    "desc": "Jawab 12 pertanyaan dan temukan<br>gaya cinta Anda + kecocokan ideal",
-    "meta1": "📝 12 Pertanyaan",
-    "meta2": "⏱️ Sekitar 3 menit",
-    "meta3": "💖 256 Kombinasi",
+    "title": "MBTI Cinta",
+    "sub": "Tipe MBTI mana yang cocok denganmu?",
+    "desc": "Jawab 12 pertanyaan dan temukan<br>gaya cintamu + kecocokan ideal",
+    "meta1": "📝 12 Pertanyaan", "meta2": "⏱️ Sekitar 3 menit", "meta3": "💖 256 Kombinasi",
     "start": "Mulai Tes"
   },
-  "question": {
-    "progress": "Pertanyaan"
+  "question": { "progress": "Pertanyaan" },
+  "loading": { "text": "Menganalisis gaya cintamu..." },
+  "questions": {
+    "q1": "Di kencan pertama, saya...",
+    "q1a": "Memulai percakapan dan membangun suasana 😄",
+    "q1b": "Menunggu mereka bicara duluan 😊",
+    "q2": "Saat merencanakan kencan dengan pasangan...",
+    "q2a": "Memutuskan secara spontan 🎲",
+    "q2b": "Merencanakan dan mempersiapkan sebelumnya 📋",
+    "q3": "Saat pasangan sedang sulit, saya...",
+    "q3a": "Menawarkan solusi logis 🧠",
+    "q3b": "Berempati dan menghibur perasaannya dulu 💕",
+    "q4": "Kencan ideal saya adalah...",
+    "q4a": "Percakapan mendalam bersama 💬",
+    "q4b": "Melakukan aktivitas seru bersama 🏃",
+    "q5": "Hal terpenting dalam hubungan...",
+    "q5a": "Berbagi visi masa depan dan nilai 🔮",
+    "q5b": "Kebahagiaan dan kegembiraan saat ini 🌈",
+    "q6": "Saat terjadi konflik, saya...",
+    "q6a": "Langsung mencoba membicarakannya 🗣️",
+    "q6b": "Berpikir sendiri dulu, baru bicara 🤔",
+    "q7": "Cara saya mengungkapkan cinta...",
+    "q7a": "Sering bilang \"aku cinta kamu\" 💖",
+    "q7b": "Membuktikan dengan tindakan diam-diam 🛠️",
+    "q8": "Dalam hubungan, saya lebih suka...",
+    "q8a": "Hubungan yang stabil dan terstruktur 🏠",
+    "q8b": "Hubungan yang bebas dan fleksibel 🦋",
+    "q9": "Cara saya mengambil keputusan dalam cinta...",
+    "q9a": "Penilaian logis dan analisis 📊",
+    "q9b": "Mengikuti emosi dan intuisi ✨",
+    "q10": "Aktivitas yang ingin dilakukan bersama pasangan...",
+    "q10a": "Percakapan mendalam tentang topik penting 📚",
+    "q10b": "Mencoba hal baru bersama 🎨",
+    "q11": "Kriteria saya memilih pasangan...",
+    "q11a": "Menganalisis kondisi dan prospek masa depan 🔍",
+    "q11b": "Memutuskan berdasarkan perasaan dan emosi 💓",
+    "q12": "Gaya kencan saya...",
+    "q12a": "Lebih nyaman mengikuti rencana 📅",
+    "q12b": "Mengikuti alur situasi 🌊"
   },
-  "loading": {
-    "text": "Menganalisis gaya cinta Anda..."
+  "style": {
+    "ENFP": { "title": "Api yang Bergairah", "desc": "Saat jatuh cinta, seluruh dunia jadi merah muda! Terus memberikan pengalaman baru dan menyukai kencan spontan.", "keywords": ["Cinta pandangan pertama", "Kejutan", "Cinta bebas"], "idealType": "Percakapan mendalam + suka petualangan", "tip": "Dalam hubungan jangka panjang, perlu memberikan stabilitas." },
+    "INFJ": { "title": "Jiwa Misterius", "desc": "Tenang di luar tapi penuh gairah di dalam. Mencari koneksi spiritual dan secara intuitif merasakan emosi pasangan.", "keywords": ["Koneksi mendalam", "Cinta ideal", "Setia"], "idealType": "Percakapan jujur + menghargai nilai", "tip": "Cinta sempurna tidak ada, tapi cinta yang tumbuh bersama ada." },
+    "ENFJ": { "title": "Pemimpin Hangat", "desc": "Tulus menginginkan pertumbuhan dan kebahagiaan pasangan, selalu mendukung. Kepemimpinan alami membimbing hubungan.", "keywords": ["Peduli", "Setia", "Empati"], "idealType": "Menghargai ketulusan + tumbuh bersama", "tip": "Ungkapkan perasaanmu sendiri juga." },
+    "INFP": { "title": "Romantis Pemimpi", "desc": "Bermimpi tentang cinta dongeng. Saat jatuh cinta, mencintai dengan sepenuh hati. Bersinar dalam hubungan tulus.", "keywords": ["Romantis", "Cinta sejati", "Setia"], "idealType": "Memahami sensitivitas + bermimpi bersama", "tip": "Hargai juga kebahagiaan kecil dalam kehidupan nyata." },
+    "ENTJ": { "title": "Strategis Kuat", "desc": "Punya tujuan dan rencana bahkan dalam cinta. Ingin tumbuh bersama sambil membayangkan masa depan.", "keywords": ["Berorientasi tujuan", "Kepemimpinan", "Langsung"], "idealType": "Independen + mencapai tujuan bersama", "tip": "Kadang romantisme yang tidak efisien juga diperlukan." },
+    "INTJ": { "title": "Strategis Independen", "desc": "Setelah membuka hati, menganggap sebagai pasangan seumur hidup. Menginginkan hubungan dewasa yang menghormati kemandirian.", "keywords": ["Kepercayaan mendalam", "Independen", "Perfeksionis"], "idealType": "Keingintahuan intelektual + independen", "tip": "Lebih sering mengungkapkan emosi akan menghangatkan hubungan." },
+    "ENTP": { "title": "Penantang Kreatif", "desc": "Menganggap cinta sebagai permainan seru, menikmati pertukaran intelektual. Lebih suka pengalaman baru.", "keywords": ["Stimulasi intelektual", "Debat", "Humor"], "idealType": "Kedalaman intelektual + humor", "tip": "Hati-hati jangan menyakiti perasaan pasangan." },
+    "INTP": { "title": "Pemikir Logis", "desc": "Menganalisis cinta secara logis dan membuktikan dengan tindakan. Menghargai pasangan yang berbagi keingintahuan intelektual.", "keywords": ["Pertukaran intelektual", "Independen", "Analitis"], "idealType": "Independen + memahami waktu sendiri", "tip": "Satu kata 'aku cinta kamu' bisa menghangatkan hubungan." },
+    "ESFP": { "title": "Penghibur Bebas", "desc": "Menjadikan setiap momen bersama pasangan seperti pesta. Mengungkapkan kasih sayang dengan sentuhan dan berbakat menghibur.", "keywords": ["Kesenangan", "Spontan", "Penuh kasih"], "idealType": "Ceria + menikmati hidup bersama", "tip": "Percakapan serius dan rencana jangka panjang juga diperlukan." },
+    "ISFP": { "title": "Seniman Lembut", "desc": "Mencintai dengan tindakan bukan kata-kata, dengan perasaan bukan logika. Menyampaikan hati dengan hadiah kecil dan surat.", "keywords": ["Emosional", "Bebas", "Tindakan berbicara"], "idealType": "Memahami emosi + tidak memaksa", "tip": "Lebih sering ungkapkan apa yang kamu rasakan." },
+    "ESFJ": { "title": "Penjaga Hangat", "desc": "Menyayangi pasangan seperti keluarga, ingat setiap hari jadi, dan menghargai harmoni.", "keywords": ["Setia", "Stabil", "Peduli"], "idealType": "Menghargai ketulusan + keluarga", "tip": "Jangan coba jadi pasangan sempurna." },
+    "ISFJ": { "title": "Pelindung Setia", "desc": "Diam-diam melindungi pasangan dan memperhatikan detail terkecil dengan cinta yang setia.", "keywords": ["Cinta diam-diam", "Stabil", "Perhatian"], "idealType": "Terpercaya + menghargai kesetiaan", "tip": "Jangan hanya berkorban; ungkapkan juga kebutuhanmu." },
+    "ESTP": { "title": "Petualang Berani", "desc": "Menikmati kencan mendebarkan dan setia pada emosi saat itu.", "keywords": ["Aktif", "Spontan", "Sensual"], "idealType": "Suka petualangan + penuh energi", "tip": "Coba buat rencana masa depan bersama juga." },
+    "ISTP": { "title": "Pengrajin Bebas", "desc": "Membuktikan cinta dengan bantuan praktis. Butuh waktu sendiri dan tidak suka dikekang.", "keywords": ["Independen", "Praktis", "Tindakan membuktikan"], "idealType": "Independen + tidak ikut campur", "tip": "Coba ungkapkan emosi sedikit lebih banyak." },
+    "ESTJ": { "title": "Pemimpin Bertanggung Jawab", "desc": "Punya aturan dan rencana dalam cinta juga. Memperlakukan pasangan dengan tanggung jawab dan mencari cinta stabil.", "keywords": ["Stabil", "Bertanggung jawab", "Terorganisir"], "idealType": "Bertanggung jawab + keluarga", "tip": "Kadang romantisme spontan juga diperlukan." },
+    "ISTJ": { "title": "Pelindung Terpercaya", "desc": "Selalu menepati janji dan mencari pasangan seumur hidup. Menghargai kencan tradisional.", "keywords": ["Setia", "Stabil", "Tindakan membuktikan"], "idealType": "Terpercaya + berbagi nilai tradisional", "tip": "Coba ungkapkan emosi sedikit lebih banyak." }
+  },
+  "compat": {
+    "soulmate": "Belahan jiwa", "perfect": "Pasangan sempurna", "great": "Kecocokan bagus",
+    "good": "Kecocokan baik", "effort": "Butuh usaha", "difficult": "Hubungan sulit",
+    "desc90": "Kombinasi ideal di mana saling melengkapi kekurangan.",
+    "desc80": "Hubungan yang tumbuh bersama melalui pemahaman dan rasa hormat.",
+    "desc65": "Pesona berbeda bisa menciptakan hubungan menarik.",
+    "desc50": "Usaha bisa membangun hubungan baik, tapi butuh saling pengertian.",
+    "desc30": "Perlu mengatasi perbedaan nilai dan gaya komunikasi.",
+    "desc0": "Kepribadian berlawanan membutuhkan banyak usaha dan pengertian."
   },
   "result": {
-    "label": "Gaya Cinta Anda",
-    "idealType": "💘 Jenis Ideal",
-    "tip": "💡 Tips Cinta",
-    "top3": "💕 3 Pasangan Terbaik",
-    "caution": "⚡ Perhatikan",
-    "score": "Skor Kompatibilitas",
-    "good": "Kekuatan",
-    "watchout": "Perhatikan",
-    "rank": "."
+    "label": "Gaya Cintamu", "idealType": "💘 Tipe Ideal", "tip": "💡 Tips Cinta",
+    "top3": "💕 Top 3 Cocok", "caution": "⚡ Hati-hati", "score": "Skor Kecocokan",
+    "good": "Kekuatan", "watchout": "Perhatikan", "rank": "."
   },
-  "compatibility": {
-    "button": "🔍 Periksa Kompatibilitas dengan Jenis Lain",
-    "header": "Pemeriksaan Kompatibilitas",
-    "instruction": "Pilih jenis MBTI pasangan",
-    "back": "← Kembali"
-  },
+  "compatibility": { "button": "🔍 Cek Kecocokan dengan Tipe Lain", "header": "Cek Kecocokan", "instruction": "Pilih tipe MBTI pasangan", "back": "← Kembali" },
   "premium": {
-    "button": "✨ Analisis Cinta Mendalam AI",
-    "badge": "PREMIUM",
-    "title": "🧠 Analisis Cinta Mendalam AI",
-    "pattern": "📊 Analisis Pola Hubungan",
-    "patternEarly": "Tahap Awal (1-3 bulan)",
-    "patternMid": "Tahap Menengah (3-12 bulan)",
-    "patternLong": "Jangka Panjang (1+ tahun)",
-    "tips": "💡 5 Tips Kesuksesan Cinta",
-    "dates": "🎯 Ide Kencan yang Direkomendasikan"
+    "button": "✨ Analisis Cinta AI Mendalam", "badge": "PREMIUM", "title": "🧠 Analisis Cinta AI Mendalam",
+    "pattern": "📊 Analisis Pola Hubungan", "patternEarly": "Tahap Awal (1-3 bulan)", "patternMid": "Tahap Menengah (3-12 bulan)", "patternLong": "Jangka Panjang (1+ tahun)",
+    "tips": "💡 5 Tips Sukses Cinta", "dates": "🎯 Ide Kencan yang Direkomendasikan",
+    "data": {
+      "ENFP": { "patternEarly": "Pendekatan bergairah, banyak acara", "patternMid": "Mencari stabilitas tapi merasa bosan", "patternLong": "Perencanaan masa depan, butuh kebebasan", "tips": ["Berbagi visi jangka panjang", "Jaga kemandirian", "Kontrol ekspresi emosi", "Percakapan mendalam penting", "Tepati janji"], "dates": ["Perjalanan spontan", "Jelajahi restoran baru", "Festival/konser", "Aktivitas outdoor", "Kafe tenang"] },
+      "INFJ": { "patternEarly": "Pendekatan hati-hati, percakapan mendalam", "patternMid": "Membuka hati sepenuhnya dan bersetia", "patternLong": "Pasangan seumur hidup", "tips": ["Ekspektasi realistis", "Berani mengungkapkan emosi", "Tetapkan batasan", "Izinkan spontanitas", "Perawatan diri"], "dates": ["Obrolan mendalam di kafe", "Museum seni", "Jalan-jalan alam", "Film + diskusi", "Membaca bersama"] },
+      "ENFJ": { "patternEarly": "Minat aktif, perhatian", "patternMid": "Perawatan setia", "patternLong": "Bermimpi tentang rumah", "tips": ["Ungkapkan perasaan sendiri", "Lepaskan perfeksionisme", "Hormati otonomi pasangan", "Jangan hindari konflik", "Ambil waktu pribadi"], "dates": ["Sukarela bersama", "Wisata kuliner", "Acara budaya", "Percakapan mendalam", "Kelas pasangan"] },
+      "INFP": { "patternEarly": "Pendekatan malu, kegembiraan batin", "patternMid": "Mencintai sepenuh hati", "patternLong": "Belahan jiwa", "tips": ["Terima kenyataan", "Latih mengungkapkan perasaan", "Lepaskan tipe ideal", "Syukuri kebahagiaan kecil", "Terima pasangan apa adanya"], "dates": ["Jalan-jalan taman", "Pameran", "Tukar surat", "Nonton film", "Menulis di kafe"] },
+      "ENTJ": { "patternEarly": "Tetapkan tujuan, pendekatan aktif", "patternMid": "Rencanakan pertumbuhan bersama", "patternLong": "Hubungan sebagai tim", "tips": ["Investasi emosi juga", "Izinkan inefisiensi", "Hormati tempo pasangan", "Sering memuji", "Santai"], "dates": ["Seminar tujuan", "Makan malam wine", "Hiking", "Game strategi", "Rencana perjalanan"] },
+      "INTJ": { "patternEarly": "Amati lalu pendekatan hati-hati", "patternMid": "Buka hati setelah membangun kepercayaan", "patternLong": "Pasangan seumur hidup", "tips": ["Latih mengungkapkan emosi", "Nikmati momen spontan", "Lepaskan harapan sempurna", "Gesture kasih sayang kecil", "Berempati dengan perasaan pasangan"], "dates": ["Museum", "Kafe diskusi intelektual", "Board game", "Nonton dokumenter", "Mengamati bintang"] },
+      "ENTP": { "patternEarly": "Pendekatan fun, daya tarik intelektual", "patternMid": "Mencari kebaruan", "patternLong": "Petualangan dengan pasangan", "tips": ["Emosi juga penting", "Kontrol argumen", "Tepati janji", "Berikan stabilitas", "Latih percakapan mendalam"], "dates": ["Restoran baru", "Perjalanan spontan", "Kafe debat", "Escape room", "Festival"] },
+      "INTP": { "patternEarly": "Pendekatan lambat dan analitis", "patternMid": "Ikatan intelektual", "patternLong": "Teman yang nyaman", "tips": ["Katakan 'aku cinta kamu'", "Akui emosi", "Tambah waktu bersama", "Ingat hari jadi", "Latih sentuhan fisik"], "dates": ["Museum sains", "Coding bersama", "Board game", "Diskusi dokumenter", "Pengamatan astronomi"] },
+      "ESFP": { "patternEarly": "Aktif, fokus kesenangan", "patternMid": "Setiap hari pesta", "patternLong": "Nikmati saat ini", "tips": ["Buat rencana masa depan", "Percakapan serius", "Tepat waktu", "Menabung bersama", "Jangan hindari konflik"], "dates": ["Pesta", "Taman hiburan", "Konser", "Wisata kuliner", "Pantai"] },
+      "ISFP": { "patternEarly": "Minat tenang, ungkap dengan tindakan", "patternMid": "Kasih sayang mendalam", "patternLong": "Teman yang nyaman", "tips": ["Ungkapkan dengan kata-kata", "Sampaikan pendapat", "Jangan hindari konflik", "Rencana masa depan bersama", "Latih ketegasan"], "dates": ["Museum seni", "Jalan-jalan alam", "Kafe", "Workshop", "Fotografi"] },
+      "ESFJ": { "patternEarly": "Minat aktif, perhatian", "patternMid": "Merawat seperti keluarga", "patternLong": "Rumah yang stabil", "tips": ["Prioritaskan perasaan sendiri", "Lepaskan perfeksionisme", "Kurangi campur tangan", "Hormati gaya pasangan", "Ambil waktu pribadi"], "dates": ["Kumpul keluarga", "Makan malam hari jadi", "Belanja", "Masak bersama", "Pesta rumah"] },
+      "ISFJ": { "patternEarly": "Minat tenang, perhatian halus", "patternMid": "Dukungan setia", "patternLong": "Pelindung seumur hidup", "tips": ["Ungkapkan kebutuhan sendiri", "Terima perubahan", "Hati-hati berkorban berlebihan", "Coba hal baru", "Latih mengungkapkan emosi"], "dates": ["Kencan di rumah", "Restoran tenang", "Jalan-jalan taman", "Nonton film", "Masak bersama"] },
+      "ESTP": { "patternEarly": "Pendekatan berani, mendebarkan", "patternMid": "Petualangan terus-menerus", "patternLong": "Hidup di saat ini", "tips": ["Waktu pertukaran emosi", "Bicara tentang masa depan", "Tepati janji", "Tunjukkan keseriusan", "Pertimbangkan tempo pasangan"], "dates": ["Bungee jumping", "Olahraga", "Road trip", "Restoran baru", "Perjalanan"] },
+      "ISTP": { "patternEarly": "Minat yang tampak acuh", "patternMid": "Bantuan praktis", "patternLong": "Teman yang nyaman", "tips": ["Latih mengungkapkan emosi", "Tambah waktu bersama", "Ingat hari jadi", "Sediakan waktu bicara", "Tambah ungkapan kasih sayang"], "dates": ["Proyek DIY", "Road trip", "Memancing", "Belanja alat", "Camping"] },
+      "ESTJ": { "patternEarly": "Pendekatan terencana", "patternMid": "Mencari stabilitas", "patternLong": "Bermimpi tentang rumah", "tips": ["Kembangkan fleksibilitas", "Latih empati emosional", "Izinkan spontanitas", "Sering memuji", "Hormati gaya pasangan"], "dates": ["Restoran mewah", "Golf", "Acara budaya", "Perjalanan terencana", "Olahraga berpasangan"] },
+      "ISTJ": { "patternEarly": "Pendekatan hati-hati, mengamati", "patternMid": "Membangun kepercayaan", "patternLong": "Pasangan seumur hidup", "tips": ["Ungkapkan emosi dengan kata-kata", "Terima perubahan", "Coba hal baru", "Latih romantisme", "Bersikap fleksibel"], "dates": ["Restoran tenang", "Museum", "Hiking", "Kencan di rumah", "Kencan di perpustakaan"] }
+    }
   },
-  "actions": {
-    "share": "📤 Bagikan Hasil",
-    "saveImage": "📷 Simpan Gambar",
-    "retry": "🔄 Coba Lagi"
-  },
+  "actions": { "share": "📤 Bagikan Hasil", "saveImage": "📷 Simpan Gambar", "retry": "🔄 Coba Lagi" },
   "share": {
-    "title": "Bagikan gaya cinta Anda!",
-    "subtitle": "Bagikan dengan teman dan bandingkan kompatibilitas Anda 💕",
-    "nativeShare": "📤 Bagikan Nativo",
-    "shareModal": "Bagikan",
-    "shareClose": "Tutup",
-    "twitter": "𝕏 Twitter",
-    "facebook": "Facebook",
-    "kakaotalk": "KakaoTalk",
-    "copyLink": "Salin Tautan",
-    "copied": "Disalin ke papan klip! 💕",
-    "compareWith": "🤝 Bandingkan dengan Teman",
-    "inviteText": "Gaya cinta MBTI saya adalah {type}! {emoji} Kami memiliki kompatibilitas {score}%! Coba juga kamu 👇",
-    "fullText": "💕 Gaya cinta saya adalah \"{title}\" {emoji}\nMBTI: {type}\n\n{bestEmoji} {bestType} memiliki kompatibilitas {score}%!\n\nApa gaya cinta Anda? 👇\nhttps://dopabrain.com/mbti-love/\n\n#MBTICinta #TesCinta #GayaCinta"
+    "title": "Bagikan Gaya Cintamu!", "subtitle": "Bagikan dengan teman dan bandingkan kecocokan 💕",
+    "nativeShare": "📤 Bagikan", "shareModal": "Bagikan", "shareClose": "Tutup",
+    "twitter": "𝕏 Twitter", "facebook": "Facebook", "kakaotalk": "KakaoTalk", "copyLink": "Salin Link",
+    "copied": "Disalin ke clipboard! 💕", "compareWith": "🤝 Bandingkan dengan Teman",
+    "inviteText": "Gaya cinta MBTI saya adalah {type}! {emoji} Kita {score}% cocok. Coba kamu juga! 👇",
+    "fullText": "💕 Gaya Cintaku \"{title}\" {emoji}\nMBTI: {type}\n\n{bestEmoji} {bestType} cocok {score}%!\n\nApa gayamu? 👇\nhttps://dopabrain.com/mbti-love/\n\n#MBTICinta #TesKecocokan #GayaCinta"
   },
-  "game": {
-    "back": "Beranda DopaBrain"
-  },
-  "ads": {
-    "banner": "Iklan",
-    "label": "Iklan",
-    "closeIn": "detik untuk menutup",
-    "close": "✕ Tutup"
-  },
-  "recommendations": {
-    "title": "Coba Juga"
-  },
-  "canvas": {
-    "myStyle": "Gaya cinta MBTI saya adalah",
-    "bestMatch": "Pasangan terbaik",
-    "compatibility": "kompatibilitas",
-    "yourStyle": "Gaya Anda apa? 👇",
-    "testTitle": "Tes Kompatibilitas Cinta MBTI"
-  },
+  "game": { "back": "DopaBrain Beranda" },
+  "ads": { "banner": "Iklan", "label": "Iklan", "closeIn": "detik untuk menutup", "close": "✕ Tutup" },
+  "recommendations": { "title": "Coba Juga Ini" },
+  "canvas": { "myStyle": "Gaya Cinta MBTI Saya", "bestMatch": "Pasangan Terbaik", "compatibility": "Kecocokan", "yourStyle": "Apa gayamu? 👇", "testTitle": "Tes Kecocokan Cinta MBTI" },
   "error": {
     "storage": "Beberapa fitur mungkin terbatas dalam mode privat.",
-    "data": "Kesalahan memuat data. Silakan muat ulang.",
-    "canvas": "Masalah rendering grafis. Silakan coba lagi.",
-    "audio": "Audio tidak tersedia. Anda dapat melanjutkan.",
+    "data": "Kesalahan memuat data. Silakan muat ulang halaman.",
+    "canvas": "Masalah rendering grafis. Coba lagi.",
+    "audio": "Audio tidak tersedia. Anda tetap bisa melanjutkan.",
     "network": "Periksa koneksi Anda dan coba lagi.",
     "general": "Terjadi kesalahan. Muat ulang atau coba lagi."
   }

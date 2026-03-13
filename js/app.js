@@ -98,13 +98,13 @@ if (themeToggle) {
         const total = QUESTIONS.length;
         document.getElementById('progress-fill').style.width = `${(currentQ / total) * 100}%`;
         document.getElementById('progress-text').textContent = `${currentQ + 1} / ${total}`;
-        document.getElementById('q-text').textContent = q.text;
+        document.getElementById('q-text').textContent = i18n.t(`questions.${q.textKey}`);
         i18n.updateUI();
 
         const opts = document.getElementById('q-options');
         const shuffled = Math.random() > 0.5 ? q.options : [...q.options].reverse();
         opts.innerHTML = shuffled.map((o, i) => `
-            <button class="option-btn" data-dim="${o.dim}" data-val="${o.val}" style="animation-delay:${i*0.1}s">${o.text}</button>
+            <button class="option-btn" data-dim="${o.dim}" data-val="${o.val}" style="animation-delay:${i*0.1}s">${i18n.t('questions.' + o.textKey)}</button>
         `).join('');
 
         const card = document.getElementById('question-card');
@@ -146,7 +146,8 @@ if (themeToggle) {
         const jp = answers.J >= answers.P ? 'J' : 'P';
         myType = ei + sn + tf + jp;
 
-        const style = STYLES[myType];
+        const style = getStyle(myType);
+        const rawStyle = STYLES[myType];
         show(resultScreen);
 
         document.getElementById('r-type').textContent = myType;
@@ -154,7 +155,8 @@ if (themeToggle) {
         document.getElementById('r-emoji').textContent = style.emoji;
         document.getElementById('r-title').textContent = `"${style.title}"`;
         document.getElementById('r-desc').textContent = style.desc;
-        document.getElementById('r-keywords').innerHTML = style.keywords.map(k => `<span class="keyword">${k}</span>`).join('');
+        const kw = Array.isArray(style.keywords) ? style.keywords : [];
+        document.getElementById('r-keywords').innerHTML = kw.map(k => `<span class="keyword">${k}</span>`).join('');
         document.getElementById('r-ideal').textContent = style.idealType;
         document.getElementById('r-tip').textContent = style.tip;
 
@@ -164,7 +166,7 @@ if (themeToggle) {
             .sort((a, b) => b.score - a.score);
 
         document.getElementById('r-top3').innerHTML = matches.slice(0, 3).map((m, i) => {
-            const s = STYLES[m.type];
+            const s = getStyle(m.type);
             const lvl = getCompatLevel(m.score);
             return `<div class="match-item">
                 <span class="match-rank">${i + 1}${i18n.t('result.rank')}</span>
@@ -176,7 +178,7 @@ if (themeToggle) {
 
         // Bottom 2
         document.getElementById('r-bottom2').innerHTML = matches.slice(-2).reverse().map(m => {
-            const s = STYLES[m.type];
+            const s = getStyle(m.type);
             return `<div class="match-item caution">
                 <span class="match-emoji">${s.emoji}</span>
                 <span class="match-info"><strong>${m.type}</strong> ${s.title}</span>
@@ -207,9 +209,9 @@ if (themeToggle) {
     function renderCompatGrid() {
         const grid = document.getElementById('compat-grid');
         grid.innerHTML = MBTI_TYPES.map(t => {
-            const s = STYLES[t];
+            const rs = STYLES[t];
             const active = t === partnerType ? 'active' : '';
-            return `<button class="compat-type-btn ${active}" data-type="${t}" style="--tc:${s.color}">${s.emoji}<br><small>${t}</small></button>`;
+            return `<button class="compat-type-btn ${active}" data-type="${t}" style="--tc:${rs.color}">${rs.emoji}<br><small>${t}</small></button>`;
         }).join('');
 
         grid.querySelectorAll('.compat-type-btn').forEach(btn => {
@@ -238,7 +240,7 @@ if (themeToggle) {
                     <div class="compat-person"><span>${s2.emoji}</span><strong>${partnerType}</strong></div>
                 </div>
                 <div class="compat-score-big">${score}%</div>
-                <div class="compat-level ${level.cls}">${level.label}</div>
+                <div class="compat-level ${level.cls}">${i18n.t(level.labelKey)}</div>
                 <p class="compat-desc">${desc}</p>
             </div>
         `;
@@ -247,7 +249,7 @@ if (themeToggle) {
 
     // Share - 향상된 버전
     function getShareText() {
-        const style = STYLES[myType];
+        const style = getStyle(myType);
         const top = MBTI_TYPES.filter(t => t !== myType)
             .map(t => ({ type: t, score: calcCompat(myType, t) }))
             .sort((a, b) => b.score - a.score)[0];
@@ -355,7 +357,7 @@ if (themeToggle) {
         const canvas = document.getElementById('share-canvas');
         const ctx = canvas.getContext('2d');
         const w = 1080, h = 1080;
-        const style = STYLES[myType];
+        const style = getStyle(myType);
 
         canvas.width = w;
         canvas.height = h;
@@ -433,19 +435,24 @@ if (themeToggle) {
         const el = document.getElementById('premium-result');
         const content = document.getElementById('premium-content');
 
+        const tips = i18n.t(p.tipsKey);
+        const dates = i18n.t(p.datesKey);
+        const tipsArr = Array.isArray(tips) ? tips : [];
+        const datesArr = Array.isArray(dates) ? dates : [];
+
         content.innerHTML = `
             <div class="prem-section"><h4>📊 ${i18n.t('premium.pattern')}</h4>
                 <div class="pattern-timeline">
-                    <div class="pattern-item"><span class="pattern-label">${i18n.t('premium.patternEarly')}</span><p>${p.pattern.early}</p></div>
-                    <div class="pattern-item"><span class="pattern-label">${i18n.t('premium.patternMid')}</span><p>${p.pattern.mid}</p></div>
-                    <div class="pattern-item"><span class="pattern-label">${i18n.t('premium.patternLong')}</span><p>${p.pattern.long}</p></div>
+                    <div class="pattern-item"><span class="pattern-label">${i18n.t('premium.patternEarly')}</span><p>${i18n.t(p.pattern.earlyKey)}</p></div>
+                    <div class="pattern-item"><span class="pattern-label">${i18n.t('premium.patternMid')}</span><p>${i18n.t(p.pattern.midKey)}</p></div>
+                    <div class="pattern-item"><span class="pattern-label">${i18n.t('premium.patternLong')}</span><p>${i18n.t(p.pattern.longKey)}</p></div>
                 </div>
             </div>
             <div class="prem-section"><h4>💡 ${i18n.t('premium.tips')}</h4>
-                <ul>${p.tips.map(t => `<li>${t}</li>`).join('')}</ul>
+                <ul>${tipsArr.map(t => `<li>${t}</li>`).join('')}</ul>
             </div>
             <div class="prem-section"><h4>🎯 ${i18n.t('premium.dates')}</h4>
-                <ul>${p.dates.map(d => `<li>${d}</li>`).join('')}</ul>
+                <ul>${datesArr.map(d => `<li>${d}</li>`).join('')}</ul>
             </div>
         `;
         el.classList.remove('hidden');

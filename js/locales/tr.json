@@ -1,100 +1,134 @@
 {
   "app": {
-    "title": "MBTI Aşk Uyumluluğu Testi | DopaBrain",
-    "description": "Tüm 16 tip için MBTI aşk uyumluluğu testi. Mükemmel eşini bul ve en kötü eşleşmeleri öğren!"
+    "title": "MBTI Ask Uyumlulugu Testi | DopaBrain",
+    "description": "Tum 16 MBTI tipi icin ask uyumlulugu testi. Mukemmel esini bul!",
+    "skipLink": "Ana icerige atla",
+    "loading": "Yukleniyor..."
   },
-  "header": {
-    "title": "💕 MBTI Aşk Uyumu",
-    "sub": "Hangi MBTI tipi senin mükemmel eşin?"
-  },
+  "header": { "title": "💕 MBTI Ask", "sub": "Hangi MBTI tipi senin mukemmel esin?" },
   "intro": {
-    "title": "MBTI Aşk Uyumu",
-    "sub": "Hangi MBTI tipi senin mükemmel eşin?",
-    "desc": "12 soruya cevap ver ve<br>aşk stilini + ideal uyumu keşfet",
-    "meta1": "📝 12 Soru",
-    "meta2": "⏱️ Yaklaşık 3 dakika",
-    "meta3": "💖 256 Kombinasyon",
-    "start": "Testi Başlat"
+    "title": "MBTI Ask",
+    "sub": "Hangi MBTI tipi senin mukemmel esin?",
+    "desc": "12 soruyu yanitla ve<br>ask stilini + ideal uyumunu kesfet",
+    "meta1": "📝 12 Soru", "meta2": "⏱️ Yaklasik 3 dakika", "meta3": "💖 256 Kombinasyon",
+    "start": "Teste Basla"
   },
-  "question": {
-    "progress": "Soru"
+  "question": { "progress": "Soru" },
+  "loading": { "text": "Ask stilin analiz ediliyor..." },
+  "questions": {
+    "q1": "Ilk bulusmada ben...",
+    "q1a": "Konusmayi baslatir ve ortami canlandiririm 😄",
+    "q1b": "Onlarin benimle konusmasini beklerim 😊",
+    "q2": "Partnerimle bulusma planlarken...",
+    "q2a": "Anlik karar veririm 🎲",
+    "q2b": "Onceden plan yapar ve hazirlanir 📋",
+    "q3": "Partnerim zor bir donemden gecerken...",
+    "q3a": "Mantikli cozumler sunarim 🧠",
+    "q3b": "Once empati kurar ve duygularini rahatlatir 💕",
+    "q4": "Ideal bulusmam...",
+    "q4a": "Birlikte derin sohbetler 💬",
+    "q4b": "Birlikte eglenceli aktiviteler 🏃",
+    "q5": "Bir iliskide en onemli sey...",
+    "q5a": "Gelecek vizyonunu ve degerleri paylasma 🔮",
+    "q5b": "Su anki mutluluk ve nese 🌈",
+    "q6": "Catisma oldugunda ben...",
+    "q6a": "Hemen konusmaya calisirim 🗣️",
+    "q6b": "Once tek basima dusunur sonra konusurum 🤔",
+    "q7": "Partnere aski ifade etme seklim...",
+    "q7a": "Sik sik \"seni seviyorum\" derim 💖",
+    "q7b": "Sessizce eylemlerle kanitlarim 🛠️",
+    "q8": "Bir iliskide ben...",
+    "q8a": "Istikrarli ve yapilandirilmis iliskiyi tercih ederim 🏠",
+    "q8b": "Ozgur ve esnek iliskiyi tercih ederim 🦋",
+    "q9": "Askta karar verme tarzim...",
+    "q9a": "Mantiksal yargi ve analiz 📊",
+    "q9b": "Duygulari ve sezgileri takip ederim ✨",
+    "q10": "Partnerimle yapmak istedigim aktiviteler...",
+    "q10a": "Onemli konularda derin sohbetler 📚",
+    "q10b": "Birlikte yeni seyler deneyimlemek 🎨",
+    "q11": "Partner secme kriterlerim...",
+    "q11a": "Kosullari ve gelecek beklentilerini analiz ederim 🔍",
+    "q11b": "Duygulara ve hislere gore karar veririm 💓",
+    "q12": "Bulusma tarzim...",
+    "q12a": "Plana gore hareket etmeyi tercih ederim 📅",
+    "q12b": "Anin akisina uyarim 🌊"
   },
-  "loading": {
-    "text": "Aşk stilin analiz ediliyor..."
+  "style": {
+    "ENFP": { "title": "Tutkulu Alev", "desc": "Asik olunca tum dunya pembeleşir! Surekli yeni deneyimler sunar ve spontan bulusmalari sever.", "keywords": ["Ilk gorusde ask", "Surpizler", "Ozgur ask"], "idealType": "Derin sohbet + macera seven biri", "tip": "Uzun iliskilerde istikrar saglamak gerekir." },
+    "INFJ": { "title": "Gizemli Ruh", "desc": "Disaridan sakin ama icinden tutku dolu. Ruhani baglanti arar ve partnerin duygularini sezgisel olarak hisseder.", "keywords": ["Derin baglanti", "Ideal ask", "Adanmis"], "idealType": "Dururst sohbet + degerlere saygi", "tip": "Mukemmel ask yok ama birlikte buyuyen ask var." },
+    "ENFJ": { "title": "Sicak Lider", "desc": "Partnerin buyumesini ve mutlulugunu ictenlikle ister, her zaman destek olur. Dogal liderlik iliskiyi yonlendirir.", "keywords": ["Ilgi", "Adanmislik", "Empati"], "idealType": "Ictenligin kiymetini bilen + birlikte buyuyen", "tip": "Kendi duygularini da durustce ifade et." },
+    "INFP": { "title": "Hayalperest Romantik", "desc": "Peri masali gibi ask hayal eder. Asik olunca tum kalbiyle sever. Gercek iliskilerde parlar.", "keywords": ["Romantik", "Gercek ask", "Sadik"], "idealType": "Hassasiyeti anlayan + birlikte hayal kuran", "tip": "Gercek hayattaki kucuk mutluluklari da onemse." },
+    "ENTJ": { "title": "Guclu Stratejist", "desc": "Askta da hedefleri ve planlari var. Gelecegi birlikte cizerek buyumek ister.", "keywords": ["Hedef odakli", "Liderlik", "Dobra"], "idealType": "Bagimsiz + birlikte hedeflere ulasan", "tip": "Bazen verimsiz romantizm de gereklidir." },
+    "INTJ": { "title": "Bagimsiz Stratejist", "desc": "Kalbini bir kez actiktan sonra omur boyu partner olarak gorur. Karsilikli bagimsilliga saygi duyan olgun iliski ister.", "keywords": ["Derin guven", "Bagimsiz", "Mukemmeliyetci"], "idealType": "Entelektuel merak + bagimsiz", "tip": "Duyguları daha sik ifade etmek iliskiyi isitir." },
+    "ENTP": { "title": "Yaratici Meydan Okuyucu", "desc": "Aski heyecanli bir oyun gibi gorur, entelektuel alisveristen zevk alir. Yeni deneyimleri tercih eder.", "keywords": ["Entelektuel uyari", "Tartisma", "Mizah"], "idealType": "Entelektuel derinlik + mizah anlayisi", "tip": "Partnerin duygularini incitmemeye dikkat et." },
+    "INTP": { "title": "Mantiksal Dusunur", "desc": "Aski mantikla analiz eder ve eylemlerle kanitlar. Entelektuel meraki paylasan partneri onemser.", "keywords": ["Entelektuel alisveri", "Bagimsiz", "Analitik"], "idealType": "Bagimsiz + yalniz zamani anlayan", "tip": "Basit bir 'seni seviyorum' iliskiyi isitabilir." },
+    "ESFP": { "title": "Ozgur Showcu", "desc": "Partnerle her ani kutlama gibi yapar. Dokunarak sevgi gosterir ve eglendirme yetenegine sahiptir.", "keywords": ["Eglence", "Spontan", "Sevecen"], "idealType": "Nesen + hayatin tadini birlikte cikaran", "tip": "Ciddi konusmalar ve uzun vadeli planlar da gerekli." },
+    "ISFP": { "title": "Nazik Sanatci", "desc": "Sozden cok eylemle, mantiktan cok duyguyla sever. Kucuk hediyeler ve mektuplarla kalbini iletir.", "keywords": ["Duygusal", "Ozgur", "Eylemler konusur"], "idealType": "Duyguları anlayan + baskı yapmayan", "tip": "Icindeki sozleri daha sik ifade et." },
+    "ESFJ": { "title": "Sicak Bakici", "desc": "Partnerine aile gibi deger verir, her yildonumunu hatirlar ve uyumu onemser.", "keywords": ["Adanmis", "Istikrarli", "Ilgili"], "idealType": "Ictenligin kiymetini bilen + ailevi", "tip": "Mukemmel partner olmaya calisma." },
+    "ISFJ": { "title": "Adanmis Koruyucu", "desc": "Sessizce partnerini korur ve en kucuk detaylara bile ozen gosterir.", "keywords": ["Sessiz ask", "Istikrarli", "Dikkatli"], "idealType": "Guvenilir + adanmisligi anlayan", "tip": "Sadece fedakarlik yapma; kendi ihtiyaclarini da ifade et." },
+    "ESTP": { "title": "Cesur Maceracı", "desc": "Heyecan verici bulusmalari sever ve anin duygularina sadiktir.", "keywords": ["Aktif", "Spontan", "Duyusal"], "idealType": "Macerasever + enerjik", "tip": "Gelecek planlari birlikte yapmayı da dene." },
+    "ISTP": { "title": "Ozgur Usta", "desc": "Pratik yardimla aski kanitlar. Yalniz zamana ihtiyac duyar ve kisitlanmayi sevmez.", "keywords": ["Bagimsiz", "Pratik", "Eylemler kanitlar"], "idealType": "Bagimsiz + karismayan", "tip": "Duyguları biraz daha fazla ifade etmeyi dene." },
+    "ESTJ": { "title": "Sorumlu Lider", "desc": "Askta da kurallari ve planlari var. Sorumlulukla partnerine yaklasir ve istikrarli ask arar.", "keywords": ["Istikrarli", "Sorumlu", "Organize"], "idealType": "Sorumlu + ailevi", "tip": "Bazen spontan romantizm de gerekli." },
+    "ISTJ": { "title": "Guvenilir Koruyucu", "desc": "Her zaman sozunu tutar ve omur boyu partner arar. Geleneksel bulusmalara deger verir.", "keywords": ["Sadik", "Istikrarli", "Eylemler kanitlar"], "idealType": "Guvenilir + geleneksel degerleri paylasan", "tip": "Duyguları biraz daha fazla ifade etmeyi dene." }
+  },
+  "compat": {
+    "soulmate": "Ruh ikizi", "perfect": "Mukemmel partner", "great": "Harika uyum",
+    "good": "Iyi uyum", "effort": "Caba gerekli", "difficult": "Zor iliski",
+    "desc90": "Birbirinin eksikliklerini mukemmelce tamamlayan ideal kombinasyon.",
+    "desc80": "Derin anlayis ve saygıyla birlikte buyuyen iliski.",
+    "desc65": "Farkli cazibeler ilginc bir iliski yaratabilir.",
+    "desc50": "Caba iyi bir iliski kurabilir ama karsilikli anlayis gerekli.",
+    "desc30": "Deger ve iletisim tarzi farkliliklarini asmak gerekir.",
+    "desc0": "Zit kisilikler cok fazla caba ve anlayis gerektirir."
   },
   "result": {
-    "label": "Senin Aşk Stilin",
-    "idealType": "💘 İdeal Tip",
-    "tip": "💡 Aşk İpucu",
-    "top3": "💕 İlk 3 Uyumu",
-    "caution": "⚡ Dikkat Et",
-    "score": "Uyumluluk Puanı",
-    "good": "Güçlü Yönler",
-    "watchout": "Dikkat Et",
-    "rank": "."
+    "label": "Ask Stilin", "idealType": "💘 Ideal Tip", "tip": "💡 Ask Tavsiyesi",
+    "top3": "💕 En Uyumlu 3", "caution": "⚡ Dikkat", "score": "Uyum Puani",
+    "good": "Guclu Yanlar", "watchout": "Dikkat Edilmesi Gereken", "rank": "."
   },
-  "compatibility": {
-    "button": "🔍 Diğer Tiplerle Uyumluluğu Kontrol Et",
-    "header": "Uyumluluk Kontrolü",
-    "instruction": "Partner'ın MBTI tipini seç",
-    "back": "← Geri"
-  },
+  "compatibility": { "button": "🔍 Diger Tiplerle Uyumu Kontrol Et", "header": "Uyum Kontrolu", "instruction": "Partnerin MBTI tipini sec", "back": "← Geri" },
   "premium": {
-    "button": "✨ YZ Derinlemesine Aşk Analizi",
-    "badge": "PREMIUM",
-    "title": "🧠 YZ Derinlemesine Aşk Analizi",
-    "pattern": "📊 İlişki Deseni Analizi",
-    "patternEarly": "Erken Aşama (1-3 ay)",
-    "patternMid": "Orta Aşama (3-12 ay)",
-    "patternLong": "Uzun Vadeli (1+ yıl)",
-    "tips": "💡 5 Aşk Başarısı İpucu",
-    "dates": "🎯 Önerilen Randevu Fikirleri"
+    "button": "✨ AI Derin Ask Analizi", "badge": "PREMIUM", "title": "🧠 AI Derin Ask Analizi",
+    "pattern": "📊 Iliski Kalıbı Analizi", "patternEarly": "Erken Donem (1-3 ay)", "patternMid": "Orta Donem (3-12 ay)", "patternLong": "Uzun Vadeli (1+ yil)",
+    "tips": "💡 5 Ask Basarı Ipucu", "dates": "🎯 Onerilen Bulusma Fikirleri",
+    "data": {
+      "ENFP": { "patternEarly": "Tutkulu yaklasim, cok etkinlik", "patternMid": "Istikrar ariyor ama rutin hissediyor", "patternLong": "Gelecek planlama, ozgurluk gerekli", "tips": ["Uzun vadeli vizyon paylas", "Bagimsiligi koru", "Duygusal ifadeyi kontrol et", "Derin sohbetler onemli", "Soz tut"], "dates": ["Spontan gezi", "Yeni restoran kesfet", "Festival/konser", "Acik hava aktivitesi", "Sessiz kafe"] },
+      "INFJ": { "patternEarly": "Dikkatli yaklasim, derin sohbet", "patternMid": "Tamamen kalbini acar ve adanir", "patternLong": "Omur boyu partner", "tips": ["Gercekci beklentiler", "Duygu ifade etme cesareti", "Sinirlar belirle", "Spontanlige izin ver", "Oz bakim"], "dates": ["Kafede derin sohbet", "Sanat galerisi", "Doga yuruyusu", "Film + tartisma", "Birlikte okuma"] },
+      "ENFJ": { "patternEarly": "Aktif ilgi, dusunceli", "patternMid": "Adanmis bakim", "patternLong": "Yuva hayali", "tips": ["Kendi duygularini ifade et", "Mukemmeliyetciligi birak", "Partnerin otonomisin saygi goster", "Catismadan kacinma", "Kisisel zaman al"], "dates": ["Birlikte gonullu calisma", "Yemek turu", "Kultur etkinligi", "Derin sohbet", "Cift dersi"] },
+      "INFP": { "patternEarly": "Utangac yaklasim, ic heyecan", "patternMid": "Tum kalbiyle sever", "patternLong": "Ruh esi", "tips": ["Gercekciligi kabul et", "Duygu ifade etme pratigi", "Ideal tip takintisindan vazgec", "Kucuk mutluluklara sukret", "Partneri oldugu gibi kabul et"], "dates": ["Park yuruyusu", "Sergi", "Mektup degisimi", "Film izleme", "Kafede yazma"] },
+      "ENTJ": { "patternEarly": "Hedef belirle, aktif yaklasim", "patternMid": "Birlikte buyume plani", "patternLong": "Takim olarak iliski", "tips": ["Duyguya da yatirim yap", "Verimsizlige izin ver", "Partnerin temposuna saygi goster", "Sik sik ov", "Rahat ol"], "dates": ["Hedef semineri", "Sarap aksam yemegi", "Dag yuruyusu", "Strateji oyunu", "Seyahat planlama"] },
+      "INTJ": { "patternEarly": "Gozlemle sonra dikkatle yaklas", "patternMid": "Guven sonrasi kalbini ac", "patternLong": "Omur boyu partner", "tips": ["Duygu ifade etme pratigi", "Anlik anlarin tadini cikar", "Mukemmellik beklentisini birak", "Kucuk sevgi gosterileri", "Partnerin duygularina empati"], "dates": ["Muze", "Entelektuel sohbet kafesi", "Masa oyunu", "Belgesel izleme", "Yildiz gozlemi"] },
+      "ENTP": { "patternEarly": "Eglenceli yaklasim, entelektuel cazibe", "patternMid": "Yenilik arayisi", "patternLong": "Partnerle maceralar", "tips": ["Duygular da onemli", "Tartismayi kontrol et", "Soz tut", "Istikrar sagla", "Derin sohbet pratigi"], "dates": ["Yeni restoran", "Spontan gezi", "Tartisma kafesi", "Kacis odasi", "Festival"] },
+      "INTP": { "patternEarly": "Yavas analitik yaklasim", "patternMid": "Entelektuel bag", "patternLong": "Rahat yol arkadasi", "tips": ["'Seni seviyorum' de", "Duyguları kabul et", "Birlikte zamani artir", "Yildonumlerini hatirla", "Fiziksel yakinlik pratigi"], "dates": ["Bilim muzesi", "Birlikte kodlama", "Masa oyunu", "Belgesel tartismasi", "Gokbilimi gozlemi"] },
+      "ESFP": { "patternEarly": "Aktif, eglence odakli", "patternMid": "Her gun parti", "patternLong": "Simdiyi yasama", "tips": ["Gelecek planlari yap", "Ciddi sohbetler yap", "Dakik ol", "Birlikte biriktir", "Catismadan kacinma"], "dates": ["Parti", "Eglence parki", "Konser", "Yemek turu", "Sahil"] },
+      "ISFP": { "patternEarly": "Sessiz ilgi, eylemle ifade", "patternMid": "Derin sevgi", "patternLong": "Rahat yol arkadasi", "tips": ["Sozle ifade et", "Goruslerini paylas", "Catismadan kacinma", "Birlikte gelecek planla", "Kararlilik pratigi"], "dates": ["Sanat galerisi", "Doga yuruyusu", "Kafe", "Atolye deneyimi", "Fotograf cekimi"] },
+      "ESFJ": { "patternEarly": "Aktif ilgi, ozenli", "patternMid": "Aile gibi bakar", "patternLong": "Istikrarli yuva", "tips": ["Kendi duygularini oncelik yap", "Mukemmeliyetciligi birak", "Mudahaleyi azalt", "Partner tarzina saygi goster", "Kisisel zaman al"], "dates": ["Aile toplantisi", "Yildonumu aksam yemegi", "Alisveris", "Birlikte yemek yapma", "Ev partisi"] },
+      "ISFJ": { "patternEarly": "Sessiz ilgi, nazik ozen", "patternMid": "Adanmis destek", "patternLong": "Omur boyu koruyucu", "tips": ["Kendi ihtiyaclarini ifade et", "Degisimi kabul et", "Asiri fedakarliga dikkat", "Yeni seyler dene", "Duygu ifade pratigi"], "dates": ["Ev bulusmasi", "Sessiz restoran", "Park yuruyusu", "Film izleme", "Birlikte yemek yapma"] },
+      "ESTP": { "patternEarly": "Cesur yaklasim, heyecan", "patternMid": "Surekli macera", "patternLong": "Simdide yasama", "tips": ["Duygusal paylasim zamani", "Gelecek hakkinda konus", "Soz tut", "Ciddiyetini goster", "Partnerin temposunu dusun"], "dates": ["Bungee jumping", "Spor", "Araba gezisi", "Yeni restoran", "Seyahat"] },
+      "ISTP": { "patternEarly": "Ilgisiz gorunen ilgi", "patternMid": "Pratik yardim", "patternLong": "Rahat yol arkadasi", "tips": ["Duygu ifade pratigi", "Birlikte zamani artir", "Yildonumlerini hatirla", "Sohbet zamani ayir", "Sevgi gosterilerini artir"], "dates": ["DIY projesi", "Araba gezisi", "Balik tutma", "Alet alisverisi", "Kamp"] },
+      "ESTJ": { "patternEarly": "Planli yaklasim", "patternMid": "Istikrar arayisi", "patternLong": "Yuva hayali", "tips": ["Esneklik gelistir", "Duygusal empati pratigi", "Spontanliga izin ver", "Sik sik ov", "Partner tarzina saygi goster"], "dates": ["Luks restoran", "Golf", "Kultur etkinligi", "Planli seyahat", "Cift egzersizi"] },
+      "ISTJ": { "patternEarly": "Dikkatli yaklasim, gozlem", "patternMid": "Guven insa etme", "patternLong": "Omur boyu partner", "tips": ["Duygulari sozle ifade et", "Degisimi kabul et", "Yeni seyler dene", "Romantizm pratigi", "Esnek tutum"], "dates": ["Sessiz restoran", "Muze", "Dag yuruyusu", "Ev bulusmasi", "Kutuphane bulusmasi"] }
+    }
   },
-  "actions": {
-    "share": "📤 Sonucu Paylaş",
-    "saveImage": "📷 Resmi Kaydet",
-    "retry": "🔄 Tekrar Dene"
-  },
+  "actions": { "share": "📤 Sonucu Paylas", "saveImage": "📷 Gorsel Kaydet", "retry": "🔄 Tekrar Dene" },
   "share": {
-    "title": "Aşk stilinizi paylaşın!",
-    "subtitle": "Arkadaşlarınızla paylaşın ve uyumluluğunuzu karşılaştırın 💕",
-    "nativeShare": "📤 Yerel Paylaşım",
-    "shareModal": "Paylaş",
-    "shareClose": "Kapat",
-    "twitter": "𝕏 Twitter",
-    "facebook": "Facebook",
-    "kakaotalk": "KakaoTalk",
-    "copyLink": "Bağlantıyı Kopyala",
-    "copied": "Panoya kopyalandı! 💕",
-    "compareWith": "🤝 Arkadaş ile Karşılaştır",
-    "inviteText": "Benim MBTI aşk stilim {type}! {emoji} %{score} uyumlu oluyoruz! Sen de dene 👇",
-    "fullText": "💕 Benim aşk stilim \"{title}\" {emoji}\nMBTI: {type}\n\n{bestEmoji} {bestType} %{score} uyumludur!\n\nSenin stiling nedir? 👇\nhttps://dopabrain.com/mbti-love/\n\n#MBTIAşk #UyumluluTestesi #AşkStili"
+    "title": "Ask Stilini Paylas!", "subtitle": "Arkadaslarinla paylas ve uyumu karsilastir 💕",
+    "nativeShare": "📤 Paylas", "shareModal": "Paylas", "shareClose": "Kapat",
+    "twitter": "𝕏 Twitter", "facebook": "Facebook", "kakaotalk": "KakaoTalk", "copyLink": "Linki Kopyala",
+    "copied": "Panoya kopyalandi! 💕", "compareWith": "🤝 Arkadasla Karsilastir",
+    "inviteText": "MBTI ask stilim {type}! {emoji} {score}% uyumluyuz. Sen de dene! 👇",
+    "fullText": "💕 Ask Stilim \"{title}\" {emoji}\nMBTI: {type}\n\n{bestEmoji} {bestType} ile {score}% uyumlu!\n\nSenin stilin ne? 👇\nhttps://dopabrain.com/mbti-love/\n\n#MBTIAsk #UyumlulukTesti #AskStili"
   },
-  "game": {
-    "back": "DopaBrain Anasayfa"
-  },
-  "ads": {
-    "banner": "Reklam",
-    "label": "Reklam",
-    "closeIn": "kapatılmaya saniye",
-    "close": "✕ Kapat"
-  },
-  "recommendations": {
-    "title": "Bunları da Dene"
-  },
-  "canvas": {
-    "myStyle": "Benim MBTI aşk stilim",
-    "bestMatch": "En iyi eşleşme",
-    "compatibility": "uyumluluk",
-    "yourStyle": "Senin stilin ne? 👇",
-    "testTitle": "MBTI Aşk Uyumluluğu Testi"
-  },
+  "game": { "back": "DopaBrain Ana Sayfa" },
+  "ads": { "banner": "Reklam", "label": "Reklam", "closeIn": "saniye sonra kapat", "close": "✕ Kapat" },
+  "recommendations": { "title": "Bunlari da Dene" },
+  "canvas": { "myStyle": "MBTI Ask Stilim", "bestMatch": "En Iyi Es", "compatibility": "Uyumluluk", "yourStyle": "Senin stilin ne? 👇", "testTitle": "MBTI Ask Uyumlulugu Testi" },
   "error": {
-    "storage": "Gizli modda bazı özellikler sınırlı olabilir.",
-    "data": "Veri yükleme hatası. Lütfen sayfayı yenileyin.",
-    "canvas": "Grafik oluşturma sorunu. Lütfen tekrar deneyin.",
-    "audio": "Ses kullanılamıyor. Devam edebilirsiniz.",
-    "network": "Bağlantınızı kontrol edip tekrar deneyin.",
-    "general": "Bir şeyler ters gitti. Yenileyip tekrar deneyin."
+    "storage": "Gizli modda bazi ozellikler sinirli olabilir.",
+    "data": "Veri yukleme hatasi. Lutfen sayfayi yenileyin.",
+    "canvas": "Grafik olusturma sorunu. Tekrar deneyin.",
+    "audio": "Ses kullanilmiyor. Devam edebilirsiniz.",
+    "network": "Baglantinizi kontrol edip tekrar deneyin.",
+    "general": "Bir seyler yanlis gitti. Yenileyip tekrar deneyin."
   }
 }

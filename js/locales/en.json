@@ -1,7 +1,9 @@
 {
   "app": {
     "title": "MBTI Love Compatibility Test | DopaBrain",
-    "description": "MBTI love compatibility test for all 16 types. Find your perfect match and worst pairings!"
+    "description": "MBTI love compatibility test for all 16 types. Find your perfect match and worst pairings!",
+    "skipLink": "Skip to main",
+    "loading": "Loading..."
   },
   "header": {
     "title": "💕 MBTI Love Match",
@@ -21,6 +23,172 @@
   },
   "loading": {
     "text": "Analyzing your love style..."
+  },
+  "questions": {
+    "q1": "On a first date with someone new, I...",
+    "q1a": "Start the conversation and lead the mood 😄",
+    "q1b": "Wait for them to talk to me first 😊",
+    "q2": "When planning a date with my partner...",
+    "q2a": "I decide spontaneously in the moment 🎲",
+    "q2b": "I plan and prepare in advance 📋",
+    "q3": "When my partner is having a hard time, I...",
+    "q3a": "Offer logical solutions 🧠",
+    "q3b": "Empathize and comfort their feelings first 💕",
+    "q4": "My ideal date is...",
+    "q4a": "Having deep conversations together 💬",
+    "q4b": "Doing fun activities together 🏃",
+    "q5": "The most important thing in a relationship is...",
+    "q5a": "Sharing future visions and values 🔮",
+    "q5b": "Happiness and joy in the present moment 🌈",
+    "q6": "When conflict arises, I...",
+    "q6a": "Try to talk it out right away 🗣️",
+    "q6b": "Think alone first, then discuss 🤔",
+    "q7": "How I express love to my partner...",
+    "q7a": "Say \"I love you\" often 💖",
+    "q7b": "Show it quietly through actions 🛠️",
+    "q8": "In a relationship, I prefer...",
+    "q8a": "A stable and structured relationship 🏠",
+    "q8b": "A free and flexible relationship 🦋",
+    "q9": "My decision-making style in love is...",
+    "q9a": "Logical judgment and analysis 📊",
+    "q9b": "Following emotions and intuition ✨",
+    "q10": "Activities I want to do with my partner...",
+    "q10a": "Deep conversations on meaningful topics 📚",
+    "q10b": "Experiencing something new together 🎨",
+    "q11": "My criteria for choosing a partner...",
+    "q11a": "Analyze conditions and future prospects 🔍",
+    "q11b": "Go with feelings and emotions 💓",
+    "q12": "My dating style is...",
+    "q12a": "I prefer following a plan 📅",
+    "q12b": "I go with the flow 🌊"
+  },
+  "style": {
+    "ENFP": {
+      "title": "Passionate Flame",
+      "desc": "When you fall in love, the whole world turns pink! You constantly gift your partner with new experiences and love spontaneous dates.",
+      "keywords": ["Love at first sight", "Surprise events", "Free-spirited love"],
+      "idealType": "Someone who enjoys deep conversations + adventure",
+      "tip": "In long-term relationships, you need to provide a sense of stability."
+    },
+    "INFJ": {
+      "title": "Mystical Soul",
+      "desc": "Quiet on the outside but burning with passion inside. You seek spiritual connection and intuitively sense your partner's emotions.",
+      "keywords": ["Deep connection", "Idealistic love", "Devoted"],
+      "idealType": "Someone who values honest conversations + respects values",
+      "tip": "Perfect love doesn't exist, but love that grows together does."
+    },
+    "ENFJ": {
+      "title": "Warm Leader",
+      "desc": "You sincerely wish for your partner's growth and happiness, always cheering them on. Your natural leadership guides the relationship.",
+      "keywords": ["Caring", "Devoted", "Empathy"],
+      "idealType": "Someone who appreciates sincerity + grows together",
+      "tip": "Express your own feelings honestly too."
+    },
+    "INFP": {
+      "title": "Dreamy Romantic",
+      "desc": "You dream of fairy-tale love, and when you fall in love, you pour your whole heart into it. You shine brightest in genuine relationships.",
+      "keywords": ["Romantic", "True love", "Loyal"],
+      "idealType": "Someone who understands sensitivity + dreams together",
+      "tip": "Cherish the small happinesses in everyday life too."
+    },
+    "ENTJ": {
+      "title": "Strong Strategist",
+      "desc": "You have goals and plans even in love. You want to grow together while envisioning the future as a couple.",
+      "keywords": ["Goal-oriented", "Leadership", "Straightforward"],
+      "idealType": "Someone independent + achieves goals together",
+      "tip": "Sometimes even inefficient romance is needed."
+    },
+    "INTJ": {
+      "title": "Independent Strategist",
+      "desc": "Once you open your heart, you see them as a lifelong partner. You desire a mature relationship that respects each other's independence.",
+      "keywords": ["Deep trust", "Independent", "Perfectionist"],
+      "idealType": "Someone with intellectual curiosity + independence",
+      "tip": "Expressing emotions more often will warm up the relationship."
+    },
+    "ENTP": {
+      "title": "Creative Challenger",
+      "desc": "You treat love like an exciting game, enjoying intellectual exchange with your partner. You prefer new experiences.",
+      "keywords": ["Intellectual stimulation", "Debate", "Humor"],
+      "idealType": "Someone with intellectual depth + sense of humor",
+      "tip": "Be careful not to hurt your partner's feelings."
+    },
+    "INTP": {
+      "title": "Logical Thinker",
+      "desc": "You analyze love logically and prove it through actions. You treasure a partner who shares intellectual curiosity.",
+      "keywords": ["Intellectual exchange", "Independent", "Analytical"],
+      "idealType": "Someone independent + who understands alone time",
+      "tip": "One simple \"I love you\" can warm up the relationship."
+    },
+    "ESFP": {
+      "title": "Free Entertainer",
+      "desc": "You make every moment with your partner feel like a celebration. You express affection through touch and have a natural talent for fun.",
+      "keywords": ["Fun", "Spontaneous", "Affectionate"],
+      "idealType": "Someone cheerful + who enjoys life together",
+      "tip": "Serious conversations and long-term plans are also necessary."
+    },
+    "ISFP": {
+      "title": "Gentle Artist",
+      "desc": "You love through actions rather than words, feelings rather than logic. Small gifts and handwritten letters convey your heart.",
+      "keywords": ["Emotional", "Free-spirited", "Actions speak louder"],
+      "idealType": "Someone who understands emotions + doesn't pressure",
+      "tip": "Express what's in your heart more often."
+    },
+    "ESFJ": {
+      "title": "Warm Caregiver",
+      "desc": "You cherish your partner like family, remember every anniversary, and value harmony with those around you.",
+      "keywords": ["Devoted", "Stable", "Caring"],
+      "idealType": "Someone who appreciates sincerity + is family-oriented",
+      "tip": "Don't try to be the perfect partner."
+    },
+    "ISFJ": {
+      "title": "Devoted Guardian",
+      "desc": "You quietly protect your partner and take care of even the smallest details with devoted love.",
+      "keywords": ["Quiet love", "Stable", "Attentive"],
+      "idealType": "Someone trustworthy + who appreciates devotion",
+      "tip": "Don't just sacrifice; express your own needs too."
+    },
+    "ESTP": {
+      "title": "Bold Adventurer",
+      "desc": "You enjoy thrilling dates and stay true to the emotions of the moment.",
+      "keywords": ["Active", "Spontaneous", "Sensual"],
+      "idealType": "Someone adventurous + full of energy",
+      "tip": "Try making future plans together too."
+    },
+    "ISTP": {
+      "title": "Free Craftsman",
+      "desc": "You prove love through practical help. You need alone time and dislike being tied down.",
+      "keywords": ["Independent", "Practical", "Actions prove love"],
+      "idealType": "Someone independent + who doesn't interfere",
+      "tip": "Try expressing emotions a bit more."
+    },
+    "ESTJ": {
+      "title": "Responsible Leader",
+      "desc": "You have rules and plans in love too. You treat your partner with responsibility and pursue stable love.",
+      "keywords": ["Stable", "Responsible", "Organized"],
+      "idealType": "Someone responsible + family-oriented",
+      "tip": "Spontaneous romance is needed sometimes."
+    },
+    "ISTJ": {
+      "title": "Trustworthy Protector",
+      "desc": "You always keep promises and seek a lifelong partner. You cherish traditional dating.",
+      "keywords": ["Loyal", "Stable", "Actions prove love"],
+      "idealType": "Someone trustworthy + who shares traditional values",
+      "tip": "Try expressing emotions a bit more."
+    }
+  },
+  "compat": {
+    "soulmate": "Soulmates",
+    "perfect": "Perfect Partners",
+    "great": "Great Match",
+    "good": "Good Match",
+    "effort": "Needs Effort",
+    "difficult": "Challenging",
+    "desc90": "An ideal combination where you perfectly complement each other's weaknesses.",
+    "desc80": "A relationship that grows together through deep understanding and respect.",
+    "desc65": "Different charms can create an interesting relationship.",
+    "desc50": "Effort can build a good relationship, but mutual understanding is needed.",
+    "desc30": "You need to overcome differences in values and communication styles.",
+    "desc0": "Opposite personalities require a lot of effort and understanding."
   },
   "result": {
     "label": "Your Love Style",
@@ -48,7 +216,25 @@
     "patternMid": "Mid Stage (3-12 months)",
     "patternLong": "Long Term (1+ years)",
     "tips": "💡 5 Love Success Tips",
-    "dates": "🎯 Recommended Date Ideas"
+    "dates": "🎯 Recommended Date Ideas",
+    "data": {
+      "ENFP": { "patternEarly": "Passionate approach, lots of events", "patternMid": "Seeking stability but feeling routine", "patternLong": "Future planning, needs freedom", "tips": ["Share long-term vision", "Maintain independence", "Control emotional expression", "Deep conversations matter", "Keep promises"], "dates": ["Spontaneous trip", "New restaurant exploration", "Festival/concert", "Adventure activity", "Quiet cafe"] },
+      "INFJ": { "patternEarly": "Cautious approach, deep conversations", "patternMid": "Fully opens heart and devotes", "patternLong": "Lifelong partner", "tips": ["Realistic expectations", "Courage to express emotions", "Set boundaries", "Allow spontaneity", "Self-care"], "dates": ["Deep cafe talk", "Art museum", "Nature walk", "Movie + discussion", "Reading together"] },
+      "ENFJ": { "patternEarly": "Active interest, considerate", "patternMid": "Devoted caring", "patternLong": "Dreams of home", "tips": ["Express own feelings", "Let go of perfectionism", "Respect partner's autonomy", "Don't avoid conflict", "Take personal time"], "dates": ["Volunteering together", "Food tour", "Cultural event", "Deep conversation", "Couple's class"] },
+      "INFP": { "patternEarly": "Shy approach, inner excitement", "patternMid": "Loves with whole heart", "patternLong": "Soulmate", "tips": ["Accept reality", "Practice expressing feelings", "Let go of ideal type fixation", "Appreciate small happiness", "Accept partner as they are"], "dates": ["Park walk", "Exhibition", "Letter exchange", "Movie watching", "Cafe writing"] },
+      "ENTJ": { "patternEarly": "Sets goals, active approach", "patternMid": "Plans growth together", "patternLong": "Relationship as a team", "tips": ["Invest in emotions too", "Allow inefficiency", "Respect partner's pace", "Compliment often", "Take it easy"], "dates": ["Goal seminar", "Wine dinner", "Hiking", "Strategy game", "Travel planning"] },
+      "INTJ": { "patternEarly": "Observes then cautiously approaches", "patternMid": "Opens heart after building trust", "patternLong": "Lifelong partner", "tips": ["Practice expressing emotions", "Enjoy spontaneous moments", "Let go of perfection", "Small affectionate gestures", "Empathize with partner's feelings"], "dates": ["Museum", "Intellectual cafe discussion", "Board games", "Documentary viewing", "Stargazing"] },
+      "ENTP": { "patternEarly": "Fun approach, intellectual charm", "patternMid": "Seeking novelty", "patternLong": "Adventures with partner", "tips": ["Emotions matter too", "Control arguments", "Keep promises", "Provide stability", "Practice deep conversations"], "dates": ["New restaurant", "Spontaneous trip", "Debate cafe", "Escape room", "Festival"] },
+      "INTP": { "patternEarly": "Slow, analytical approach", "patternMid": "Intellectual bond", "patternLong": "Comfortable companion", "tips": ["Say 'I love you'", "Acknowledge emotions", "Increase time together", "Remember anniversaries", "Practice physical affection"], "dates": ["Science museum", "Coding together", "Board games", "Documentary discussion", "Stargazing"] },
+      "ESFP": { "patternEarly": "Active, fun-oriented", "patternMid": "Every day is a party", "patternLong": "Enjoys the present", "tips": ["Make future plans", "Have serious talks", "Be punctual", "Save together", "Don't avoid conflict"], "dates": ["Party", "Amusement park", "Concert", "Food tour", "Beach"] },
+      "ISFP": { "patternEarly": "Quiet interest, expresses through actions", "patternMid": "Deep affection", "patternLong": "Comfortable companion", "tips": ["Express through words", "Share opinions", "Don't avoid conflict", "Plan future together", "Practice assertiveness"], "dates": ["Art museum", "Nature walk", "Cafe", "Workshop experience", "Photo shooting"] },
+      "ESFJ": { "patternEarly": "Active interest, attentive", "patternMid": "Cares like family", "patternLong": "Stable home", "tips": ["Prioritize own feelings", "Let go of perfectionism", "Reduce interference", "Respect partner's style", "Take personal time"], "dates": ["Family gathering", "Anniversary dinner", "Shopping", "Cooking together", "Home party"] },
+      "ISFJ": { "patternEarly": "Quiet interest, delicate care", "patternMid": "Devoted support", "patternLong": "Lifelong guardian", "tips": ["Express own needs", "Accept change", "Beware over-sacrifice", "Try new things", "Practice expressing emotions"], "dates": ["Home date", "Quiet restaurant", "Park walk", "Movie watching", "Cooking together"] },
+      "ESTP": { "patternEarly": "Bold approach, thrilling", "patternMid": "Continuous adventure", "patternLong": "Lives in the present", "tips": ["Time for emotional exchange", "Talk about the future", "Keep promises", "Show seriousness", "Consider partner's pace"], "dates": ["Bungee jumping", "Sports", "Road trip", "New restaurant", "Travel"] },
+      "ISTP": { "patternEarly": "Seemingly indifferent interest", "patternMid": "Practical help", "patternLong": "Comfortable companion", "tips": ["Practice expressing emotions", "Increase time together", "Remember anniversaries", "Have conversation time", "Increase affection"], "dates": ["DIY project", "Road trip", "Fishing", "Hardware shopping", "Camping"] },
+      "ESTJ": { "patternEarly": "Planned approach", "patternMid": "Seeks stability", "patternLong": "Dreams of home", "tips": ["Build flexibility", "Practice emotional empathy", "Allow spontaneity", "Compliment often", "Respect partner's style"], "dates": ["Fine dining", "Golf", "Cultural event", "Planned trip", "Couple's workout"] },
+      "ISTJ": { "patternEarly": "Cautious approach, observing", "patternMid": "Building trust", "patternLong": "Lifelong partner", "tips": ["Express emotions verbally", "Accept change", "Try new things", "Practice romance", "Be flexible"], "dates": ["Quiet restaurant", "Museum", "Hiking", "Home date", "Library date"] }
+    }
   },
   "actions": {
     "share": "📤 Share Result",

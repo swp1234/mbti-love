@@ -1,100 +1,134 @@
 {
   "app": {
-    "title": "MBTI Liebes-Kompatibilität Test | DopaBrain",
-    "description": "MBTI Liebes-Kompatibilität Test für alle 16 Typen. Finde deine perfekte Passung und schlimmsten Paarungen!"
+    "title": "MBTI Liebes-Kompatibilitaetstest | DopaBrain",
+    "description": "MBTI Liebes-Kompatibilitaetstest fuer alle 16 Typen. Finde deine perfekte Passung!",
+    "skipLink": "Zum Inhalt springen",
+    "loading": "Laden..."
   },
-  "header": {
-    "title": "💕 MBTI Liebes-Passung",
-    "sub": "Welcher MBTI-Typ ist deine perfekte Passung?"
-  },
+  "header": { "title": "💕 MBTI Liebe", "sub": "Welcher MBTI-Typ ist dein perfektes Match?" },
   "intro": {
-    "title": "MBTI Liebes-Passung",
-    "sub": "Welcher MBTI-Typ ist deine perfekte Passung?",
-    "desc": "Beantworte 12 Fragen und entdecke<br>deinen Liebeszstil + ideale Kompatibilitäts-Passung",
-    "meta1": "📝 12 Fragen",
-    "meta2": "⏱️ Etwa 3 Minuten",
-    "meta3": "💖 256 Kombinationen",
+    "title": "MBTI Liebe",
+    "sub": "Welcher MBTI-Typ ist dein perfektes Match?",
+    "desc": "Beantworte 12 Fragen und entdecke<br>deinen Liebesstil + ideale Kompatibilitaet",
+    "meta1": "📝 12 Fragen", "meta2": "⏱️ Ca. 3 Minuten", "meta3": "💖 256 Kombinationen",
     "start": "Test starten"
   },
-  "question": {
-    "progress": "Frage"
+  "question": { "progress": "Frage" },
+  "loading": { "text": "Dein Liebesstil wird analysiert..." },
+  "questions": {
+    "q1": "Beim ersten Date...",
+    "q1a": "Beginne ich das Gespraech und fuehre die Stimmung 😄",
+    "q1b": "Warte ich, bis sie mich ansprechen 😊",
+    "q2": "Bei der Planung eines Dates mit meinem Partner...",
+    "q2a": "Entscheide ich spontan im Moment 🎲",
+    "q2b": "Plane und bereite ich im Voraus vor 📋",
+    "q3": "Wenn mein Partner eine schwere Zeit hat...",
+    "q3a": "Biete ich logische Loesungen an 🧠",
+    "q3b": "Zeige ich zuerst Empathie und troeste 💕",
+    "q4": "Mein ideales Date ist...",
+    "q4a": "Gemeinsam tiefe Gespraeche fuehren 💬",
+    "q4b": "Gemeinsam spassige Aktivitaeten machen 🏃",
+    "q5": "Das Wichtigste in einer Beziehung...",
+    "q5a": "Zukunftsvisionen und Werte teilen 🔮",
+    "q5b": "Glueck und Freude im Moment 🌈",
+    "q6": "Bei Konflikten...",
+    "q6a": "Versuche ich sofort zu reden 🗣️",
+    "q6b": "Denke ich erst allein nach, dann rede ich 🤔",
+    "q7": "Wie ich meinem Partner Liebe zeige...",
+    "q7a": "Sage oft \"Ich liebe dich\" 💖",
+    "q7b": "Zeige es still durch Taten 🛠️",
+    "q8": "In einer Beziehung bevorzuge ich...",
+    "q8a": "Eine stabile und strukturierte Beziehung 🏠",
+    "q8b": "Eine freie und flexible Beziehung 🦋",
+    "q9": "Mein Entscheidungsstil in der Liebe...",
+    "q9a": "Logisches Urteil und Analyse 📊",
+    "q9b": "Folge Gefuehlen und Intuition ✨",
+    "q10": "Aktivitaeten mit meinem Partner...",
+    "q10a": "Tiefe Gespraeche ueber wichtige Themen 📚",
+    "q10b": "Gemeinsam Neues erleben 🎨",
+    "q11": "Meine Kriterien bei der Partnerwahl...",
+    "q11a": "Bedingungen und Zukunftsaussichten analysieren 🔍",
+    "q11b": "Nach Gefuehlen und Emotionen entscheiden 💓",
+    "q12": "Mein Dating-Stil...",
+    "q12a": "Ich folge lieber einem Plan 📅",
+    "q12b": "Ich passe mich der Situation an 🌊"
   },
-  "loading": {
-    "text": "Analysiere deinen Liebeszstil..."
+  "style": {
+    "ENFP": { "title": "Leidenschaftliche Flamme", "desc": "Wenn du dich verliebst, wird die ganze Welt rosa! Du schenkst staendig neue Erlebnisse und liebst spontane Dates.", "keywords": ["Liebe auf den ersten Blick", "Ueberraschungen", "Freie Liebe"], "idealType": "Jemand fuer tiefe Gespraeche + Abenteuer", "tip": "In Langzeitbeziehungen musst du Stabilitaet geben." },
+    "INFJ": { "title": "Mystische Seele", "desc": "Aussen ruhig, aber innen voller Leidenschaft. Sucht spirituelle Verbindung und spuert intuitiv die Emotionen des Partners.", "keywords": ["Tiefe Verbindung", "Ideale Liebe", "Hingebungsvoll"], "idealType": "Ehrliche Gespraeche + Werteschaetzung", "tip": "Perfekte Liebe gibt es nicht, aber Liebe, die zusammen waechst." },
+    "ENFJ": { "title": "Warmer Anfuehrer", "desc": "Wuenscht aufrichtig das Wachstum und Glueck des Partners. Natuerliche Fuehrung leitet die Beziehung.", "keywords": ["Fuersorge", "Hingabe", "Empathie"], "idealType": "Jemand der Aufrichtigkeit schaetzt + zusammen waechst", "tip": "Druecke auch deine eigenen Gefuehle ehrlich aus." },
+    "INFP": { "title": "Traeumerischer Romantiker", "desc": "Traeumt von Maerchen-Liebe. Liebt mit ganzem Herzen. Strahlt in echten Beziehungen.", "keywords": ["Romantisch", "Wahre Liebe", "Treu"], "idealType": "Jemand der Sensibilitaet versteht + zusammen traeumt", "tip": "Schaetze auch die kleinen Freuden im Alltag." },
+    "ENTJ": { "title": "Starker Stratege", "desc": "Hat auch in der Liebe Ziele und Plaene. Will zusammen wachsen und die Zukunft gestalten.", "keywords": ["Zielorientiert", "Fuehrung", "Direkt"], "idealType": "Unabhaengig + erreicht Ziele zusammen", "tip": "Manchmal ist auch ineffiziente Romantik noetig." },
+    "INTJ": { "title": "Unabhaengiger Stratege", "desc": "Oeffnet das Herz einmal und sieht den Partner fuers Leben. Will eine reife Beziehung mit gegenseitigem Respekt.", "keywords": ["Tiefes Vertrauen", "Unabhaengig", "Perfektionist"], "idealType": "Intellektuelle Neugier + Unabhaengigkeit", "tip": "Mehr Gefuehle auszudruecken waermt die Beziehung." },
+    "ENTP": { "title": "Kreativer Herausforderer", "desc": "Sieht Liebe als spannendes Spiel und geniesst intellektuellen Austausch. Bevorzugt neue Erfahrungen.", "keywords": ["Intellektueller Reiz", "Debatte", "Humor"], "idealType": "Intellektuelle Tiefe + Sinn fuer Humor", "tip": "Achte darauf, die Gefuehle des Partners nicht zu verletzen." },
+    "INTP": { "title": "Logischer Denker", "desc": "Analysiert Liebe logisch und beweist sie durch Taten. Schaetzt Partner, die intellektuelle Neugier teilen.", "keywords": ["Intellektueller Austausch", "Unabhaengig", "Analytisch"], "idealType": "Unabhaengig + versteht Alleinzeit", "tip": "Ein einfaches 'Ich liebe dich' kann die Beziehung waermen." },
+    "ESFP": { "title": "Freier Entertainer", "desc": "Macht jeden Moment mit dem Partner zum Fest. Zeigt Zuneigung durch Beruehrung mit natuerlichem Talent zum Unterhalten.", "keywords": ["Spass", "Spontan", "Zueneigungsvoll"], "idealType": "Froehlich + geniesst das Leben zusammen", "tip": "Ernste Gespraeche und Langzeitplaene sind auch noetig." },
+    "ISFP": { "title": "Sanfter Kuenstler", "desc": "Liebt mit Taten statt Worten, mit Gefuehlen statt Logik. Uebermittelt das Herz mit kleinen Geschenken und Briefen.", "keywords": ["Gefuehlvoll", "Frei", "Taten sprechen"], "idealType": "Versteht Emotionen + uebt keinen Druck aus", "tip": "Druecke oefter aus, was du fuehlst." },
+    "ESFJ": { "title": "Warmer Betreuer", "desc": "Kuemmert sich um den Partner wie um Familie, erinnert sich an jeden Jahrestag und schaetzt Harmonie.", "keywords": ["Hingebungsvoll", "Stabil", "Fueersorglich"], "idealType": "Schaetzt Aufrichtigkeit + familienorientiert", "tip": "Versuche nicht, der perfekte Partner zu sein." },
+    "ISFJ": { "title": "Hingebungsvoller Beschuetzer", "desc": "Schuetzt still den Partner und kuemmert sich liebevoll um jedes Detail.", "keywords": ["Stille Liebe", "Stabil", "Aufmerksam"], "idealType": "Vertrauenswuerdig + schaetzt Hingabe", "tip": "Opfere dich nicht nur auf; druecke auch deine Beduerfnisse aus." },
+    "ESTP": { "title": "Kuehner Abenteurer", "desc": "Geniesst aufregende Dates und ist treu den Emotionen des Moments.", "keywords": ["Aktiv", "Spontan", "Sinnlich"], "idealType": "Abenteuerlustig + voller Energie", "tip": "Versuche auch gemeinsam Zukunftsplaene zu machen." },
+    "ISTP": { "title": "Freier Handwerker", "desc": "Beweist Liebe durch praktische Hilfe. Braucht Alleinzeit und mag keine Einschraenkungen.", "keywords": ["Unabhaengig", "Praktisch", "Taten beweisen"], "idealType": "Unabhaengig + mischt sich nicht ein", "tip": "Versuche etwas mehr Emotionen auszudruecken." },
+    "ESTJ": { "title": "Verantwortungsvoller Anfuehrer", "desc": "Hat auch in der Liebe Regeln und Plaene. Behandelt den Partner verantwortungsvoll und sucht stabile Liebe.", "keywords": ["Stabil", "Verantwortungsvoll", "Organisiert"], "idealType": "Verantwortungsvoll + familienorientiert", "tip": "Manchmal braucht es spontane Romantik." },
+    "ISTJ": { "title": "Vertrauenswuerdiger Beschuetzer", "desc": "Haelt immer Versprechen und sucht einen Partner fuers Leben. Schaetzt traditionelle Dates.", "keywords": ["Treu", "Stabil", "Taten beweisen"], "idealType": "Vertrauenswuerdig + teilt traditionelle Werte", "tip": "Versuche etwas mehr Emotionen auszudruecken." }
+  },
+  "compat": {
+    "soulmate": "Seelenverwandte", "perfect": "Perfektes Paar", "great": "Grossartige Kompatibilitaet",
+    "good": "Gute Kompatibilitaet", "effort": "Braucht Einsatz", "difficult": "Schwierige Beziehung",
+    "desc90": "Eine ideale Kombination, die sich perfekt ergaenzt.",
+    "desc80": "Eine Beziehung, die durch tiefes Verstaendnis und Respekt waechst.",
+    "desc65": "Unterschiedliche Reize koennen eine interessante Beziehung schaffen.",
+    "desc50": "Einsatz kann eine gute Beziehung aufbauen, aber gegenseitiges Verstaendnis ist noetig.",
+    "desc30": "Unterschiede in Werten und Kommunikationsstilen muessen ueberwunden werden.",
+    "desc0": "Gegensaetzliche Persoenlichkeiten erfordern viel Einsatz und Verstaendnis."
   },
   "result": {
-    "label": "Dein Liebeszstil",
-    "idealType": "💘 Idealer Typ",
-    "tip": "💡 Liebes-Tipp",
-    "top3": "💕 Top 3 Passungen",
-    "caution": "⚡ Achte auf",
-    "score": "Kompatibilitätspunktzahl",
-    "good": "Stärken",
-    "watchout": "Achte auf",
-    "rank": "."
+    "label": "Dein Liebesstil", "idealType": "💘 Idealtyp", "tip": "💡 Liebestipp",
+    "top3": "💕 Top 3 Matches", "caution": "⚡ Vorsicht", "score": "Kompatibilitaetswert",
+    "good": "Staerken", "watchout": "Vorsicht bei", "rank": "."
   },
-  "compatibility": {
-    "button": "🔍 Kompatibilität mit anderen Typen prüfen",
-    "header": "Kompatibilitätsprüfung",
-    "instruction": "Wähle MBTI-Typ des Partners",
-    "back": "← Zurück"
-  },
+  "compatibility": { "button": "🔍 Kompatibilitaet mit anderen Typen pruefen", "header": "Kompatibilitaetspruefung", "instruction": "Waehle den MBTI-Typ des Partners", "back": "← Zurueck" },
   "premium": {
-    "button": "✨ Tiefe KI-Liebes-Analyse",
-    "badge": "PREMIUM",
-    "title": "🧠 Tiefe KI-Liebes-Analyse",
-    "pattern": "📊 Beziehungsmuster-Analyse",
-    "patternEarly": "Frühe Phase (1-3 Monate)",
-    "patternMid": "Mittlere Phase (3-12 Monate)",
-    "patternLong": "Langfristig (1+ Jahre)",
-    "tips": "💡 5 Liebes-Erfolgs-Tipps",
-    "dates": "🎯 Empfehlenswerte Dating-Ideen"
+    "button": "✨ KI Tiefe Liebesanalyse", "badge": "PREMIUM", "title": "🧠 KI Tiefe Liebesanalyse",
+    "pattern": "📊 Beziehungsmuster-Analyse", "patternEarly": "Fruehe Phase (1-3 Monate)", "patternMid": "Mittlere Phase (3-12 Monate)", "patternLong": "Langfristig (1+ Jahre)",
+    "tips": "💡 5 Tipps fuer Liebeserfolg", "dates": "🎯 Empfohlene Date-Ideen",
+    "data": {
+      "ENFP": { "patternEarly": "Leidenschaftlicher Ansatz, viele Events", "patternMid": "Sucht Stabilitaet, fuehlt aber Routine", "patternLong": "Zukunftsplanung, braucht Freiheit", "tips": ["Langfristige Vision teilen", "Unabhaengigkeit bewahren", "Emotionale Ausdruecke kontrollieren", "Tiefe Gespraeche sind wichtig", "Versprechen halten"], "dates": ["Spontaner Trip", "Neues Restaurant entdecken", "Festival/Konzert", "Outdoor-Aktivitaet", "Ruhiges Cafe"] },
+      "INFJ": { "patternEarly": "Vorsichtiger Ansatz, tiefe Gespraeche", "patternMid": "Oeffnet das Herz komplett und widmet sich", "patternLong": "Lebenslanger Partner", "tips": ["Realistische Erwartungen", "Mut Emotionen auszudruecken", "Grenzen setzen", "Spontanitaet zulassen", "Selbstfuersorge"], "dates": ["Tiefes Gespraech im Cafe", "Kunstmuseum", "Naturspaziergang", "Film + Diskussion", "Gemeinsam lesen"] },
+      "ENFJ": { "patternEarly": "Aktives Interesse, ruecksichtsvoll", "patternMid": "Hingebungsvolle Fuersorge", "patternLong": "Traeumt vom Zuhause", "tips": ["Eigene Gefuehle ausdruecken", "Perfektionismus loslassen", "Autonomie des Partners respektieren", "Konflikte nicht vermeiden", "Persoenliche Zeit nehmen"], "dates": ["Gemeinsam ehrenamtlich", "Food-Tour", "Kulturveranstaltung", "Tiefes Gespraech", "Paarkurs"] },
+      "INFP": { "patternEarly": "Schuechtern, innere Aufregung", "patternMid": "Liebt mit ganzem Herzen", "patternLong": "Seelenverwandte", "tips": ["Realitaet akzeptieren", "Gefuehle ausdruecken ueben", "Idealtyp-Fixierung loslassen", "Kleine Freuden schaetzen", "Partner akzeptieren wie er ist"], "dates": ["Parkspaziergang", "Ausstellung", "Briefe austauschen", "Film schauen", "Im Cafe schreiben"] },
+      "ENTJ": { "patternEarly": "Ziele setzen, aktiver Ansatz", "patternMid": "Wachstum zusammen planen", "patternLong": "Beziehung als Team", "tips": ["Auch in Gefuehle investieren", "Ineffizienz zulassen", "Tempo des Partners respektieren", "Oft loben", "Entspannen"], "dates": ["Zielseminar", "Weinabendessen", "Wandern", "Strategiespiel", "Reise planen"] },
+      "INTJ": { "patternEarly": "Beobachtet dann naehert sich vorsichtig", "patternMid": "Oeffnet Herz nach Vertrauensaufbau", "patternLong": "Lebenslanger Partner", "tips": ["Emotionen ausdruecken ueben", "Spontane Momente geniessen", "Perfektionserwartung loslassen", "Kleine Zuneigungsgesten", "Mit Gefuehlen des Partners mitfuehlen"], "dates": ["Museum", "Intellektuelles Cafe", "Brettspiele", "Dokumentation schauen", "Sternebeobachten"] },
+      "ENTP": { "patternEarly": "Spassiger Ansatz, intellektueller Charme", "patternMid": "Sucht Neuheit", "patternLong": "Abenteuer mit Partner", "tips": ["Emotionen sind auch wichtig", "Argumente kontrollieren", "Versprechen halten", "Stabilitaet geben", "Tiefe Gespraeche ueben"], "dates": ["Neues Restaurant", "Spontaner Trip", "Debattier-Cafe", "Escape Room", "Festival"] },
+      "INTP": { "patternEarly": "Langsamer analytischer Ansatz", "patternMid": "Intellektuelle Bindung", "patternLong": "Bequemer Begleiter", "tips": ["'Ich liebe dich' sagen", "Emotionen anerkennen", "Mehr Zeit zusammen", "Jahrestage erinnern", "Koerperliche Naehe ueben"], "dates": ["Wissenschaftsmuseum", "Zusammen programmieren", "Brettspiele", "Dokumentation diskutieren", "Sterne beobachten"] },
+      "ESFP": { "patternEarly": "Aktiv, spassorientiert", "patternMid": "Jeden Tag Party", "patternLong": "Geniesst die Gegenwart", "tips": ["Zukunftsplaene machen", "Ernste Gespraeche fuehren", "Puenktlich sein", "Zusammen sparen", "Konflikte nicht vermeiden"], "dates": ["Party", "Freizeitpark", "Konzert", "Food-Tour", "Strand"] },
+      "ISFP": { "patternEarly": "Stilles Interesse, drueckt durch Taten aus", "patternMid": "Tiefe Zuneigung", "patternLong": "Bequemer Begleiter", "tips": ["Mit Worten ausdruecken", "Meinung teilen", "Konflikte nicht vermeiden", "Zukunft zusammen planen", "Durchsetzungsfaehigkeit ueben"], "dates": ["Kunstmuseum", "Naturspaziergang", "Cafe", "Workshop", "Fotoshooting"] },
+      "ESFJ": { "patternEarly": "Aktives Interesse, aufmerksam", "patternMid": "Kuemmert sich wie Familie", "patternLong": "Stabiles Zuhause", "tips": ["Eigene Gefuehle priorisieren", "Perfektionismus loslassen", "Weniger einmischen", "Partnerstil respektieren", "Persoenliche Zeit"], "dates": ["Familientreffen", "Jahrestagdinner", "Einkaufen", "Zusammen kochen", "Hausparty"] },
+      "ISFJ": { "patternEarly": "Stilles Interesse, zarte Fuersorge", "patternMid": "Hingebungsvolle Unterstuetzung", "patternLong": "Lebenslanger Beschuetzer", "tips": ["Eigene Beduerfnisse ausdruecken", "Veraenderungen akzeptieren", "Vorsicht vor Aufopferung", "Neues ausprobieren", "Emotionen ausdruecken ueben"], "dates": ["Home-Date", "Ruhiges Restaurant", "Parkspaziergang", "Film schauen", "Zusammen kochen"] },
+      "ESTP": { "patternEarly": "Kuehner Ansatz, Nervenkitzel", "patternMid": "Staendiges Abenteuer", "patternLong": "Lebt in der Gegenwart", "tips": ["Zeit fuer emotionalen Austausch", "Ueber Zukunft sprechen", "Versprechen halten", "Ernsthaftigkeit zeigen", "Tempo des Partners beruecksichtigen"], "dates": ["Bungee-Jumping", "Sport", "Autofahrt", "Neues Restaurant", "Reise"] },
+      "ISTP": { "patternEarly": "Scheinbar gleichgueltiges Interesse", "patternMid": "Praktische Hilfe", "patternLong": "Bequemer Begleiter", "tips": ["Emotionen ausdruecken ueben", "Mehr Zeit zusammen", "Jahrestage erinnern", "Gespraechszeit einplanen", "Mehr Zuneigung zeigen"], "dates": ["DIY-Projekt", "Autofahrt", "Angeln", "Werkzeug-Shopping", "Camping"] },
+      "ESTJ": { "patternEarly": "Geplanter Ansatz", "patternMid": "Sucht Stabilitaet", "patternLong": "Traeumt vom Zuhause", "tips": ["Flexibilitaet entwickeln", "Emotionale Empathie ueben", "Spontanitaet zulassen", "Oft loben", "Partnerstil respektieren"], "dates": ["Feines Restaurant", "Golf", "Kulturveranstaltung", "Geplante Reise", "Paar-Workout"] },
+      "ISTJ": { "patternEarly": "Vorsichtiger Ansatz, beobachtend", "patternMid": "Vertrauen aufbauen", "patternLong": "Lebenslanger Partner", "tips": ["Emotionen verbal ausdruecken", "Veraenderungen akzeptieren", "Neues ausprobieren", "Romantik ueben", "Flexibel sein"], "dates": ["Ruhiges Restaurant", "Museum", "Wandern", "Home-Date", "Bibliotheks-Date"] }
+    }
   },
-  "actions": {
-    "share": "📤 Ergebnis teilen",
-    "saveImage": "📷 Bild speichern",
-    "retry": "🔄 Nochmal versuchen"
-  },
+  "actions": { "share": "📤 Ergebnis teilen", "saveImage": "📷 Bild speichern", "retry": "🔄 Nochmal versuchen" },
   "share": {
-    "title": "Teile deinen Liebeszstil!",
-    "subtitle": "Teile mit Freunden und vergleiche eure Kompatibilität 💕",
-    "nativeShare": "📤 Natives Teilen",
-    "shareModal": "Teilen",
-    "shareClose": "Schließen",
-    "twitter": "𝕏 Twitter",
-    "facebook": "Facebook",
-    "kakaotalk": "KakaoTalk",
-    "copyLink": "Link kopieren",
-    "copied": "In die Zwischenablage kopiert! 💕",
-    "compareWith": "🤝 Mit Freund vergleichen",
-    "inviteText": "Mein MBTI-Liebeszstil ist {type}! {emoji} Wir haben {score}% Kompatibilität! Probiere auch du 👇",
-    "fullText": "💕 Mein Liebeszstil ist \"{title}\" {emoji}\nMBTI: {type}\n\n{bestEmoji} {bestType} hat {score}% Kompatibilität!\n\nWas ist dein Stil? 👇\nhttps://dopabrain.com/mbti-love/\n\n#MBTILiebe #KompatibilitätsTest #Liebeszstil"
+    "title": "Teile deinen Liebesstil!", "subtitle": "Teile mit Freunden und vergleiche die Kompatibilitaet 💕",
+    "nativeShare": "📤 Teilen", "shareModal": "Teilen", "shareClose": "Schliessen",
+    "twitter": "𝕏 Twitter", "facebook": "Facebook", "kakaotalk": "KakaoTalk", "copyLink": "Link kopieren",
+    "copied": "In die Zwischenablage kopiert! 💕", "compareWith": "🤝 Mit Freund vergleichen",
+    "inviteText": "Mein MBTI Liebesstil ist {type}! {emoji} Wir sind {score}% kompatibel. Probier es auch! 👇",
+    "fullText": "💕 Mein Liebesstil ist \"{title}\" {emoji}\nMBTI: {type}\n\n{bestEmoji} {bestType} ist {score}% kompatibel!\n\nWas ist dein Stil? 👇\nhttps://dopabrain.com/mbti-love/\n\n#MBTILiebe #Kompatibilitaet #Liebesstil"
   },
-  "game": {
-    "back": "DopaBrain Startseite"
-  },
-  "ads": {
-    "banner": "Werbung",
-    "label": "Anzeige",
-    "closeIn": "Sekunden zum Schließen",
-    "close": "✕ Schließen"
-  },
-  "recommendations": {
-    "title": "Probiere auch diese"
-  },
-  "canvas": {
-    "myStyle": "Mein MBTI-Liebeszstil ist",
-    "bestMatch": "Beste Passung",
-    "compatibility": "Kompatibilität",
-    "yourStyle": "Welcher ist dein Stil? 👇",
-    "testTitle": "MBTI Liebes-Kompatibilität Test"
-  },
+  "game": { "back": "DopaBrain Startseite" },
+  "ads": { "banner": "Werbung", "label": "Anzeige", "closeIn": "Sekunden zum Schliessen", "close": "✕ Schliessen" },
+  "recommendations": { "title": "Probiere auch diese" },
+  "canvas": { "myStyle": "Mein MBTI Liebesstil ist", "bestMatch": "Bestes Match", "compatibility": "Kompatibilitaet", "yourStyle": "Was ist dein Stil? 👇", "testTitle": "MBTI Liebes-Kompatibilitaetstest" },
   "error": {
-    "storage": "Einige Funktionen sind im privaten Modus eingeschränkt.",
-    "data": "Fehler beim Laden. Bitte Seite aktualisieren.",
-    "canvas": "Grafikfehler. Bitte erneut versuchen.",
-    "audio": "Audio nicht verfügbar. Sie können fortfahren.",
-    "network": "Bitte Verbindung prüfen und erneut versuchen.",
+    "storage": "Einige Funktionen koennen im privaten Modus eingeschraenkt sein.",
+    "data": "Fehler beim Laden der Daten. Bitte Seite aktualisieren.",
+    "canvas": "Grafikdarstellungsproblem. Bitte erneut versuchen.",
+    "audio": "Audio nicht verfuegbar. Sie koennen fortfahren.",
+    "network": "Bitte Verbindung pruefen und erneut versuchen.",
     "general": "Etwas ist schiefgelaufen. Bitte aktualisieren oder erneut versuchen."
   }
 }
