@@ -84,7 +84,15 @@
   "result": {
     "label": "Ton Style Amoureux", "idealType": "💘 Type Ideal", "tip": "💡 Conseil d'Amour",
     "top3": "💕 Top 3 Compatibles", "caution": "⚡ Attention", "score": "Score de Compatibilite",
-    "good": "Points forts", "watchout": "A surveiller", "rank": "e"
+    "good": "Points forts", "watchout": "A surveiller", "rank": "e",
+    "moreTests": "Explorer plus",
+    "percentileStat": "Seulement <strong>{percent}%</strong> des couples partagent cette compatibilité"
+  },
+  "related": {
+    "mbtiCoffee": "Café MBTI",
+    "mbtiCity": "Ville MBTI",
+    "emotionIceberg": "Iceberg Émotionnel",
+    "hspTest": "Test HSP"
   },
   "compatibility": { "button": "🔍 Verifier la Compatibilite avec d'Autres Types", "header": "Verification de Compatibilite", "instruction": "Selectionne le type MBTI du partenaire", "back": "← Retour" },
   "premium": {

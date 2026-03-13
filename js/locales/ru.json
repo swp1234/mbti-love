@@ -84,7 +84,15 @@
   "result": {
     "label": "Ваш стиль любви", "idealType": "💘 Идеальный тип", "tip": "💡 Совет о любви",
     "top3": "💕 Топ-3 совместимых", "caution": "⚡ Осторожно", "score": "Баллы совместимости",
-    "good": "Сильные стороны", "watchout": "На заметку", "rank": "-й"
+    "good": "Сильные стороны", "watchout": "На заметку", "rank": "-й",
+    "moreTests": "Ещё тесты",
+    "percentileStat": "Только <strong>{percent}%</strong> пар имеют такую совместимость"
+  },
+  "related": {
+    "mbtiCoffee": "MBTI Кофе",
+    "mbtiCity": "MBTI Город",
+    "emotionIceberg": "Айсберг эмоций",
+    "hspTest": "HSP Тест"
   },
   "compatibility": { "button": "🔍 Проверить совместимость с другими типами", "header": "Проверка совместимости", "instruction": "Выберите тип MBTI партнёра", "back": "← Назад" },
   "premium": {

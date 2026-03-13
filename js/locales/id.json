@@ -84,7 +84,15 @@
   "result": {
     "label": "Gaya Cintamu", "idealType": "💘 Tipe Ideal", "tip": "💡 Tips Cinta",
     "top3": "💕 Top 3 Cocok", "caution": "⚡ Hati-hati", "score": "Skor Kecocokan",
-    "good": "Kekuatan", "watchout": "Perhatikan", "rank": "."
+    "good": "Kekuatan", "watchout": "Perhatikan", "rank": ".",
+    "moreTests": "Jelajahi lagi",
+    "percentileStat": "Hanya <strong>{percent}%</strong> pasangan memiliki kecocokan ini"
+  },
+  "related": {
+    "mbtiCoffee": "Kopi MBTI",
+    "mbtiCity": "Kota MBTI",
+    "emotionIceberg": "Gunung Es Emosi",
+    "hspTest": "Tes HSP"
   },
   "compatibility": { "button": "🔍 Cek Kecocokan dengan Tipe Lain", "header": "Cek Kecocokan", "instruction": "Pilih tipe MBTI pasangan", "back": "← Kembali" },
   "premium": {

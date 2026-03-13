@@ -84,7 +84,15 @@
   "result": {
     "label": "आपकी प्रेम शैली", "idealType": "💘 आदर्श प्रकार", "tip": "💡 प्रेम सुझाव",
     "top3": "💕 शीर्ष 3 अनुकूल", "caution": "⚡ सावधान", "score": "अनुकूलता अंक",
-    "good": "ताकत", "watchout": "सावधानी", "rank": "वां"
+    "good": "ताकत", "watchout": "सावधानी", "rank": "वां",
+    "moreTests": "और जानें",
+    "percentileStat": "केवल <strong>{percent}%</strong> जोड़ों की यह अनुकूलता है"
+  },
+  "related": {
+    "mbtiCoffee": "MBTI कॉफी",
+    "mbtiCity": "MBTI शहर",
+    "emotionIceberg": "भावना हिमशैल",
+    "hspTest": "HSP परीक्षण"
   },
   "compatibility": { "button": "🔍 अन्य प्रकारों से अनुकूलता जांचें", "header": "अनुकूलता जांच", "instruction": "साथी का MBTI प्रकार चुनें", "back": "← वापस" },
   "premium": {

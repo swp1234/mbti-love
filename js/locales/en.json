@@ -199,7 +199,15 @@
     "score": "Compatibility Score",
     "good": "Strengths",
     "watchout": "Watch Out For",
-    "rank": "th"
+    "rank": "th",
+    "moreTests": "Explore More",
+    "percentileStat": "Only <strong>{percent}%</strong> of couples share this compatibility"
+  },
+  "related": {
+    "mbtiCoffee": "MBTI Coffee",
+    "mbtiCity": "MBTI City",
+    "emotionIceberg": "Emotion Iceberg",
+    "hspTest": "HSP Test"
   },
   "compatibility": {
     "button": "🔍 Check Compatibility with Other Types",

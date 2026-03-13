@@ -199,7 +199,15 @@
     "score": "궁합 점수",
     "good": "잘 맞는 점",
     "watchout": "주의할 점",
-    "rank": "위"
+    "rank": "위",
+    "moreTests": "더 많은 테스트",
+    "percentileStat": "커플의 <strong>{percent}%</strong>만이 이 궁합을 가지고 있습니다"
+  },
+  "related": {
+    "mbtiCoffee": "MBTI 커피",
+    "mbtiCity": "MBTI 도시",
+    "emotionIceberg": "감정 빙산",
+    "hspTest": "HSP 테스트"
   },
   "compatibility": {
     "button": "🔍 다른 유형과 궁합 확인하기",

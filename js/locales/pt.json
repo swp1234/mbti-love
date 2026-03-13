@@ -84,7 +84,15 @@
   "result": {
     "label": "Seu Estilo de Amor", "idealType": "💘 Tipo Ideal", "tip": "💡 Dica de Amor",
     "top3": "💕 Top 3 Compativeis", "caution": "⚡ Cuidado", "score": "Pontuacao",
-    "good": "Pontos Fortes", "watchout": "Cuidado com", "rank": "o"
+    "good": "Pontos Fortes", "watchout": "Cuidado com", "rank": "o",
+    "moreTests": "Explorar mais",
+    "percentileStat": "Apenas <strong>{percent}%</strong> dos casais compartilham esta compatibilidade"
+  },
+  "related": {
+    "mbtiCoffee": "Café MBTI",
+    "mbtiCity": "Cidade MBTI",
+    "emotionIceberg": "Iceberg Emocional",
+    "hspTest": "Teste HSP"
   },
   "compatibility": { "button": "🔍 Verificar Compatibilidade com Outros Tipos", "header": "Verificar Compatibilidade", "instruction": "Selecione o tipo MBTI do par", "back": "← Voltar" },
   "premium": {

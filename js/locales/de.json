@@ -84,7 +84,15 @@
   "result": {
     "label": "Dein Liebesstil", "idealType": "💘 Idealtyp", "tip": "💡 Liebestipp",
     "top3": "💕 Top 3 Matches", "caution": "⚡ Vorsicht", "score": "Kompatibilitaetswert",
-    "good": "Staerken", "watchout": "Vorsicht bei", "rank": "."
+    "good": "Staerken", "watchout": "Vorsicht bei", "rank": ".",
+    "moreTests": "Mehr entdecken",
+    "percentileStat": "Nur <strong>{percent}%</strong> der Paare teilen diese Kompatibilität"
+  },
+  "related": {
+    "mbtiCoffee": "MBTI Kaffee",
+    "mbtiCity": "MBTI Stadt",
+    "emotionIceberg": "Emotions-Eisberg",
+    "hspTest": "HSP-Test"
   },
   "compatibility": { "button": "🔍 Kompatibilitaet mit anderen Typen pruefen", "header": "Kompatibilitaetspruefung", "instruction": "Waehle den MBTI-Typ des Partners", "back": "← Zurueck" },
   "premium": {

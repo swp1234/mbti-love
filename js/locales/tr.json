@@ -84,7 +84,15 @@
   "result": {
     "label": "Ask Stilin", "idealType": "💘 Ideal Tip", "tip": "💡 Ask Tavsiyesi",
     "top3": "💕 En Uyumlu 3", "caution": "⚡ Dikkat", "score": "Uyum Puani",
-    "good": "Guclu Yanlar", "watchout": "Dikkat Edilmesi Gereken", "rank": "."
+    "good": "Guclu Yanlar", "watchout": "Dikkat Edilmesi Gereken", "rank": ".",
+    "moreTests": "Daha fazla keşfet",
+    "percentileStat": "Çiftlerin sadece <strong>{percent}%</strong>'i bu uyuma sahip"
+  },
+  "related": {
+    "mbtiCoffee": "MBTI Kahve",
+    "mbtiCity": "MBTI Şehir",
+    "emotionIceberg": "Duygu Buzdağı",
+    "hspTest": "HSP Testi"
   },
   "compatibility": { "button": "🔍 Diger Tiplerle Uyumu Kontrol Et", "header": "Uyum Kontrolu", "instruction": "Partnerin MBTI tipini sec", "back": "← Geri" },
   "premium": {

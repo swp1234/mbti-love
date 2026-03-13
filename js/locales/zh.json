@@ -88,7 +88,15 @@
   "result": {
     "label": "你的恋爱风格", "idealType": "💘 理想类型", "tip": "💡 恋爱建议",
     "top3": "💕 最佳配对TOP 3", "caution": "⚡ 需注意", "score": "配对分数",
-    "good": "优势", "watchout": "注意事项", "rank": "名"
+    "good": "优势", "watchout": "注意事项", "rank": "名",
+    "moreTests": "探索更多",
+    "percentileStat": "仅 <strong>{percent}%</strong> 的情侣拥有这种匹配"
+  },
+  "related": {
+    "mbtiCoffee": "MBTI咖啡",
+    "mbtiCity": "MBTI城市",
+    "emotionIceberg": "情感冰山",
+    "hspTest": "HSP测试"
   },
   "compatibility": { "button": "🔍 查看与其他类型的配对", "header": "配对查看", "instruction": "选择对方的MBTI类型", "back": "← 返回" },
   "premium": {

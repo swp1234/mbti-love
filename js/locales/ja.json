@@ -99,7 +99,15 @@
     "score": "相性スコア",
     "good": "強み",
     "watchout": "注意すべき点",
-    "rank": "位"
+    "rank": "位",
+    "moreTests": "もっと見る",
+    "percentileStat": "カップルの<strong>{percent}%</strong>だけがこの相性です"
+  },
+  "related": {
+    "mbtiCoffee": "MBTIコーヒー",
+    "mbtiCity": "MBTI都市",
+    "emotionIceberg": "感情の氷山",
+    "hspTest": "HSPテスト"
   },
   "compatibility": {
     "button": "🔍 他のタイプとの相性をチェック",

@@ -189,6 +189,14 @@ if (themeToggle) {
         // Premium hidden
         document.getElementById('premium-result').classList.add('hidden');
 
+        // Percentile stat
+        const pStat = document.getElementById('percentile-stat');
+        if (pStat) {
+            const pct = 5 + Math.floor(Math.random() * 15);
+            const tmpl = i18n?.t('result.percentileStat') || 'Only <strong>{percent}%</strong> of couples share this compatibility';
+            pStat.innerHTML = tmpl.replace('{percent}', pct);
+        }
+
         // GA4: 테스트 완료
         if (typeof gtag === 'function') {
             gtag('event', 'test_complete', {
