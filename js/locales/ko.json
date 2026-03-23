@@ -271,7 +271,8 @@
     "mbtiCoffee": "MBTI 커피",
     "mbtiCity": "MBTI 도시",
     "emotionIceberg": "감정 빙산",
-    "hspTest": "HSP 테스트"
+    "hspTest": "HSP 테스트",
+    "attachmentStyle": "애착 유형"
   },
   "compatibility": {
     "button": "🔍 다른 유형과 궁합 확인하기",
