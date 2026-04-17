@@ -265,13 +265,20 @@
     "watchout": "注意事项",
     "rank": "名",
     "moreTests": "探索更多",
-    "percentileStat": "仅 <strong>{percent}%</strong> 的情侣拥有这种匹配"
+    "percentileStat": "仅 <strong>{percent}%</strong> 的情侣拥有这种匹配",
+    "nextStepLabel": "下一步推荐",
+    "nextStepDesc": "打开最适合你当前结果的后续测试。",
+    "nextStepCta": "打开后续测试",
+    "jumpToMore": "查看更多推荐测试"
   },
   "related": {
     "mbtiCoffee": "MBTI咖啡",
     "mbtiCity": "MBTI城市",
     "emotionIceberg": "情感冰山",
-    "hspTest": "HSP测试"
+    "hspTest": "HSP测试",
+    "loveLanguage": "爱的语言",
+    "eqTest": "情商测试",
+    "rizzScore": "魅力分数"
   },
   "compatibility": {
     "button": "🔍 查看与其他类型的配对",

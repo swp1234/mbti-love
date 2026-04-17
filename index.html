@@ -36,18 +36,18 @@
     <meta name="twitter:site" content="@dopabrain">
     <link rel="canonical" href="https://dopabrain.com/mbti-love/">
     <!-- hreflang for multilingual SEO -->
-    <link rel="alternate" hreflang="ko" href="https://dopabrain.com/mbti-love/">
-    <link rel="alternate" hreflang="en" href="https://dopabrain.com/mbti-love/">
-    <link rel="alternate" hreflang="zh" href="https://dopabrain.com/mbti-love/">
-    <link rel="alternate" hreflang="hi" href="https://dopabrain.com/mbti-love/">
-    <link rel="alternate" hreflang="ru" href="https://dopabrain.com/mbti-love/">
-    <link rel="alternate" hreflang="ja" href="https://dopabrain.com/mbti-love/">
-    <link rel="alternate" hreflang="es" href="https://dopabrain.com/mbti-love/">
-    <link rel="alternate" hreflang="pt" href="https://dopabrain.com/mbti-love/">
-    <link rel="alternate" hreflang="id" href="https://dopabrain.com/mbti-love/">
-    <link rel="alternate" hreflang="tr" href="https://dopabrain.com/mbti-love/">
-    <link rel="alternate" hreflang="de" href="https://dopabrain.com/mbti-love/">
-    <link rel="alternate" hreflang="fr" href="https://dopabrain.com/mbti-love/">
+    <link rel="alternate" hreflang="ko" href="https://dopabrain.com/mbti-love/?lang=ko">
+    <link rel="alternate" hreflang="en" href="https://dopabrain.com/mbti-love/?lang=en">
+    <link rel="alternate" hreflang="zh" href="https://dopabrain.com/mbti-love/?lang=zh">
+    <link rel="alternate" hreflang="hi" href="https://dopabrain.com/mbti-love/?lang=hi">
+    <link rel="alternate" hreflang="ru" href="https://dopabrain.com/mbti-love/?lang=ru">
+    <link rel="alternate" hreflang="ja" href="https://dopabrain.com/mbti-love/?lang=ja">
+    <link rel="alternate" hreflang="es" href="https://dopabrain.com/mbti-love/?lang=es">
+    <link rel="alternate" hreflang="pt" href="https://dopabrain.com/mbti-love/?lang=pt">
+    <link rel="alternate" hreflang="id" href="https://dopabrain.com/mbti-love/?lang=id">
+    <link rel="alternate" hreflang="tr" href="https://dopabrain.com/mbti-love/?lang=tr">
+    <link rel="alternate" hreflang="de" href="https://dopabrain.com/mbti-love/?lang=de">
+    <link rel="alternate" hreflang="fr" href="https://dopabrain.com/mbti-love/?lang=fr">
     <link rel="alternate" hreflang="x-default" href="https://dopabrain.com/mbti-love/">
     <script type="application/ld+json">
     {
@@ -251,6 +251,20 @@
             <div id="r-bottom2"></div>
         </div>
 
+        <section class="next-step-card" id="next-step-card">
+            <p class="next-step-label" data-i18n="result.nextStepLabel">Best Next Step</p>
+            <div class="next-step-head">
+                <span class="next-step-emoji" id="primary-related-emoji">💕</span>
+                <div class="next-step-copy">
+                    <h3 class="next-step-title" id="primary-related-title">Attachment Style</h3>
+                    <p class="next-step-desc" id="primary-related-desc" data-i18n="result.nextStepDesc">Open the strongest follow-up test for your current MBTI love result.</p>
+                </div>
+            </div>
+            <a href="/attachment-style/" class="next-step-cta" id="primary-related-cta" data-related-key="attachment-style" data-related-rank="1">
+                <span id="primary-related-cta-text" data-i18n="result.nextStepCta">Open Follow-up</span>
+            </a>
+        </section>
+
         <button class="btn-compat" id="btn-compat" data-i18n="compatibility.button"></button>
 
         <button class="btn-premium" id="btn-premium">
@@ -271,24 +285,25 @@
 
         <p class="percentile-stat" id="percentile-stat"></p>
 
+        <button class="related-jump-btn" id="related-jump-btn" data-i18n="result.jumpToMore">See More Follow-up Tests</button>
+
         <!-- In-article ad between result actions and recommendations -->
-        <div class="ad-container" style="margin: 24px auto; text-align: center; min-height: 100px;">
+        <div class="result-inline-ad" id="result-inline-ad">
           <ins class="adsbygoogle"
                style="display:block"
                data-ad-client="ca-pub-3600813755953882"
                data-ad-slot="auto"
                data-ad-format="auto"
                data-full-width-responsive="true"></ins>
-          <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
 
         <div class="related-tests">
             <h3 data-i18n="result.moreTests">Explore More</h3>
-            <div class="related-grid">
-                <a href="/mbti-coffee/" class="related-card" style="--card-color: #8B4513"><span class="related-emoji">☕</span><span class="related-name" data-i18n="related.mbtiCoffee">MBTI Coffee</span></a>
-                <a href="/mbti-city/" class="related-card" style="--card-color: #1abc9c"><span class="related-emoji">🏙️</span><span class="related-name" data-i18n="related.mbtiCity">MBTI City</span></a>
-                <a href="/attachment-style/" class="related-card" style="--card-color: #e879a0"><span class="related-emoji">💕</span><span class="related-name" data-i18n="related.attachmentStyle">Attachment Style</span></a>
-                <a href="/hsp-test/" class="related-card" style="--card-color: #7c3aed"><span class="related-emoji">🧠</span><span class="related-name" data-i18n="related.hspTest">HSP Test</span></a>
+            <div class="related-grid" id="related-grid">
+                <a href="/attachment-style/" class="related-card" data-related-key="attachment-style" style="--card-color:#e879a0"><span class="related-emoji">&#128149;</span><span class="related-name" data-i18n="related.attachmentStyle">Attachment Style</span></a>
+                <a href="/love-language/" class="related-card" data-related-key="love-language" style="--card-color:#f59e0b"><span class="related-emoji">&#128140;</span><span class="related-name" data-i18n="related.loveLanguage">Love Language</span></a>
+                <a href="/eq-test/" class="related-card" data-related-key="eq-test" style="--card-color:#06b6d4"><span class="related-emoji">&#127917;</span><span class="related-name" data-i18n="related.eqTest">EQ Test</span></a>
+                <a href="/rizz-score/" class="related-card" data-related-key="rizz-score" style="--card-color:#8b5cf6"><span class="related-emoji">&#128526;</span><span class="related-name" data-i18n="related.rizzScore">Rizz Score</span></a>
             </div>
         </div>
 

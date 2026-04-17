@@ -265,13 +265,20 @@
     "watchout": "Vorsicht bei",
     "rank": ".",
     "moreTests": "Mehr entdecken",
-    "percentileStat": "Nur <strong>{percent}%</strong> der Paare teilen diese Kompatibilität"
+    "percentileStat": "Nur <strong>{percent}%</strong> der Paare teilen diese Kompatibilität",
+    "nextStepLabel": "Nächste Empfehlung",
+    "nextStepDesc": "Öffne den Folgetest, der am besten zu deinem aktuellen Ergebnis passt.",
+    "nextStepCta": "Folgetest öffnen",
+    "jumpToMore": "Weitere empfohlene Tests ansehen"
   },
   "related": {
     "mbtiCoffee": "MBTI Kaffee",
     "mbtiCity": "MBTI Stadt",
     "emotionIceberg": "Emotions-Eisberg",
-    "hspTest": "HSP-Test"
+    "hspTest": "HSP-Test",
+    "loveLanguage": "Liebessprache",
+    "eqTest": "EQ-Test",
+    "rizzScore": "Rizz-Score"
   },
   "compatibility": {
     "button": "🔍 Kompatibilitaet mit anderen Typen pruefen",

@@ -265,13 +265,20 @@
     "watchout": "Dikkat Edilmesi Gereken",
     "rank": ".",
     "moreTests": "Daha fazla keşfet",
-    "percentileStat": "Çiftlerin sadece <strong>{percent}%</strong>'i bu uyuma sahip"
+    "percentileStat": "Çiftlerin sadece <strong>{percent}%</strong>'i bu uyuma sahip",
+    "nextStepLabel": "Sonraki öneri",
+    "nextStepDesc": "Mevcut sonucunla en iyi eşleşen devam testini aç.",
+    "nextStepCta": "Devam testini aç",
+    "jumpToMore": "Daha fazla önerilen test gör"
   },
   "related": {
     "mbtiCoffee": "MBTI Kahve",
     "mbtiCity": "MBTI Şehir",
     "emotionIceberg": "Duygu Buzdağı",
-    "hspTest": "HSP Testi"
+    "hspTest": "HSP Testi",
+    "loveLanguage": "Aşk dili",
+    "eqTest": "EQ Testi",
+    "rizzScore": "Rizz Skoru"
   },
   "compatibility": {
     "button": "🔍 Diger Tiplerle Uyumu Kontrol Et",

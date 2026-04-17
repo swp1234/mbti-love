@@ -265,13 +265,20 @@
     "watchout": "सावधानी",
     "rank": "वां",
     "moreTests": "और जानें",
-    "percentileStat": "केवल <strong>{percent}%</strong> जोड़ों की यह अनुकूलता है"
+    "percentileStat": "केवल <strong>{percent}%</strong> जोड़ों की यह अनुकूलता है",
+    "nextStepLabel": "अगली सिफारिश",
+    "nextStepDesc": "अपने मौजूदा परिणाम के लिए सबसे उपयुक्त अगला टेस्ट खोलें।",
+    "nextStepCta": "अगला टेस्ट खोलें",
+    "jumpToMore": "और सुझाए गए टेस्ट देखें"
   },
   "related": {
     "mbtiCoffee": "MBTI कॉफी",
     "mbtiCity": "MBTI शहर",
     "emotionIceberg": "भावना हिमशैल",
-    "hspTest": "HSP परीक्षण"
+    "hspTest": "HSP परीक्षण",
+    "loveLanguage": "लव लैंग्वेज",
+    "eqTest": "EQ टेस्ट",
+    "rizzScore": "रिज़ स्कोर"
   },
   "compatibility": {
     "button": "🔍 अन्य प्रकारों से अनुकूलता जांचें",

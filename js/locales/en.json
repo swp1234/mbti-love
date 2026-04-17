@@ -265,14 +265,21 @@
     "watchout": "Watch Out For",
     "rank": "th",
     "moreTests": "Explore More",
-    "percentileStat": "Only <strong>{percent}%</strong> of couples share this compatibility"
+    "percentileStat": "Only <strong>{percent}%</strong> of couples share this compatibility",
+    "nextStepLabel": "Best Next Step",
+    "nextStepDesc": "Open the strongest follow-up test for your current MBTI love result.",
+    "nextStepCta": "Open Follow-up",
+    "jumpToMore": "See More Follow-up Tests"
   },
   "related": {
     "mbtiCoffee": "MBTI Coffee",
     "mbtiCity": "MBTI City",
     "emotionIceberg": "Emotion Iceberg",
     "hspTest": "HSP Test",
-    "attachmentStyle": "Attachment Style"
+    "attachmentStyle": "Attachment Style",
+    "loveLanguage": "Love Language",
+    "eqTest": "EQ Test",
+    "rizzScore": "Rizz Score"
   },
   "compatibility": {
     "button": "🔍 Check Compatibility with Other Types",

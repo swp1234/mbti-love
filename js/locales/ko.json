@@ -265,14 +265,21 @@
     "watchout": "주의할 점",
     "rank": "위",
     "moreTests": "더 많은 테스트",
-    "percentileStat": "커플의 <strong>{percent}%</strong>만이 이 궁합을 가지고 있습니다"
+    "percentileStat": "커플의 <strong>{percent}%</strong>만이 이 궁합을 가지고 있습니다",
+    "nextStepLabel": "다음 추천",
+    "nextStepDesc": "지금 결과와 가장 잘 맞는 후속 테스트를 바로 열어보세요.",
+    "nextStepCta": "후속 테스트 열기",
+    "jumpToMore": "추천 테스트 더 보기"
   },
   "related": {
     "mbtiCoffee": "MBTI 커피",
     "mbtiCity": "MBTI 도시",
     "emotionIceberg": "감정 빙산",
     "hspTest": "HSP 테스트",
-    "attachmentStyle": "애착 유형"
+    "attachmentStyle": "애착 유형",
+    "loveLanguage": "사랑의 언어",
+    "eqTest": "EQ 테스트",
+    "rizzScore": "매력 점수"
   },
   "compatibility": {
     "button": "🔍 다른 유형과 궁합 확인하기",

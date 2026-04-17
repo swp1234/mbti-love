@@ -265,13 +265,20 @@
     "watchout": "A surveiller",
     "rank": "e",
     "moreTests": "Explorer plus",
-    "percentileStat": "Seulement <strong>{percent}%</strong> des couples partagent cette compatibilité"
+    "percentileStat": "Seulement <strong>{percent}%</strong> des couples partagent cette compatibilité",
+    "nextStepLabel": "Prochaine recommandation",
+    "nextStepDesc": "Ouvre le test complémentaire le plus adapté à ton résultat actuel.",
+    "nextStepCta": "Ouvrir le test suivant",
+    "jumpToMore": "Voir plus de tests recommandés"
   },
   "related": {
     "mbtiCoffee": "Café MBTI",
     "mbtiCity": "Ville MBTI",
     "emotionIceberg": "Iceberg Émotionnel",
-    "hspTest": "Test HSP"
+    "hspTest": "Test HSP",
+    "loveLanguage": "Langage de l'amour",
+    "eqTest": "Test de QE",
+    "rizzScore": "Score de rizz"
   },
   "compatibility": {
     "button": "🔍 Verifier la Compatibilite avec d'Autres Types",

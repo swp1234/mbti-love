@@ -62,6 +62,14 @@ if (themeToggle) {
     let answers = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
     let myType = '';
     let partnerType = '';
+    let resultInlineAdLoaded = false;
+
+    const recommendationMap = {
+        NF: ['attachment-style', 'love-language', 'eq-test', 'rizz-score'],
+        NT: ['eq-test', 'attachment-style', 'rizz-score', 'love-language'],
+        SF: ['love-language', 'attachment-style', 'rizz-score', 'eq-test'],
+        ST: ['rizz-score', 'eq-test', 'attachment-style', 'love-language']
+    };
 
     const introScreen = document.getElementById('intro-screen');
     const questionScreen = document.getElementById('question-screen');
@@ -69,6 +77,98 @@ if (themeToggle) {
     const resultScreen = document.getElementById('result-screen');
     const compatScreen = document.getElementById('compat-screen');
     const adOverlay = document.getElementById('ad-overlay');
+    const relatedGrid = document.getElementById('related-grid');
+    const relatedTests = document.querySelector('.related-tests');
+    const primaryRelatedEmoji = document.getElementById('primary-related-emoji');
+    const primaryRelatedTitle = document.getElementById('primary-related-title');
+    const primaryRelatedDesc = document.getElementById('primary-related-desc');
+    const primaryRelatedCta = document.getElementById('primary-related-cta');
+    const primaryRelatedCtaText = document.getElementById('primary-related-cta-text');
+    const relatedJumpBtn = document.getElementById('related-jump-btn');
+    const resultInlineAd = document.getElementById('result-inline-ad');
+
+    function trackEvent(name, params) {
+        if (typeof gtag !== 'function') return;
+        gtag('event', name, Object.assign({ event_category: 'mbti_love' }, params || {}));
+    }
+
+    function getCurrentLang() {
+        if (window.i18n && typeof window.i18n.getCurrentLanguage === 'function') {
+            return window.i18n.getCurrentLanguage();
+        }
+        return document.documentElement.lang || 'en';
+    }
+
+    function getShareUrl() {
+        const url = new URL(window.location.origin + window.location.pathname);
+        url.searchParams.set('lang', getCurrentLang());
+        return url.toString();
+    }
+
+    function getLoveGroup(type) {
+        return `${type[1]}${type[2]}`;
+    }
+
+    function prioritizeRelatedCards(type) {
+        if (!relatedGrid) return;
+
+        const cards = Array.from(relatedGrid.querySelectorAll('.related-card'));
+        const order = recommendationMap[getLoveGroup(type)] || recommendationMap.NF;
+        const rankMap = {};
+        order.forEach((key, index) => {
+            rankMap[key] = index;
+        });
+
+        cards.sort((a, b) => {
+            const aKey = a.getAttribute('data-related-key') || '';
+            const bKey = b.getAttribute('data-related-key') || '';
+            const aRank = Object.prototype.hasOwnProperty.call(rankMap, aKey) ? rankMap[aKey] : 999;
+            const bRank = Object.prototype.hasOwnProperty.call(rankMap, bKey) ? rankMap[bKey] : 999;
+            return aRank - bRank;
+        });
+
+        cards.forEach((card, index) => {
+            card.classList.toggle('is-featured', index < 2);
+            card.setAttribute('data-related-rank', String(index + 1));
+            relatedGrid.appendChild(card);
+        });
+    }
+
+    function updatePrimaryRecommendation() {
+        if (!relatedGrid || !primaryRelatedTitle || !primaryRelatedDesc || !primaryRelatedCta || !primaryRelatedCtaText || !primaryRelatedEmoji) {
+            return;
+        }
+
+        const firstCard = relatedGrid.querySelector('.related-card');
+        if (!firstCard) return;
+
+        const titleEl = firstCard.querySelector('.related-name');
+        const emojiEl = firstCard.querySelector('.related-emoji');
+        const cardColor = firstCard.style.getPropertyValue('--card-color') || '';
+
+        primaryRelatedEmoji.textContent = emojiEl ? emojiEl.textContent.trim() : '✨';
+        primaryRelatedTitle.textContent = titleEl ? titleEl.textContent.trim() : 'Recommended Follow-up';
+        primaryRelatedDesc.textContent = i18n.t('result.nextStepDesc');
+        primaryRelatedCtaText.textContent = i18n.t('result.nextStepCta');
+        primaryRelatedCta.setAttribute('href', firstCard.getAttribute('href') || '#');
+        primaryRelatedCta.setAttribute('data-related-key', firstCard.getAttribute('data-related-key') || '');
+        primaryRelatedCta.setAttribute('data-related-rank', firstCard.getAttribute('data-related-rank') || '1');
+        if (cardColor) {
+            primaryRelatedCta.style.setProperty('--card-color', cardColor.trim());
+        }
+    }
+
+    function ensureResultAdLoaded() {
+        if (resultInlineAdLoaded || !resultInlineAd) return;
+        const adNode = resultInlineAd.querySelector('.adsbygoogle');
+        if (!adNode) return;
+        try {
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            resultInlineAdLoaded = true;
+        } catch (error) {
+            // Ad blockers and delayed AdSense init are non-fatal.
+        }
+    }
 
     function show(screen) {
         [introScreen, questionScreen, loadingScreen, resultScreen, compatScreen].forEach(s => {
@@ -83,6 +183,10 @@ if (themeToggle) {
         answers = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
         show(questionScreen);
         showQuestion();
+        trackEvent('quiz_start', {
+            test_type: 'mbti_love',
+            lang: getCurrentLang()
+        });
         // GA4: 테스트 시작
         if (typeof gtag === 'function') {
             gtag('event', 'test_start', {
@@ -119,6 +223,11 @@ if (themeToggle) {
         document.querySelectorAll('.option-btn').forEach(o => o.disabled = true);
         btn.classList.add('selected');
         answers[btn.dataset.val]++;
+        trackEvent('mbti_love_option_select', {
+            question_number: currentQ + 1,
+            dimension: btn.dataset.dim,
+            value: btn.dataset.val
+        });
 
         setTimeout(() => {
             currentQ++;
@@ -197,6 +306,20 @@ if (themeToggle) {
             pStat.innerHTML = tmpl.replace('{percent}', pct);
         }
 
+        prioritizeRelatedCards(myType);
+        updatePrimaryRecommendation();
+        ensureResultAdLoaded();
+        trackEvent('result_view', {
+            result_type: myType,
+            love_group: getLoveGroup(myType),
+            top_match: matches[0] ? matches[0].type : '',
+            best_score: matches[0] ? matches[0].score : 0
+        });
+        trackEvent('quiz_complete', {
+            result_type: myType,
+            love_group: getLoveGroup(myType)
+        });
+
         // GA4: 테스트 완료
         if (typeof gtag === 'function') {
             gtag('event', 'test_complete', {
@@ -212,6 +335,9 @@ if (themeToggle) {
     function showCompatCheck() {
         show(compatScreen);
         renderCompatGrid();
+        trackEvent('mbti_love_compat_open', {
+            result_type: myType
+        });
     }
 
     function renderCompatGrid() {
@@ -253,6 +379,11 @@ if (themeToggle) {
             </div>
         `;
         el.scrollIntoView({ behavior: 'smooth' });
+        trackEvent('mbti_love_partner_pick', {
+            result_type: myType,
+            partner_type: partnerType,
+            compatibility_score: score
+        });
     }
 
     // Share - 향상된 버전
@@ -262,20 +393,30 @@ if (themeToggle) {
             .map(t => ({ type: t, score: calcCompat(myType, t) }))
             .sort((a, b) => b.score - a.score)[0];
 
+        const fullTextTemplate = (window.i18n?.t('share.fullText') || 'My love style is "{title}" {emoji}\nMBTI: {type}\n\n{bestEmoji} {bestType} is {score}% compatible!\n\nWhat is your style? 👇\nhttps://dopabrain.com/mbti-love/\n\n#MBTILove #CompatibilityTest #LoveStyle');
+
         return {
             title: i18n.t('share.inviteText').replace('{type}', myType).replace('{emoji}', style.emoji).replace('{score}', top.score),
             shortText: `💕 ${myType} - ${style.title} ${style.emoji}`,
-            fullText: (window.i18n?.t('share.fullText') || 'English').replace('{title}', style.title).replace('{type}', myType).replace('{emoji}', style.emoji).replace('{bestEmoji}', STYLES[top.type].emoji).replace('{bestType}', top.type).replace('{score}', top.score),
-            url: 'https://dopabrain.com/mbti-love/'
+            fullText: fullTextTemplate
+                .replace('{title}', style.title)
+                .replace('{type}', myType)
+                .replace('{emoji}', style.emoji)
+                .replace('{bestEmoji}', STYLES[top.type].emoji)
+                .replace('{bestType}', top.type)
+                .replace('{score}', top.score)
+                .replace('https://dopabrain.com/mbti-love/', getShareUrl()),
+            url: getShareUrl()
         };
     }
 
     function shareResult() {
         if (!myType) return;
-        const shareData = getShareText();
         const shareModal = document.getElementById('share-modal');
         shareModal.classList.remove('hidden');
-
+        trackEvent('mbti_love_share_open', {
+            result_type: myType
+        });
         gtag('event', 'share_modal_open', { test_type: 'mbti_love' });
     }
 
@@ -299,6 +440,7 @@ if (themeToggle) {
             const text = encodeURIComponent(shareData.title);
             const url = `https://x.com/intent/tweet?text=${text}&url=${encodeURIComponent(shareData.url)}`;
             window.open(url, '_blank', 'width=550,height=420');
+            trackEvent('mbti_love_share_click', { method: 'twitter', result_type: myType });
             gtag('event', 'share', { method: 'twitter', test_type: 'mbti_love' });
         });
 
@@ -308,6 +450,7 @@ if (themeToggle) {
             const shareData = getShareText();
             const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareData.url)}`;
             window.open(url, '_blank', 'width=550,height=420');
+            trackEvent('mbti_love_share_click', { method: 'facebook', result_type: myType });
             gtag('event', 'share', { method: 'facebook', test_type: 'mbti_love' });
         });
 
@@ -318,6 +461,7 @@ if (themeToggle) {
             navigator.clipboard.writeText(shareData.url).then(() => {
                 alert(i18n.t('share.copied'));
             }).catch(() => {});
+            trackEvent('mbti_love_share_click', { method: 'kakaotalk', result_type: myType });
             gtag('event', 'share', { method: 'kakaotalk', test_type: 'mbti_love' });
         });
 
@@ -328,6 +472,7 @@ if (themeToggle) {
             navigator.clipboard.writeText(`${shareData.title}\n${shareData.url}`).then(() => {
                 alert(i18n.t('share.copied'));
             }).catch(() => {});
+            trackEvent('mbti_love_share_click', { method: 'copy', result_type: myType });
             gtag('event', 'share', { method: 'copy', test_type: 'mbti_love' });
         });
 
@@ -341,6 +486,7 @@ if (themeToggle) {
                     text: shareData.fullText,
                     url: shareData.url
                 }).then(() => {
+                    trackEvent('mbti_love_share_click', { method: 'native', result_type: myType });
                     gtag('event', 'share', { method: 'native', test_type: 'mbti_love' });
                 }).catch(() => {});
             } else {
@@ -435,6 +581,9 @@ if (themeToggle) {
         let c = 5; cb.classList.add('hidden'); cd.textContent = c;
         const iv = setInterval(() => { c--; cd.textContent = c; if (c <= 0) { clearInterval(iv); cb.classList.remove('hidden'); } }, 1000);
         cb.onclick = () => { adOverlay.classList.add('hidden'); displayPremium(); };
+        trackEvent('mbti_love_premium_click', {
+            result_type: myType
+        });
         gtag('event', 'premium_click', { test_type: 'mbti_love' });
     }
 
@@ -465,6 +614,9 @@ if (themeToggle) {
         `;
         el.classList.remove('hidden');
         el.scrollIntoView({ behavior: 'smooth' });
+        trackEvent('mbti_love_premium_view', {
+            result_type: myType
+        });
         gtag('event', 'premium_view', { test_type: 'mbti_love' });
     }
 
@@ -475,8 +627,35 @@ if (themeToggle) {
     document.getElementById('btn-premium').addEventListener('click', showPremium);
     document.getElementById('btn-compat').addEventListener('click', showCompatCheck);
     document.getElementById('btn-compat-back').addEventListener('click', () => show(resultScreen));
+    primaryRelatedCta?.addEventListener('click', () => {
+        trackEvent('mbti_love_primary_cta_click', {
+            result_type: myType,
+            related_key: primaryRelatedCta.getAttribute('data-related-key') || '',
+            related_rank: Number(primaryRelatedCta.getAttribute('data-related-rank') || '1')
+        });
+    });
+    relatedJumpBtn?.addEventListener('click', () => {
+        if (relatedTests) {
+            relatedTests.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        trackEvent('mbti_love_related_jump_click', {
+            result_type: myType
+        });
+    });
+    relatedGrid?.querySelectorAll('.related-card').forEach((card) => {
+        card.addEventListener('click', () => {
+            trackEvent('mbti_love_related_click', {
+                result_type: myType,
+                related_key: card.getAttribute('data-related-key') || '',
+                related_rank: Number(card.getAttribute('data-related-rank') || '0')
+            });
+        });
+    });
     document.getElementById('btn-retry').addEventListener('click', () => {
         document.getElementById('premium-result').classList.add('hidden');
+        trackEvent('mbti_love_retry_click', {
+            result_type: myType
+        });
         show(introScreen);
     });
 

@@ -265,13 +265,20 @@
     "watchout": "Perhatikan",
     "rank": ".",
     "moreTests": "Jelajahi lagi",
-    "percentileStat": "Hanya <strong>{percent}%</strong> pasangan memiliki kecocokan ini"
+    "percentileStat": "Hanya <strong>{percent}%</strong> pasangan memiliki kecocokan ini",
+    "nextStepLabel": "Langkah berikutnya",
+    "nextStepDesc": "Buka tes lanjutan yang paling cocok dengan hasilmu saat ini.",
+    "nextStepCta": "Buka tes lanjutan",
+    "jumpToMore": "Lihat lebih banyak tes rekomendasi"
   },
   "related": {
     "mbtiCoffee": "Kopi MBTI",
     "mbtiCity": "Kota MBTI",
     "emotionIceberg": "Gunung Es Emosi",
-    "hspTest": "Tes HSP"
+    "hspTest": "Tes HSP",
+    "loveLanguage": "Bahasa cinta",
+    "eqTest": "Tes EQ",
+    "rizzScore": "Skor Rizz"
   },
   "compatibility": {
     "button": "🔍 Cek Kecocokan dengan Tipe Lain",

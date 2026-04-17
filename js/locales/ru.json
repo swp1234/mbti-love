@@ -265,13 +265,20 @@
     "watchout": "На заметку",
     "rank": "-й",
     "moreTests": "Ещё тесты",
-    "percentileStat": "Только <strong>{percent}%</strong> пар имеют такую совместимость"
+    "percentileStat": "Только <strong>{percent}%</strong> пар имеют такую совместимость",
+    "nextStepLabel": "Следующая рекомендация",
+    "nextStepDesc": "Откройте следующий тест, который лучше всего подходит к вашему текущему результату.",
+    "nextStepCta": "Открыть следующий тест",
+    "jumpToMore": "Посмотреть больше рекомендованных тестов"
   },
   "related": {
     "mbtiCoffee": "MBTI Кофе",
     "mbtiCity": "MBTI Город",
     "emotionIceberg": "Айсберг эмоций",
-    "hspTest": "HSP Тест"
+    "hspTest": "HSP Тест",
+    "loveLanguage": "Язык любви",
+    "eqTest": "Тест EQ",
+    "rizzScore": "Ризз-оценка"
   },
   "compatibility": {
     "button": "🔍 Проверить совместимость с другими типами",
