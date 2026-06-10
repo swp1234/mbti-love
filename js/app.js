@@ -101,12 +101,54 @@ if (themeToggle) {
 
     function getShareUrl() {
         const url = new URL(window.location.origin + window.location.pathname);
+        const resultType = myType || '';
+        const loveGroup = resultType ? getLoveGroup(resultType) : '';
         url.searchParams.set('lang', getCurrentLang());
+        url.searchParams.set('utm_source', 'share');
+        url.searchParams.set('utm_medium', 'mbti_love_result');
+        url.searchParams.set('utm_campaign', 'personality_result_share');
+        if (resultType) {
+            url.searchParams.set('utm_content', resultType);
+            url.searchParams.set('mbti_love_result', resultType);
+        }
+        if (loveGroup) url.searchParams.set('love_group', loveGroup);
         return url.toString();
     }
 
     function getLoveGroup(type) {
+        if (!type || type.length < 3) return '';
         return `${type[1]}${type[2]}`;
+    }
+
+    function getShareEventParams(method, extra = {}) {
+        const resultType = myType || 'unknown';
+        return {
+            app_name: 'mbti-love',
+            content_type: 'test_result',
+            surface: 'result_actions',
+            method,
+            result_type: resultType,
+            love_group: getLoveGroup(resultType),
+            lang: getCurrentLang(),
+            utm_source: 'share',
+            utm_medium: 'mbti_love_result',
+            utm_campaign: 'personality_result_share',
+            utm_content: resultType,
+            ...extra
+        };
+    }
+
+    function copyShareText(text, method, extra = {}) {
+        const params = getShareEventParams(method, extra);
+        const onSuccess = () => {
+            trackEvent('mbti_love_copy_link', params);
+            trackEvent('share', params);
+            alert(i18n.t('share.copied'));
+        };
+
+        if (navigator.clipboard?.writeText) {
+            navigator.clipboard.writeText(text).then(onSuccess).catch(() => {});
+        }
     }
 
     function prioritizeRelatedCards(type) {
@@ -165,6 +207,12 @@ if (themeToggle) {
         try {
             (adsbygoogle = window.adsbygoogle || []).push({});
             resultInlineAdLoaded = true;
+            trackEvent('mbti_love_result_ad_impression', {
+                app_name: 'mbti-love',
+                ad_surface: 'result_inline',
+                result_type: myType || '',
+                love_group: getLoveGroup(myType)
+            });
         } catch (error) {
             // Ad blockers and delayed AdSense init are non-fatal.
         }
@@ -440,8 +488,9 @@ if (themeToggle) {
             const text = encodeURIComponent(shareData.title);
             const url = `https://x.com/intent/tweet?text=${text}&url=${encodeURIComponent(shareData.url)}`;
             window.open(url, '_blank', 'width=550,height=420');
-            trackEvent('mbti_love_share_click', { method: 'twitter', result_type: myType });
-            gtag('event', 'share', { method: 'twitter', test_type: 'mbti_love' });
+            const params = getShareEventParams('twitter', { share_url: shareData.url });
+            trackEvent('mbti_love_share_click', params);
+            trackEvent('share', params);
         });
 
         // 페이스북 공유
@@ -450,30 +499,23 @@ if (themeToggle) {
             const shareData = getShareText();
             const url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareData.url)}`;
             window.open(url, '_blank', 'width=550,height=420');
-            trackEvent('mbti_love_share_click', { method: 'facebook', result_type: myType });
-            gtag('event', 'share', { method: 'facebook', test_type: 'mbti_love' });
+            const params = getShareEventParams('facebook', { share_url: shareData.url });
+            trackEvent('mbti_love_share_click', params);
+            trackEvent('share', params);
         });
 
         // 카카오톡 공유 (URL만 공유)
         document.getElementById('share-kakaotalk')?.addEventListener('click', () => {
             if (!myType) return;
             const shareData = getShareText();
-            navigator.clipboard.writeText(shareData.url).then(() => {
-                alert(i18n.t('share.copied'));
-            }).catch(() => {});
-            trackEvent('mbti_love_share_click', { method: 'kakaotalk', result_type: myType });
-            gtag('event', 'share', { method: 'kakaotalk', test_type: 'mbti_love' });
+            copyShareText(shareData.url, 'kakaotalk_fallback', { share_url: shareData.url });
         });
 
         // 링크 복사
         document.getElementById('share-copy')?.addEventListener('click', () => {
             if (!myType) return;
             const shareData = getShareText();
-            navigator.clipboard.writeText(`${shareData.title}\n${shareData.url}`).then(() => {
-                alert(i18n.t('share.copied'));
-            }).catch(() => {});
-            trackEvent('mbti_love_share_click', { method: 'copy', result_type: myType });
-            gtag('event', 'share', { method: 'copy', test_type: 'mbti_love' });
+            copyShareText(`${shareData.title}\n${shareData.url}`, 'clipboard', { share_url: shareData.url });
         });
 
         // 네이티브 공유
@@ -486,11 +528,12 @@ if (themeToggle) {
                     text: shareData.fullText,
                     url: shareData.url
                 }).then(() => {
-                    trackEvent('mbti_love_share_click', { method: 'native', result_type: myType });
-                    gtag('event', 'share', { method: 'native', test_type: 'mbti_love' });
+                    const params = getShareEventParams('native', { share_url: shareData.url });
+                    trackEvent('mbti_love_share_click', params);
+                    trackEvent('share', params);
                 }).catch(() => {});
             } else {
-                alert(i18n.t('share.copied'));
+                copyShareText(shareData.url, 'native_fallback', { share_url: shareData.url });
             }
         });
     }
@@ -503,7 +546,12 @@ if (themeToggle) {
             link.download = `MBTI_Love_${myType}.png`;
             link.href = canvas.toDataURL('image/png');
             link.click();
-            gtag('event', 'save_image', { test_type: 'mbti_love' });
+            const params = getShareEventParams('download', {
+                save_surface: 'result_canvas',
+                share_url: getShareUrl()
+            });
+            trackEvent('save_image', params);
+            trackEvent('mbti_love_save_click', params);
         });
     }
 
