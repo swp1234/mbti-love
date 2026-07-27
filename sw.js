@@ -1,10 +1,13 @@
 // MBTI Love Compatibility - Service Worker
-const CACHE_NAME = 'mbti-love-v2';
+const CACHE_NAME = 'mbti-love-v3';
 const urlsToCache = [
     './',
     './index.html',
+    './deck.html',
     './css/style.css',
+    './css/deck.css',
     './js/app.js',
+    './js/deck.js',
     './js/data.js',
     './js/i18n.js',
     './manifest.json',

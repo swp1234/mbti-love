@@ -390,6 +390,15 @@ select:focus-visible {
 .related-jump-btn { width: 100%; max-width: 420px; min-height: 48px; margin: 10px 0 0; border-radius: 12px; border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.05); color: var(--text, #fff); font-size: 14px; font-weight: 600; cursor: pointer; transition: transform 0.2s, border-color 0.2s; }
 .related-jump-btn:hover { transform: translateY(-2px); border-color: rgba(233,30,99,0.28); }
 .result-inline-ad { width: 100%; max-width: 420px; margin: 22px 0 0; padding: 14px; background: rgba(233,30,99,0.04); border: 1px solid rgba(233,30,99,0.12); border-radius: 16px; text-align: center; min-height: 110px; }
+.conversation-deck-intro{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:12px;min-height:46px;padding:10px 14px;border:1px solid rgba(233,30,99,.28);border-radius:12px;background:rgba(233,30,99,.08);color:var(--text);font-size:14px;font-weight:700;text-decoration:none;transition:transform .2s,border-color .2s}
+.conversation-deck-intro:hover{transform:translateY(-2px);border-color:rgba(233,30,99,.55)}
+.conversation-deck-result{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;width:100%;margin:14px 0;padding:16px;border:1px solid rgba(233,30,99,.25);border-radius:16px;background:linear-gradient(135deg,rgba(233,30,99,.14),rgba(124,58,237,.1));color:var(--text);text-decoration:none;box-shadow:0 12px 28px rgba(0,0,0,.12);transition:transform .2s,border-color .2s}
+.conversation-deck-result:hover{transform:translateY(-2px);border-color:rgba(233,30,99,.48)}
+.conversation-deck-result-icon{display:grid;place-items:center;width:42px;height:42px;border-radius:13px;background:linear-gradient(135deg,#e91e63,#7c3aed);color:#fff;font-size:20px}
+.conversation-deck-result-copy{min-width:0;text-align:left}
+.conversation-deck-result-copy strong{display:block;font-size:15px;line-height:1.35}
+.conversation-deck-result-copy small{display:block;margin-top:3px;color:var(--text-sec);font-size:12px;line-height:1.4}
+.conversation-deck-result-arrow{font-size:20px;color:#f9a8d4}
 .related-tests { margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); width: 100%; max-width: 420px; }
 .related-tests h3 { font-size: 16px; color: var(--text-secondary, #94a3b8); margin-bottom: 12px; text-align: center; }
 .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }

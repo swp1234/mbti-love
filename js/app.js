@@ -50,6 +50,7 @@ if (themeToggle) {
                 langOptions.forEach(o => o.classList.remove('active'));
                 opt.classList.add('active');
                 if (langMenu) langMenu.classList.add('hidden');
+                window.dispatchEvent(new CustomEvent('mbtiLoveLanguageChanged', { detail: { lang } }));
             }
         });
     });
@@ -63,6 +64,25 @@ if (themeToggle) {
     let myType = '';
     let partnerType = '';
     let resultInlineAdLoaded = false;
+    const conversationDeckIntro = document.getElementById('conversation-deck-intro');
+    const conversationDeckIntroText = document.getElementById('conversation-deck-intro-text');
+    const conversationDeckResult = document.getElementById('conversation-deck-result');
+    const conversationDeckResultTitle = document.getElementById('conversation-deck-result-title');
+    const conversationDeckResultDesc = document.getElementById('conversation-deck-result-desc');
+    const conversationDeckCopy = {
+        ko: { intro: '커플 대화 카드 바로 열기', title: '결과를 실제 대화로 이어보세요', desc: '두 사람이 함께 뽑는 무료 대화 카드 12장' },
+        en: { intro: 'Open the couple conversation deck', title: 'Turn your result into a real conversation', desc: '12 free cards for two people to draw together' },
+        zh: { intro: '打开情侣对话卡', title: '把结果带入一次真实对话', desc: '两个人一起抽的12张免费对话卡' },
+        hi: { intro: 'कपल बातचीत कार्ड खोलें', title: 'अपने परिणाम को असली बातचीत में बदलें', desc: 'दो लोगों के लिए 12 मुफ़्त बातचीत कार्ड' },
+        ru: { intro: 'Открыть вопросы для пары', title: 'Продолжите результат настоящим разговором', desc: '12 бесплатных карт, которые можно тянуть вдвоём' },
+        ja: { intro: 'カップル会話カードを開く', title: '結果を実際の会話につなげる', desc: '二人で引く無料の会話カード12枚' },
+        es: { intro: 'Abrir cartas de conversación', title: 'Convierte el resultado en una conversación real', desc: '12 cartas gratis para sacar en pareja' },
+        pt: { intro: 'Abrir cartas de conversa', title: 'Leve o resultado para uma conversa real', desc: '12 cartas grátis para tirar em casal' },
+        id: { intro: 'Buka kartu percakapan pasangan', title: 'Lanjutkan hasil ke percakapan nyata', desc: '12 kartu gratis untuk diambil bersama' },
+        tr: { intro: 'Çift sohbet kartlarını aç', title: 'Sonucunu gerçek bir sohbete taşı', desc: 'Birlikte çekilecek 12 ücretsiz kart' },
+        de: { intro: 'Gesprächskarten für Paare öffnen', title: 'Macht aus dem Ergebnis ein echtes Gespräch', desc: '12 kostenlose Karten zum gemeinsamen Ziehen' },
+        fr: { intro: 'Ouvrir les cartes de conversation', title: 'Transformez le résultat en vraie conversation', desc: '12 cartes gratuites à tirer à deux' }
+    };
 
     const recommendationMap = {
         NF: ['attachment-style', 'love-language', 'eq-test', 'rizz-score'],
@@ -97,6 +117,23 @@ if (themeToggle) {
             return window.i18n.getCurrentLanguage();
         }
         return document.documentElement.lang || 'en';
+    }
+
+    function updateConversationDeckCta(resultType) {
+        const lang = getCurrentLang();
+        const copy = conversationDeckCopy[lang] || conversationDeckCopy.en;
+        if (conversationDeckIntroText) conversationDeckIntroText.textContent = copy.intro;
+        if (conversationDeckResultTitle) conversationDeckResultTitle.textContent = copy.title;
+        if (conversationDeckResultDesc) conversationDeckResultDesc.textContent = copy.desc;
+
+        if (conversationDeckIntro) {
+            conversationDeckIntro.href = `/mbti-love/deck.html?lang=${encodeURIComponent(lang)}&source=mbti_love_intro`;
+        }
+        if (conversationDeckResult) {
+            let href = `/mbti-love/deck.html?lang=${encodeURIComponent(lang)}&source=mbti_love_result`;
+            if (resultType) href += `&mbti=${encodeURIComponent(resultType)}`;
+            conversationDeckResult.href = href;
+        }
     }
 
     function getShareUrl() {
@@ -356,7 +393,14 @@ if (themeToggle) {
 
         prioritizeRelatedCards(myType);
         updatePrimaryRecommendation();
+        updateConversationDeckCta(myType);
         ensureResultAdLoaded();
+        trackEvent('couple_deck_cta_view', {
+            result_type: myType,
+            love_group: getLoveGroup(myType),
+            surface: 'mbti_love_result',
+            destination_path: conversationDeckResult ? conversationDeckResult.getAttribute('href') : ''
+        });
         trackEvent('result_view', {
             result_type: myType,
             love_group: getLoveGroup(myType),
@@ -682,6 +726,22 @@ if (themeToggle) {
             related_rank: Number(primaryRelatedCta.getAttribute('data-related-rank') || '1')
         });
     });
+    conversationDeckIntro?.addEventListener('click', () => {
+        trackEvent('couple_deck_cta_click', {
+            result_type: '',
+            surface: 'mbti_love_intro',
+            destination_path: conversationDeckIntro.getAttribute('href') || ''
+        });
+    });
+    conversationDeckResult?.addEventListener('click', () => {
+        trackEvent('couple_deck_cta_click', {
+            result_type: myType,
+            love_group: getLoveGroup(myType),
+            surface: 'mbti_love_result',
+            destination_path: conversationDeckResult.getAttribute('href') || ''
+        });
+    });
+    window.addEventListener('mbtiLoveLanguageChanged', () => updateConversationDeckCta(myType));
     relatedJumpBtn?.addEventListener('click', () => {
         if (relatedTests) {
             relatedTests.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -709,6 +769,7 @@ if (themeToggle) {
 
     // 공유 버튼 초기화
     setupShareButtons();
+    updateConversationDeckCta(myType);
 
     if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {});
 
