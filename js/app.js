@@ -96,7 +96,6 @@ if (themeToggle) {
     const loadingScreen = document.getElementById('loading-screen');
     const resultScreen = document.getElementById('result-screen');
     const compatScreen = document.getElementById('compat-screen');
-    const adOverlay = document.getElementById('ad-overlay');
     const relatedGrid = document.getElementById('related-grid');
     const relatedTests = document.querySelector('.related-tests');
     const primaryRelatedEmoji = document.getElementById('primary-related-emoji');
@@ -653,16 +652,10 @@ if (themeToggle) {
 
     // Premium
     function showPremium() {
-        adOverlay.classList.remove('hidden');
-        const cd = document.getElementById('ad-countdown');
-        const cb = document.getElementById('btn-close-ad');
-        let c = 5; cb.classList.add('hidden'); cd.textContent = c;
-        const iv = setInterval(() => { c--; cd.textContent = c; if (c <= 0) { clearInterval(iv); cb.classList.remove('hidden'); } }, 1000);
-        cb.onclick = () => { adOverlay.classList.add('hidden'); displayPremium(); };
-        trackEvent('mbti_love_premium_click', {
+        displayPremium();
+        trackEvent('mbti_love_detail_click', {
             result_type: myType
         });
-        gtag('event', 'premium_click', { test_type: 'mbti_love' });
     }
 
     function displayPremium() {
@@ -692,10 +685,9 @@ if (themeToggle) {
         `;
         el.classList.remove('hidden');
         el.scrollIntoView({ behavior: 'smooth' });
-        trackEvent('mbti_love_premium_view', {
+        trackEvent('mbti_love_detail_view', {
             result_type: myType
         });
-        gtag('event', 'premium_view', { test_type: 'mbti_love' });
     }
 
     // Events
