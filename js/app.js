@@ -238,21 +238,7 @@ if (themeToggle) {
     }
 
     function ensureResultAdLoaded() {
-        if (resultInlineAdLoaded || !resultInlineAd) return;
-        const adNode = resultInlineAd.querySelector('.adsbygoogle');
-        if (!adNode) return;
-        try {
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            resultInlineAdLoaded = true;
-            trackEvent('mbti_love_result_ad_impression', {
-                app_name: 'mbti-love',
-                ad_surface: 'result_inline',
-                result_type: myType || '',
-                love_group: getLoveGroup(myType)
-            });
-        } catch (error) {
-            // Ad blockers and delayed AdSense init are non-fatal.
-        }
+        // Auto Ads owns placement and paid-impression measurement.
     }
 
     function show(screen) {
