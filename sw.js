@@ -1,77 +1,8 @@
-// MBTI Love Compatibility - Service Worker
-const CACHE_NAME = 'mbti-love-v3';
-const urlsToCache = [
-    './',
-    './index.html',
-    './deck.html',
-    './css/style.css',
-    './css/deck.css',
-    './js/app.js',
-    './js/deck.js',
-    './js/data.js',
-    './js/i18n.js',
-    './manifest.json',
-    './icon-192.svg',
-    './icon-512.svg',
-    './js/locales/ko.json',
-    './js/locales/en.json',
-    './js/locales/zh.json',
-    './js/locales/hi.json',
-    './js/locales/ru.json',
-    './js/locales/ja.json',
-    './js/locales/es.json',
-    './js/locales/pt.json',
-    './js/locales/id.json',
-    './js/locales/tr.json',
-    './js/locales/de.json',
-    './js/locales/fr.json'
-];
-
-// Install event
-self.addEventListener('install', event => {
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then(cache => cache.addAll(urlsToCache))
-            .then(() => self.skipWaiting())
-    );
-});
-
-// Activate event
-self.addEventListener('activate', event => {
-    event.waitUntil(
-        caches.keys().then(cacheNames => {
-            return Promise.all(
-                cacheNames.map(cacheName => {
-                    if (cacheName !== CACHE_NAME) {
-                        return caches.delete(cacheName);
-                    }
-                })
-            );
-        }).then(() => self.clients.claim())
-    );
-});
-
-// Fetch event - network first, fallback to cache
-self.addEventListener('fetch', event => {
-    if (event.request.method !== 'GET') return;
-
-    // Skip external requests (ads, analytics, etc.)
-    if (!event.request.url.startsWith(self.location.origin)) return;
-
-    event.respondWith(
-        fetch(event.request)
-            .then(response => {
-                if (response && response.status === 200) {
-                    const responseToCache = response.clone();
-                    caches.open(CACHE_NAME).then(cache => {
-                        cache.put(event.request, responseToCache);
-                    });
-                }
-                return response;
-            })
-            .catch(() => {
-                return caches.match(event.request)
-                    .then(cached => cached || caches.match('./index.html'));
-            })
-    );
-});
+const CACHE_PREFIX='mbti-love-';
+const CACHE_NAME=`${CACHE_PREFIX}v4`;
+const BASE='/mbti-love/';
+const LOCALES=['ko','en','ja','es','pt','zh','id','tr','de','fr','hi','ru'];
+const ASSETS=[BASE,`${BASE}index.html`,`${BASE}deck.html`,`${BASE}css/style.css`,`${BASE}css/deck.css`,`${BASE}js/app.js`,`${BASE}js/deck.js`,`${BASE}js/data.js`,`${BASE}js/i18n.js`,`${BASE}manifest.json`,`${BASE}icon-192.svg`,`${BASE}icon-512.svg`,...LOCALES.map(lang=>`${BASE}js/locales/${lang}.json`)];
+self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.addAll(ASSETS)));self.skipWaiting()});
+self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith(CACHE_PREFIX)&&key!==CACHE_NAME).map(key=>caches.delete(key)))));self.clients.claim()});
+self.addEventListener('fetch',event=>{if(event.request.method!=='GET')return;const url=new URL(event.request.url);if(url.origin!==self.location.origin||!url.pathname.startsWith(BASE))return;event.respondWith(caches.match(event.request).then(cached=>cached||fetch(event.request).then(response=>{if(response.ok){const copy=response.clone();caches.open(CACHE_NAME).then(cache=>cache.put(event.request,copy))}return response})))});

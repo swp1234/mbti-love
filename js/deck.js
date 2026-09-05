@@ -431,6 +431,8 @@
   let currentId = null;
   let favorites = loadFavorites();
   let toastTimer = null;
+  const trackedStages = new Set();
+  const allowedStages = new Set(['couple_deck_view','couple_deck_start','couple_deck_progress','couple_deck_complete','couple_deck_save','couple_deck_share','couple_deck_return_click']);
 
   const elements = {
     language: document.getElementById('language-select'),
@@ -457,22 +459,13 @@
     emptySaved: document.getElementById('empty-saved'),
     print: document.getElementById('print-btn'),
     testLinks: [document.getElementById('test-link-top'), document.getElementById('test-link-bottom')],
-    ad: document.getElementById('deck-ad'),
     toast: document.getElementById('toast')
   };
 
-  function track(name, extra) {
-    if (typeof window.gtag !== 'function') return;
-    window.gtag('event', name, Object.assign({
-      event_category: 'couple_deck',
-      app_name: 'mbti-love',
-      content_format: 'conversation_card_deck',
-      source: source,
-      lang: lang,
-      conversation_mode: mode,
-      mbti_type: mbti,
-      revenue_goal: 'daily_0_10'
-    }, extra || {}));
+  function track(name) {
+    if (!allowedStages.has(name) || trackedStages.has(name)) return;
+    trackedStages.add(name);
+    if (typeof window.gtag === 'function') window.gtag('event', name, { event_category: 'couple_conversation_deck' });
   }
 
   function loadFavorites() {
@@ -628,14 +621,10 @@
     elements.card.classList.add('card-enter');
     renderCurrent();
     renderProgress();
-    track('couple_deck_card_view', {
-      card_id: currentId + 1,
-      card_mode: CARD_MODES[currentId],
-      card_position: drawn,
-      cards_remaining: queue.length
-    });
+    if (drawn === 1) track('couple_deck_start');
+    if (drawn === 4) track('couple_deck_progress');
     if (!queue.length) {
-      track('couple_deck_session_complete', { cards_viewed: drawn, saved_count: favorites.size });
+      track('couple_deck_complete');
       showToast((COPY[lang] || COPY.en).sessionDone);
     }
   }
@@ -650,7 +639,6 @@
       button.classList.toggle('is-active', active);
       button.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
-    if (reason) track('couple_deck_reset', { reset_reason: reason, session_size: sessionSize });
   }
 
   function toggleFavorite() {
@@ -661,13 +649,13 @@
     saveFavorites();
     renderFavoriteButton();
     renderFavorites();
-    track('couple_deck_favorite', { card_id: currentId + 1, card_mode: CARD_MODES[currentId], action: adding ? 'save' : 'remove', saved_count: favorites.size });
+    if (adding) track('couple_deck_save');
   }
 
   function copyText(text, successKey, eventName) {
     const done = () => {
       showToast((COPY[lang] || COPY.en)[successKey]);
-      track(eventName, { card_id: currentId === null ? 0 : currentId + 1, card_mode: currentId === null ? '' : CARD_MODES[currentId] });
+      track(eventName);
     };
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text, done));
@@ -700,12 +688,12 @@
     const text = currentShareText();
     if (navigator.share) {
       navigator.share({ title: locale.title, text, url: `https://dopabrain.com/mbti-love/deck.html?lang=${encodeURIComponent(lang)}&source=deck_share` })
-        .then(() => track('couple_deck_share', { method: 'native', card_id: currentId + 1, card_mode: CARD_MODES[currentId] }))
+        .then(() => track('couple_deck_share'))
         .catch(error => {
-          if (error && error.name !== 'AbortError') copyText(text, 'shared', 'couple_deck_share_copy');
+          if (error && error.name !== 'AbortError') copyText(text, 'shared', 'couple_deck_share');
         });
     } else {
-      copyText(text, 'shared', 'couple_deck_share_copy');
+      copyText(text, 'shared', 'couple_deck_share');
     }
   }
 
@@ -721,12 +709,10 @@
       const nextMode = button.dataset.mode;
       if (!['all', 'playful', 'connect', 'repair'].includes(nextMode)) return;
       resetDeck(nextMode, 'mode_change');
-      track('couple_deck_mode_select', { selected_mode: nextMode, session_size: sessionSize });
     });
   });
   elements.draw.addEventListener('click', drawCard);
   elements.next.addEventListener('click', () => {
-    track('couple_deck_next', { previous_card_id: currentId === null ? 0 : currentId + 1 });
     drawCard();
   });
   elements.restart.addEventListener('click', () => resetDeck(mode, 'session_restart'));
@@ -745,15 +731,13 @@
     renderFavorites();
     renderFavoriteButton();
     showToast((COPY[lang] || COPY.en).removed);
-    track('couple_deck_favorite', { card_id: id + 1, card_mode: CARD_MODES[id], action: 'remove_from_list', saved_count: favorites.size });
   });
   elements.print.addEventListener('click', () => {
-    track('couple_deck_print', { saved_count: favorites.size });
     window.print();
   });
   elements.testLinks.forEach((link, index) => {
     if (!link) return;
-    link.addEventListener('click', () => track('couple_deck_test_click', { surface: index === 0 ? 'header' : 'footer', saved_count: favorites.size }));
+    link.addEventListener('click', () => track('couple_deck_return_click'));
   });
   elements.language.addEventListener('change', () => {
     const nextLang = elements.language.value;
@@ -761,32 +745,9 @@
     lang = nextLang;
     localStorage.setItem('app_language', lang);
     applyTranslations();
-    track('couple_deck_language_change', { selected_language: lang });
   });
-
-  function initializeAd() {
-    try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (_) {}
-    let sent = false;
-    const send = () => {
-      if (sent) return;
-      sent = true;
-      track('couple_deck_ad_impression', { ad_surface: 'deck_inline' });
-    };
-    if ('IntersectionObserver' in window && elements.ad) {
-      const observer = new IntersectionObserver(entries => {
-        if (entries.some(entry => entry.isIntersecting && entry.intersectionRatio >= 0.35)) {
-          send();
-          observer.disconnect();
-        }
-      }, { threshold: [0.35] });
-      observer.observe(elements.ad);
-    } else {
-      send();
-    }
-  }
 
   buildQueue();
   applyTranslations();
-  initializeAd();
-  track('couple_deck_view', { saved_count: favorites.size, session_size: sessionSize });
+  track('couple_deck_view');
 })();
