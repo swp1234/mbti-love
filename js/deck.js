@@ -737,7 +737,17 @@
   });
   elements.testLinks.forEach((link, index) => {
     if (!link) return;
-    link.addEventListener('click', () => track('couple_deck_return_click'));
+    link.addEventListener('click', () => {
+      track('couple_deck_return_click');
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'content_cta_click', {
+          link_id: 'couple_deck_return_' + (index ? 'bottom' : 'top'),
+          link_text: (link.textContent || '').trim().slice(0, 40),
+          target_url: link.href || '',
+          source_page: 'couple_deck'
+        });
+      }
+    });
   });
   elements.language.addEventListener('change', () => {
     const nextLang = elements.language.value;

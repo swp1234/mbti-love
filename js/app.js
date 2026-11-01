@@ -5,7 +5,40 @@ const t=key=>window.i18n?window.i18n.t(key):key;
 function track(stage){if(tracked.has(stage))return;tracked.add(stage);if(typeof window.gtag==='function')window.gtag('event',`mbti_love_${stage}`,{event_category:'relationship_preference_reflection'})}
 class PreferenceReflection{
   constructor(){this.index=0;this.scores={E:0,I:0,S:0,N:0,T:0,F:0,J:0,P:0};this.first={};this.locked=false;this.bind();Promise.resolve(window.i18n.ready).finally(()=>{document.getElementById('app-loader')?.remove();this.syncRoutes();track('view')})}
-  bind(){document.getElementById('btn-start').addEventListener('click',()=>this.start());document.getElementById('btn-retry').addEventListener('click',()=>this.retry());document.getElementById('share-page').addEventListener('click',()=>this.share());document.getElementById('next-action').addEventListener('click',()=>track('next_click'));document.querySelectorAll('[data-related-slug]').forEach(link=>link.addEventListener('click',()=>track('related_click')));this.bindTheme();this.bindLanguage()}
+  bind(){
+    document.getElementById('btn-start').addEventListener('click',()=>this.start());
+    document.getElementById('btn-retry').addEventListener('click',()=>this.retry());
+    document.getElementById('share-page').addEventListener('click',()=>this.share());
+    const nextAction=document.getElementById('next-action');
+    if(nextAction){
+      nextAction.addEventListener('click',()=>{
+        track('next_click');
+        if(typeof window.gtag==='function'){
+          window.gtag('event','content_cta_click',{
+            link_id:'mbti_love_deck_cta',
+            link_text:(nextAction.textContent||'').trim().slice(0,40),
+            target_url:nextAction.href||'',
+            source_page:'mbti_love_result'
+          });
+        }
+      });
+    }
+    document.querySelectorAll('[data-related-slug]').forEach(link=>{
+      link.addEventListener('click',()=>{
+        track('related_click');
+        if(typeof window.gtag==='function'){
+          window.gtag('event','content_cta_click',{
+            link_id:'mbti_love_related_'+(link.dataset.relatedSlug||'companion'),
+            link_text:(link.textContent||'').trim().slice(0,40),
+            target_url:link.href||'',
+            source_page:'mbti_love_result'
+          });
+        }
+      });
+    });
+    this.bindTheme();
+    this.bindLanguage();
+  }
   bindTheme(){const button=document.getElementById('theme-toggle');if(localStorage.getItem('mbti-love-theme')==='light')document.documentElement.dataset.theme='light';const update=()=>button.textContent=document.documentElement.dataset.theme==='light'?'☀':'☾';update();button.addEventListener('click',()=>{const light=document.documentElement.dataset.theme!=='light';if(light)document.documentElement.dataset.theme='light';else delete document.documentElement.dataset.theme;localStorage.setItem('mbti-love-theme',light?'light':'dark');update()})}
   bindLanguage(){const toggle=document.getElementById('lang-toggle'),menu=document.getElementById('lang-menu');toggle.addEventListener('click',()=>{menu.hidden=!menu.hidden;toggle.setAttribute('aria-expanded',String(!menu.hidden))});menu.querySelectorAll('[data-lang]').forEach(button=>button.addEventListener('click',async()=>{await window.i18n.setLanguage(button.dataset.lang);menu.hidden=true;toggle.setAttribute('aria-expanded','false');this.syncRoutes();if(document.getElementById('question-screen').classList.contains('active'))this.renderQuestion();if(document.getElementById('result-screen').classList.contains('active'))this.renderResult()}));document.addEventListener('click',event=>{if(!event.target.closest('.language-selector')){menu.hidden=true;toggle.setAttribute('aria-expanded','false')}})}
   lang(){return window.i18n.getCurrentLanguage()}
