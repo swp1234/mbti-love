@@ -527,9 +527,7 @@
     if (mbti) url.searchParams.set('mbti', mbti);
     window.history.replaceState({}, '', url.pathname + '?' + url.searchParams.toString());
     const alternate = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`);
-    const canonical = document.querySelector('link[rel="canonical"]');
     const og = document.querySelector('meta[property="og:url"]');
-    if (alternate && canonical) canonical.href = alternate.href;
     if (alternate && og) og.content = alternate.href;
   }
 
